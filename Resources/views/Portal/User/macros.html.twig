@@ -1,0 +1,25 @@
+{% macro user_notice(type, title, subtitle = null) %}
+
+<div class="inline-form-wrapper">
+  <div class="inline-form-alert">
+      <div class="form-alert-icon">
+          {% if type == 'auth' %}
+              <i class="fa fa-lock"></i>
+          {% endif %}
+      </div>
+      <div class="content-wrapper">
+          <h1>{{ title }}</h1>
+          {% if subtitle %}
+            <p>{{ subtitle }}</p>
+          {% endif %}
+      </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro lockout_notice(title, lockout, lockout_time) %}
+    {% import _self as this %}
+    {% if lockout %}
+        {{ this.user_notice('auth', title, lockout_time ? phrase('portal.account.lockout_time', {time: lockout_time})) }}
+    {% endif %}
+{% endmacro %}

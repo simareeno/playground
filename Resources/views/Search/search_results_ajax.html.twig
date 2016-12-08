@@ -1,0 +1,9 @@
+{% import 'Theme:Search:search_macros.html.twig' as search_macros %}
+
+<div>
+    <div class="dpx-search-result-section" data-next="{{ result_set.pageinfo.next ? 1 : 0 }}">
+    {% for set in result_set['results'] %}
+        {{ search_macros.search_result(set) }}
+    {% endfor %}
+    </div>
+</div>

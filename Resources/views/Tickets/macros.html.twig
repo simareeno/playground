@@ -1,0 +1,70 @@
+{% macro person_sidebar(person, avatar_link = false) %}
+    {% set is_agent = person and person.isAgent() %}
+    <div class="sidebar-person">
+        {% if avatar_link %}
+        <a href="{{ avatar_link }}" class="post-link">
+            {% endif %}
+            {% if person %}
+                <span class="agent-avatar agent-avatar-mid"
+                      style="background-image: url({{ avatar_url(person, 36) }});">
+            {% if avatar_link %}
+                <span class="remove-agent"></span>
+            {% endif %}
+        </span>
+            {% else %}
+                <span class="agent-avatar agent-avatar-mid agent-avatar-blank" style=""></span>
+            {% endif %}
+            {% if avatar_link %}
+        </a>
+        {% endif %}
+        {% if person and not is_agent %}
+        <a href="mailto:{{ person.primary_email_address }}">
+            {% endif %}
+            <span class="avatar-meta">
+                {% if person %}
+                    <span class="primary {% if is_agent %}single{% endif %}">{% if is_agent %}{{ person.display_name_user }}{% else %}{{ person.display_name }}{% endif %}</span>
+                    {% if not is_agent %}<span class="secondary">{{ person.primary_email_address }}</span>{% endif %}
+                {% else %}
+                    <span class="primary">{{ phrase('portal.tickets.view_unassigned') }}</span>
+                    <span class="secondary">{{ phrase('portal.tickets.view_unassigned_more') }}</span>
+                {% endif %}
+            </span>
+        {% if person and not is_agent %}
+            </a>
+        {% endif %}
+    </div>
+{% endmacro %}
+{% macro person_inline(person, include_email = false) %}
+    {% if person %}
+        <span class="agent-avatar agent-avatar-mid" style="background-image: url({{ avatar_url(person, 36) }});"></span>
+        <span class="ticket-owner-name">{{ person.display_name_user }}</span>
+        {% if include_email or not person.isAgent() %}
+            <span class="ticket-owner-email">({{ person.primary_email_address }})</span>
+        {% endif %}
+    {% else %}
+        <span class="ticket-owner-name">Helpdesk system</span>
+        <span class="agent-avatar agent-avatar-blank agent-avatar-mid" style=""></span>
+    {% endif %}
+{% endmacro %}
+{% macro attachment_inline(ticket_attachment) %}
+    {% if ticket_attachment.blob %}
+    <a href="{{ ticket_attachment.blob.downloadUrl }}">
+        {{ file_icon(ticket_attachment.blob) }}
+        <span class="file-name">{{ ticket_attachment.blob.filename }}</span>
+        <span class="file-size">{{ ticket_attachment.blob.readable_filesize }}</span>
+    </a>
+    {% endif %}
+{% endmacro %}
+{% macro attachment_full(ticket_attachment) %}
+    {% if ticket_attachment.blob %}
+    <a href="{{ ticket_attachment.blob.downloadUrl }}">
+        {% if ticket_attachment.blob.is_image %}
+            <img src="{{ ticket_attachment.blob.thumbnailUrl }}" alt="{{ ticket_attachment.blob.filename }}">
+        {% else %}
+            {{ file_icon(ticket_attachment.blob) }}
+        {% endif %}
+        <span class="file-name">{{ ticket_attachment.blob.filename }}</span>
+        <span class="file-size">{{ ticket_attachment.blob.readable_filesize }}</span>
+    </a>
+    {% endif %}
+{% endmacro %}

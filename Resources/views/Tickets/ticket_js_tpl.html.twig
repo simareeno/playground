@@ -1,0 +1,10 @@
+<!-- BEGIN JS FORM -->
+<div class="js_form_tpl" style="display: none;">
+    {% for widget in form_full.children if widget.vars.name not in ['_token', '_dp_csrf_token'] %}
+        <div class="deskpro-form-widget" data-field="{{ widget.vars.name }}">
+            {{ form_label(widget) }}
+            {{ form_widget(widget) }}
+        </div>
+    {% endfor %}
+</div>
+<!-- END JS FORM -->

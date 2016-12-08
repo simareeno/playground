@@ -1,0 +1,64 @@
+{% include 'Theme:Internal:modernizr-include.html.twig' %}
+<script type="text/javascript">
+    (function() {
+        document.body.className = document.body.className + ' with-js';
+
+        // Features that determine if 'DPUI' can be enabled for this user
+        window.WITH_DPUI =
+          Modernizr &&
+          !Modernizr.ie8compat &&
+          Modernizr.json &&
+          Modernizr.blobconstructor
+        ;
+
+        if (window.WITH_DPUI) {
+            document.body.className += ' with-dpui';
+        } else {
+            document.body.className += ' without-dpui';
+        }
+
+        if ("ontouchstart" in document.documentElement) {
+            document.body.className += ' with-touch-device';
+        } else {
+            document.body.className += ' without-touch-device';
+        }
+
+        window.DP_LOAD_FN = [];
+
+        window.DESKPRO_BASE_URL = '{{ base_url() }}';
+        window.DESKPRO_ROOT_URL = '{{ root_url() }}';
+        window.DESKPRO_LEGACY_WEB_URL = '{{ asset('', 'legacy_web') }}';
+        window.DESKPRO_APP_ASSETS_URL = '{{ asset('', 'app_assets') }}';
+        window.DESKPRO_MULTI_LANG = {{ is_multi_lang() ? 'true' : 'false' }};
+        window.DESKPRO_LANG = '{{ lang_code() }}';
+        window.DESKPRO_LOCALE = '{{ lang_locale() }}';
+        window.DESKPRO_ENABLED_LANGS = [{% for language in enabled_languages() %}{{ '{' }}code: '{{ language.urlCode }}', title:'{{ language.title|capitalize }}',flag:'{{ language.flag_image }}'{{ '}' }}{% if not loop.last %},{% endif %}{% endfor %}];
+        window.DP_ASSET_URL = '{{ asset('') }}';
+        window.DP_BASE_URL = '/{{ path('portal_home')|trim('/') }}';
+
+        window.DESKPRO_USERSOURCES = {{ auth_usersources_js_object() }};
+        window.DESKPRO_HAS_LOGIN_FORM = {{ has_login_form() ? 'true' : 'false' }};
+        window.DESKPRO_IS_FORGOT_PASSWORD_VISIBLE = {{ has_login_form() ? 'true' : 'false' }};
+        window.DESKPRO_CAN_USE_TICKETS = {{ can_use_tickets() ? 'true' : 'false' }};
+        window.DESKPRO_CAN_VIEW_TICKETS_LINK = {{ can_view_tickets_link() ? 'true' : 'false' }};
+        window.DESKPRO_CAN_USE_FEEDBACK = {{ can_use_feedback() ? 'true' : 'false' }};
+        window.DESKPRO_CAN_USE_CHAT = {{ can_use_chat() ? 'true' : 'false' }};
+        window.PORTAL_MODE = '{{ portal_mode() }}';
+
+        window.DESKPRO_PHRASES = {};
+        window.DP_SET_PHRASES = function(p) {
+            window.DESKPRO_PHRASES = p;
+            if (window.PortalApp && window.PortalApp.phrases) {
+                window.PortalApp.phrases.setPhrases(p);
+            }
+        }
+    })();
+</script>
+<script type="text/javascript" src="{{ path('portal_api_lang_widget_phrases', {_format: 'js'}) }}"></script>
+<script type="text/javascript" src="{{ asset('DeskPRO_PortalBundle.js', 'app_assets') }}" async="async"></script>
+
+{% if portal_mode() == 'focus-window' or portal_mode() == 'fame-embed' %}
+<script type="text/javascript" src="{{ asset('iframeResizer_contentWindow.js', 'app_assets') }}" async="async"></script>
+{% endif %}
+
+{% if portal_mode() != 'focus-window' and portal_mode() != 'fame-embed' and is_portal_widget_enabled() %}{{ portal_widget_loader() }}{% endif %}

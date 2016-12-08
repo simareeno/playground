@@ -1,0 +1,41 @@
+<header class="top-bar {% if portal_custom_logo() %}with-logo-img{% endif %}">
+  <div class="mobile-view big-button-collection-expand-mobile">
+    <a class="dpx-toggle-big-buttons" href="#"><i class="fa fa-navicon"></i> <span class="title">Navigate</span></a>
+  </div>
+  <div class="brand {% if portal_custom_logo() %}with-logo{% endif %}">
+    <a href="{{ path('portal_home') }}">
+      {% if portal_custom_logo() %}
+        <img alt="{{ brand_setting('core.deskpro_name') }}" src="{{ portal_custom_logo() }}" class="logo" />
+      {% else %}
+        <h1>{{ brand_setting('core.deskpro_name') }}</h1>
+      {% endif %}
+    </a>
+  </div>
+  <ul id="menu">
+    {% show section small_user_info %}
+
+    {% if is_multi_language %}
+    <li class="language-switcher-container">
+      <form method="POST" action="{{ path('portal_change_language') }}" id="language-changer" class="as-no-dpui">
+        <select name="lang_code" class="button button-dropdown button-dropdown-language">
+          {% for language in enabled_languages %}
+            <option value="{{ language.urlCode }}"
+              {% if language.urlCode == current_language.urlCode %}selected="selected"{% endif %}>
+              {{ language.title|capitalize }}
+            </option>
+          {% endfor %}
+        </select>
+        <button class="button button-plain button-small" type="submit">Go</button>
+      </form>
+      {# This widget below is rendered before JS replaces with the smart widget, so its a placeholder #}
+      <div class="language-changer-widget dpx-placeholder">
+        <a href="#" class="button-small button-language">
+          <img src="{{ asset('images/flags/us.png', 'legacy_web') }}" alt="">
+          <span class="text">English</span>
+          <span class="extra"><i class="fa fa-caret-down"></i></span>
+        </a>
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+</header>

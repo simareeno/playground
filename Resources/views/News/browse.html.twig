@@ -1,0 +1,18 @@
+{% extends 'Theme::layout.html.twig' %}
+{% block inner_content %}
+  <div class="breadcrumbs">
+    {% show breadcrumbs %}
+  </div>
+  <div class="browse-page">
+    <header class="section-header padded">
+      <div class="header-button-container">
+        <div class="header-buttons">
+          {% show rss_link %}
+          {% show kb_cat_subscription_link %}
+        </div>
+      </div>
+    </header>
+    {% show news_cats_tabs %}
+    {% show news_list_full %}
+  </div>
+{% endblock inner_content %}

@@ -1,0 +1,29 @@
+<div class="content-list-wrap simple {% if pager|length %}with-items{% else %}with-no-items{% endif %}">
+    {% if pager|length %}
+        <ul>
+            {% for item in pager %}
+                <li>
+                    <a href="{{ portal_path(item, 'vote_up') }}" class="post-link thumbs">
+                        <span><i class="fa fa-thumbs-up"></i> {{ item.total_rating }}</span>
+                    </a>
+                    <span class="text-tag">{{ item.status_category ? object_phrase(item.status_category) : item.status }}</span>
+                    <a href="{{ portal_path(item) }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>{{ phrase('portal.feedback.none') }}</strong>
+    {% endif %}
+
+    {% if show_category_link and pager|length > 0 %}
+        <div class="list-meta">
+            <a href="{{ path('portal_feedback') }}">
+                {{ phrase('portal.feedback.view-x-feedback', {count: pager|length}) }}<i class="fa fa-caret-right"></i>
+            </a>
+        </div>
+    {% endif %}
+
+    {% if show_pager %}
+       {% show feedback_pager %}
+    {% endif %}
+</div>

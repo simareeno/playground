@@ -1,0 +1,21 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <div class="downloads main-downloads">
+        <header class="large-title">
+            <div class="header-buttons">
+                {% show rss_link %}
+                {% show download_root_subscription_link %}
+            </div>
+            <h1>{{ phrase('portal.downloads.section-title') }}</h1>
+            <p>{{ phrase('portal.downloads.section-desc') }}</p>
+        </header>
+
+        <section>
+            {% show section download_cats_simple %}
+        </section>
+    </div>
+{% endblock inner_content %}

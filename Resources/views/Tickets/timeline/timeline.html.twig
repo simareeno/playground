@@ -1,0 +1,45 @@
+{% import 'Theme:Tickets:macros.html.twig' as macros %}
+{% for line in timeline_pager %}
+  {% if line.type == 'ticket_created' %}
+    <div class="ticket-message">
+      <div class="ticket-owner">
+        {{ macros.person_inline(line.person) }}
+        <span>{{ phrase('portal.tickets.timeline_opened') }}</span>
+        <span class="ticket-actual-date">({{ line.datetime|date('day') }})</span>
+      </div>
+    </div>
+  {% elseif line.type == 'ticket_reopened' %}
+    <div class="ticket-message">
+      <div class="ticket-owner">
+        <div class="ticket-action-date">{{ date_ago(line.datetime) }}</div>
+        {{ macros.person_inline(line.person) }}
+        <span>{{ phrase('portal.tickets.timeline_re_opened') }}</span>
+      </div>
+    </div>
+  {% elseif line.type == 'ticket_closed' %}
+    <div class="ticket-message">
+      <div class="ticket-owner">
+        <div class="ticket-action-date">{{ date_ago(line.datetime) }}</div>
+        {{ macros.person_inline(line.person) }}
+        <span>{{ phrase('portal.tickets.timeline_marked') }}</span>
+        <span class="mark-resolved">{{ phrase('portal.tickets.timeline_marked_resolved') }}</span>
+      </div>
+    </div>
+  {% elseif line.type == 'agent_message' %}
+    {% set msg = line.message %}
+    {% include 'Theme:Tickets:timeline/agent_message.html.twig' %}
+  {% elseif line.type == 'user_message' %}
+    {% set msg = line.message %}
+    {% include 'Theme:Tickets:timeline/user_message.html.twig' %}
+  {% endif %}
+
+  {% if timeline.isMultipleUserActions(line) %}
+    {# Only between multiple user messages #}
+    <hr>
+  {% endif %}
+{% endfor %}
+{% if timeline_pager.haveToPaginate %}
+    <div class="deskpro-pager">
+      {{ pagerfanta(timeline_pager) }}
+    </div>
+{% endif %}

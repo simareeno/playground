@@ -1,0 +1,41 @@
+{# Here's an example of a "Get in Touch" sidebar block:
+
+<div class="get-in-touch">
+  <div class="sidebar-content">
+    <h1>Get in touch</h1>
+
+    <div>
+        <h2>DeskPRO Ltd.</h2>
+        <p>DeskPRO Ltd, 81-83 Fulham High Street. London, SW6 3JA, United Kingdom</p>
+
+        <h2>Phone:</h2>
+        (+1) 1-888-DESKPRO<br>
+        (+44) 020-3582-1980
+
+        <h2>Email:</h2>
+        <a href="mailto:">hello@deskpro.com</a><br>
+
+        <h2>On social media</h2>
+        <a href="http://facebook.com/DeskPRO" class="link-solo link-facebook"><i class="fa fa-facebook-square"></i>facebook.com/DeskPRO</a><br>
+        <a href="http://twitter.com/DeskPRO" class="link-solo link-twitter"><i class="fa fa-twitter-square"></i>twitter.com/DeskPRO</a>
+    </div>
+  </div>
+  <hr>
+</div>
+
+#}
+
+{# This shows a list of online agents #}
+{# {% show section agents_online %} #}
+
+{# This shows a list of online agent avatars. It is more small/compact than the full list on the line above. #}
+{% show section agents_online_small %}
+
+{# This shows recent news #}
+{% show section news_sidebar %}
+
+{# This shows articles with the most views #}
+{% show section kb_top_articles %}
+
+{# This shows articles but with an author by-line #}
+{# {% show section kb_top_articles_detail %} #}

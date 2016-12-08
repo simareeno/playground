@@ -1,0 +1,206 @@
+@animationDuration: .35s;
+@animationDelay: .15s;
+
+body {
+	background-color: #181818;
+}
+
+#container {
+	position: relative;
+	box-sizing: border-box;
+	display:flex;
+	width: 1280px;
+	margin: 0 auto;
+	transform: translate(-44px,0);
+}
+
+#link {
+	position: absolute;
+	z-index: 1;
+	top: 16px;
+	left: 128px;
+	padding:20px;
+	cursor:pointer;
+	    opacity: .6;
+
+	&:hover {
+		opacity: 1;
+		transition: opacity .2s;
+	}
+
+	&::before {
+		content:'';
+		background-image: url(img/arrow.png);
+		position: absolute;
+		left: 7px;
+		width: 8px;
+		height: 8px;
+		top: 23px;
+	}
+
+	&:hover ~ #forgame {
+		opacity:0;
+		transition: opacity ease-in @animationDuration @animationDelay;
+	}
+
+	&:hover ~ #forgame-hover {
+		opacity:1;
+		transition: opacity ease-in @animationDuration @animationDelay;
+	}
+}
+
+
+
+#forgame {
+	position: absolute;
+	opacity: 1;
+	transition: opacity ease-out @animationDuration;
+}
+
+#forgame-hover {
+	position: absolute;
+	opacity: 0;
+	transition: opacity ease-out @animationDuration;
+}
+
+#forgamer {
+	position: absolute;
+	opacity: 0;
+	transition: opacity ease-out @animationDuration;
+}
+
+
+.show {
+	opacity: 1!important;
+}
+
+.hide {
+	opacity: 0!important;
+}
+
+.active {
+	opacity: 1!important;
+	z-index: 11;
+}
+
+
+.flip-container {
+	perspective: 1800;
+	left: 575px;
+	top: 14px;
+	position: relative;
+	z-index: 11;
+}
+
+.flip-container, .front, .back {
+	width: 43px;
+	height: 44px;
+}
+
+.flipper {
+	transition: transform ease-out @animationDuration;
+	transform-style: preserve-3d;
+	position: relative;
+	transform: translate(20px, 0);
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.flip-container.hover {
+
+	.flipper {
+	transform: rotateY(180deg) translate(0px, 0);
+	transition: transform ease-in @animationDuration @animationDelay;
+	}
+}
+
+
+.header {
+	position: relative;
+	right: -588px;
+	top: 21px;
+	transition: opacity ease-out @animationDuration, transform ease-out @animationDuration;
+	z-index: 11;
+	transform: translate(20px, 0);
+
+	&.hover {
+		transform: translate(0, 0);
+		transition: opacity ease-in @animationDuration @animationDelay, transform ease-in @animationDuration @animationDelay;
+	}
+}
+
+.header.hover .header-fogamer,
+.header.hover .header-4gamer {
+	opacity: 1;
+	transition: opacity @animationDuration ease-in @animationDelay;
+}
+
+.header.hover .header-4 {
+	background: url('img/4_4gamer.png') no-repeat 0 0;
+}
+
+.header .header-fogame {
+	position: absolute;
+	background: url('img/forgame-text.png') no-repeat 0 0;
+	height: 33px;
+	width: 123px;
+}
+
+.header .header-fogamer {
+	position: absolute;
+	background: url('img/forgamer-text.png') no-repeat 0 0;
+	height: 33px;
+	width: 123px;
+	opacity: 0;
+	transition: opacity @animationDuration ease-out ;
+}
+
+.header-4game,
+.header-4gamer {
+	position: absolute;
+	right: 100.5%;
+	top:-10px;
+	height:43px;
+	width:42px;
+	transition: opacity @animationDuration ease-out ;
+}
+
+.header-ep {
+	position: absolute;
+	left: 97px;
+	opacity: 0;
+	z-index: -1;
+	transition: opacity  @animationDuration cubic-bezier(0.165, 0.84, 0.44, 1), left @animationDuration ease-out;
+}
+
+.header.hover .header-ep {
+	left: 122px;
+	opacity: 1;
+	transition: opacity cubic-bezier(0.895, 0.03, 0.685, 0.22) @animationDuration @animationDelay, left ease-in @animationDuration @animationDelay;
+}
+
+
+.header-4game {
+	background: url('img/4_4game.png') no-repeat 0 0;
+}
+
+.header-4gamer {
+	background: url('img/4_4gamer.png') no-repeat 0 0;
+	opacity: 0;
+	transform: translate(-1px,1px);
+}

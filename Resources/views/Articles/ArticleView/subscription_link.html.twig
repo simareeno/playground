@@ -1,0 +1,12 @@
+{% if brand_setting('user.kb_subscriptions') %}
+    <a href="{{ portal_path(article, 'toggle_subscription') }}" class="post-link">
+        <span>
+            {% if is_subscribed %}
+                {{ phrase('portal.general.btn-unsubscribe') }}
+            {% else %}
+                {{ phrase('portal.general.btn-subscribe') }}
+            {% endif %}
+        </span>
+        <i class="fa fa-rss"></i>
+    </a>
+{% endif %}

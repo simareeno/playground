@@ -1,0 +1,21 @@
+{% extends 'Theme:Tickets:base_view.html.twig' %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block page_sidebar %}
+{% endblock %}
+
+
+{% block page_specific_content %}
+    <div class="container">
+        <article class="ticket-info">
+            <form method="post" novalidate>
+                <p>{{ phrase('portal.tickets.resolve_ticket_explain') }}</p>
+                <br />
+                <button class="button">{{ phrase('portal.tickets.resolve_my_ticket_btn') }}</button>
+                <a class="button" href="{{ portal_path(ticket) }}">{{ phrase('portal.general.btn-cancel') }}</a>
+            </form>
+        </article>
+    </div>
+{% endblock %}

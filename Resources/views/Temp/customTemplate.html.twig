@@ -1,0 +1,16 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block page_content %}
+
+
+    <form method="post">
+        <select name="template_name" id="">
+            {% for name,path in template_map %}
+                <option value="{{ name }}"{% if template and template.name == name %} selected="selected"{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Save</button>
+        <textarea name="template_code" id="" style="width:600px;" rows="50">{% if template %}{{ template.template_code }}{% endif %}</textarea>
+    </form>
+
+{% endblock page_content %}

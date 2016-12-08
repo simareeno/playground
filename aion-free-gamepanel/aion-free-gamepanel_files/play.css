@@ -1,0 +1,80 @@
+.bPageLayout.cAion.mPageType_Game {
+  background: #629cd7;
+}
+.bPageLayout.cAion.bPageLayout__mPage_play .bPageLayout__eContext:before {
+  background: linear-gradient(to bottom, #629cd7 0%, #629cd7 13%, rgba(98, 156, 215, 0.65) 47%, rgba(98, 156, 215, 0) 100%);
+}
+.bPageLayout.cAion .bPlayLayout__eBackground {
+  top: -35px;
+  background-image: url('https://ru.4game.com/-/1785375215/aion/play/aion-bg-light.jpg');
+}
+.bPageLayout.cAion .bPlayLayout__eLogo {
+  width: 480px;
+  height: 190px;
+  left: 50%;
+  margin-left: -20%;
+  background-image: url('https://ru.4game.com/-/1418314743/aion/play/aion-logo.png');
+}
+.bPageLayout.cAion .bFooter a,
+.bPageLayout.cAion .bFooter .bPseudoLink {
+  color: #ffffff;
+}
+.bPageLayout.cAion .bPageFooterLang__ePopupShowLink {
+  border-bottom: 1px dashed #ffffff;
+}
+.bPageLayout.cAion .bFooter a:hover,
+.bPageLayout.cAion .bFooter .bPseudoLink:hover {
+  color: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+.bPageLayout.cAion .bGamePage,
+.bPageLayout.cAion .bShopBlock__eShopItem {
+  color: #bebebe;
+}
+.bPageLayout.cAion .bFooter,
+.bPageLayout.cAion .bGamePageNewsBlockTwitterAccount,
+.bPageLayout.cAion .bBottomContent__eMainColumn {
+  color: #707070;
+}
+.bPageLayout.cAion .bShopBlock__ePrice {
+  border-color: rgba(112, 112, 112, 0.5);
+  color: #bebebe;
+}
+.bPageLayout.cAion .bPageFooterList__eHeaderText {
+  border-bottom: 1px dashed;
+}
+.bPageLayout.cAion .bPageFooterList__eHeaderText {
+  color: #ffffff;
+}
+.bPageLayout.cAion .bPageFooterList__eHeaderText:hover,
+.bPageLayout.cAion .bPageFooterList__eHeaderText__mState_Active {
+  color: #ff0000;
+}
+.bPageLayout.cAion .bPageFooterList__eHeaderText__mState_Active:hover {
+  color: #ffffff;
+}
+.bPageLayout.cAion .bPseudoLink__mState_active {
+  border: none;
+  color: #bebebe;
+  font-weight: bold;
+}
+.bPageLayout.cAion .bPseudoLink__mState_active:hover {
+  color: #bebebe !important;
+}
+.bPageLayout.cAion .bPlayLayout__eMenuSections {
+  width: 53%;
+}
+.bPageLayout.cAion .bPlayLayout__eMenuLinks {
+  width: 47%;
+}
+.bPageLayout.cAion game-achievements {
+  display: block;
+  position: relative;
+  margin: 0 -30px -30px -30px;
+  z-index: 6000;
+  min-height: 312px;
+}
+.bPageLayout.cAion .footer-4game {
+  z-index: 1;
+  padding: 98px 27px 23px;
+}

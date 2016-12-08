@@ -1,0 +1,34 @@
+{% if display_alerts %}
+    <div class="alerts as-dpui" id="dpx-alerts" style="display: none;">
+        {% if lang_diff %}
+            <span class="alert" data-dismiss-handler="{{ path('portal_dismiss_lang_alert') }}">
+              <div class="click-to-dismiss"><i class="fa fa-times"></i></div>
+                {{ phrase('portal.general.lang-diff', { active_lang: lang_diff.active_lang.title, person_lang: lang_diff.person_lang.title }) }}
+              <a href="{{ path('portal_change_language', {lang_code: lang_diff.active_lang.url_code}) }}" class="alert-button post-link">{{ phrase('portal.general.lang-change-to-current', { lang: lang_diff.active_lang.title }) }}</a>
+              <a href="{{ path('portal_change_language', {lang_code: lang_diff.person_lang.url_code}) }}" class="alert-button post-link">{{ phrase('portal.general.lang-switch', { lang: lang_diff.person_lang.title }) }}</a>
+            </span>
+        {% endif %}
+
+        {% for saved in saved_forms %}
+            {% set alert_id = saved.link %}
+            <span class="alert" data-alert-id="{{ alert_id }}">
+                <div class="click-to-dismiss"><i class="fa fa-times"></i></div>
+                {{ phrase('portal.account.submit-saved-form', { type: saved.message }) }}
+                <a class="alert-button" href="{{ saved.link }}">{{ phrase('portal.account.submit-saved-form-go') }}</a>
+            </span>
+        {% endfor %}
+
+        {% for ticket in tickets_awaiting_reply %}
+            {% set last_msg = ticket.getLastAgentMessage() %}
+            {% if last_msg.person.display_name_user is defined %}
+                {% set alert_id = portal_path(ticket) %}
+                <span class="alert" data-alert-id="{{ alert_id }}" data-alert-version="{{ last_msg.getDateCreated().getTimestamp() }}">
+                    <div class="click-to-dismiss"><i class="fa fa-times"></i></div>
+                    <a href="{{ portal_path(ticket) }}">
+                        You have a new reply on your ticket "<span class="ticket-title">{{ ticket.subject }}</span>" by {{ last_msg.person.display_name_user }}: <span class="post-content">{{ last_msg.getMessagePreviewText(100) }}</span>
+                    </a>
+                </span>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

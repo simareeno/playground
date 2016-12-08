@@ -1,0 +1,9 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    {% if is_valid %}
+        Email validated sucessfully
+    {% else %}
+        Invalid validation code
+    {% endif %}
+{% endblock inner_content %}

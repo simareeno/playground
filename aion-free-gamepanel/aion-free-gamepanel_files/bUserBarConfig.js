@@ -1,0 +1,2 @@
+(function(){define(["module","packages/jquery"],function(e,r){return function(){var a,n;return n=r(document.documentElement),a=r.extend({area:n.data("area").toUpperCase(),lang:n.attr("lang"),staging:n.data("staging")},e.config()),"string"==typeof a.gamesOrder&&(a.gamesOrder=JSON.parse(a.gamesOrder),Array.isArray(a.gamesOrder)||(a.gamesOrder=r.map(a.gamesOrder,function(e){return e}))),a}})}).call(this);
+//# sourceMappingURL=bUserBarConfig.js.map

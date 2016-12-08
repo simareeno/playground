@@ -1,0 +1,24 @@
+{% import 'Theme:Tickets:macros.html.twig' as macros %}
+<div class="ticket-message agent-message">
+  <div class="ticket-owner">
+    <div class="ticket-action-date">{{ date_ago(msg.date_created) }}</div>
+    {{ macros.person_inline(msg.person) }}
+    <span>{{ phrase('portal.tickets.timeline_wrote') }}</span>
+  </div>
+
+  <div class="ticket-message-content">
+    {{ render_message(msg) }}
+    {% if msg.getAttachmentsList()|length > 0 %}
+      <div class="ticket-message-files">
+        <h1>{{ phrase('portal.tickets.timeline_attached') }}</h1>
+        <ul>
+          {% for attachment in msg.getAttachmentsList() %}
+            <li>
+              {{ macros.attachment_full(attachment) }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</div>

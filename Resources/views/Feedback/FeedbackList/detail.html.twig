@@ -1,0 +1,66 @@
+{% for item in pager %}
+<div class="feedback-item feedback-list-item">
+  {%  include 'Theme:Feedback:items_controls_partial.html.twig' with {'item': item} %}
+
+  <div class="feedback-item-content">
+    <span class="feedback-status">
+      {% if item.status_category %}
+      <a href="{{ portal_path(item.status_category) }}" data-id="{{ item.status_category.id }}">
+        <i class="fa fa-eye"></i> {{ object_phrase(item.status_category) }}
+      </a>
+      {% else %}
+        {{ item.status }}
+      {% endif %}
+    </span>
+
+    <span class="feedback-item-type">
+      <a href="{{ portal_path(item.category) }}" class="feedback-category" data-id="{{ item.category.id }}">{{ object_phrase(item.category) }}</a>
+    </span>
+
+    <h1>
+      <a href="{{ portal_path(item) }}">{{ item.title }}</a>
+    </h1>
+
+    <div class="comment">
+      <p>{{ item.getContentPlainHtml()|html_content_preview(350) }}</p>
+    </div>
+
+      <div class="article-meta">
+        {{ phrase('portal.general.by_2') }}
+        <span style="background: url({{ avatar_url(item.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>{{ item.person.display_name }}
+         {{ phrase('portal.general.on') }} {{ item.date_published ? item.date_published|date('day') : item.date_created|date('day') }}
+
+      {% if item.calc_num_comments > 0 %}
+        <hr>
+      <span><a href="{{ portal_path(item) }}#comments"><i class="fa fa-comment"></i> {{ phrase('portal.general.comments-count', {count: item.calc_num_comments}) }}</a></span>
+      {% endif %}
+
+      {% if item.getCustomDataSelection() %}
+        <hr>
+      <span><i class="fa fa-inbox"></i> {{ item.getCustomDataSelection().title }}</span>
+      {% endif %}
+
+      {% if item.labels|length %}
+        <hr>
+      <span>
+        <i class="fa fa-tags"></i>
+        {% for l in item.labels %}
+        <a href="{{ path('portal_search_labels', { label: l }) }}">{{ l }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </span>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+{% else %}
+  {% if filtered %}
+    <strong class="no-data">{{ phrase('portal.feedback.no_matching') }}</strong>
+  {% else %}
+    <strong class="no-data">{{ phrase('portal.feedback.none') }}</strong>
+  {% endif %}
+{% endfor %}
+
+{% if show_pager %}
+   {% show feedback_pager %}
+{% endif %}

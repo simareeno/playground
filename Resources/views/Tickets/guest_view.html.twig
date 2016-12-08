@@ -1,0 +1,16 @@
+{% extends 'Theme:Tickets:base_view.html.twig' %}
+
+{% block page_specific_content %}
+  <div class="ticket-messages" style="min-height: 400px;">
+    {% show ticket_timeline %}
+    <div class="ticket-reply-closed">
+         <a href="{{ portal_path(ticket, 'edit') }}">{{ phrase('portal.tickets.please_login_to_reply') }}</a>
+    </div>
+  </div>
+{% endblock page_specific_content %}
+
+{% block page_header %}
+{% endblock page_header %}
+
+{% block page_sidebar_add_participant_form %}
+{% endblock page_sidebar_add_participant_form %}

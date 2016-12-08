@@ -1,0 +1,2 @@
+(function(){define(["packages/jquery"],function(e){var r,n,a;return r={},n=5e3,a=function(a,t){var u;return"string"==typeof a&&(a={url:a}),(t||(null!=(u=r[a.url])?u.expires:void 0)<Date.now())&&delete r[a.url],a.url in r||(r[a.url]={promise:e.ajax(a),expires:Date.now()+n}),r[a.url].promise},{accountData:function(e){return a("/launcher/accountData/",e)},gameData:function(e){return a("/launcher/gameData/",e)},userData:function(e){return a("/launcher/userData/",e)},reset:function(){return r={}}}})}).call(this);
+//# sourceMappingURL=launcher.js.map

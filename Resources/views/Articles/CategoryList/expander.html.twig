@@ -1,0 +1,18 @@
+{# TODO: style not implemented yet #}
+{#{% if category_children|length > 0 %}#}
+    {#{% for category in category_children %}#}
+        {#<article class="article-categories-expandable">#}
+            {#<header>#}
+                {#<a href="{{ portal_path(category) }}">#}
+                    {#<h1>{{ category.title }}</h1>#}
+                    {#<div class="article-controls single-line">#}
+                        {#<span class="article-tag pointy">{{ phrase('portal.articles.x-articles', {count: category.articles|length}) }}</span>#}
+                        {#<span class="expandable-control"><i class="fa fa-angle-up"></i></span>#}
+                    {#</div>#}
+                {#</a>#}
+            {#</header>#}
+
+            {#{% show kb_list_simple with { show_category_link: true } %}#}
+        {#</article>#}
+    {#{% endfor %}#}
+{#{% endif %}#}

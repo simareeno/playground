@@ -1,0 +1,2 @@
+(function(){define(["packages/jquery"],function(n){var t,e,i,r,u;return t=null,e=null,r=0,i=0,u=function(){return r=t.width()-e.width()},{init:function(i){return t=n(i),e=t.find(".bScrollbarsTest__eContent"),u()},getWidth:function(){return 0+r},getHeight:function(){return 0+i},isBodyWithBars:function(){return n(window).innerHeight()<document.documentElement.scrollHeight}}})}).call(this);
+//# sourceMappingURL=bScrollbarsTest.js.map

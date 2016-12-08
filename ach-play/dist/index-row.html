@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ach-play</title>
+  <link rel="stylesheet" type="text/css" href="slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='constcss/ach-style.css' type='text/css'/>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel='stylesheet' href='constcss/animations.css' type='text/css'/>
+  <link rel='stylesheet' href='constcss/icons.css' type='text/css'/>
+  <link rel='stylesheet' href='constcss/bgs.css' type='text/css'/>
+
+  <style>
+
+    .achievements-slide {
+      display:inline-block;
+      width:176px;
+      padding:0 0px;
+    }
+
+    .slick-track {
+      left: 53px;
+      overflow: none;
+    }
+
+    .achievement {
+      width: 176px;
+    }
+
+    .achievements-slide:hover .achievement-scale {
+      transform: scale(1);
+    }
+    .achievement-scale {
+      transform: scale(1);
+      /*opacity: 0;*/
+    }
+
+    .slick-active .achievement-scale {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slick-list {
+      /*overflow: visible;*/
+    }
+
+    .next .achievement:hover .achievement-scale {
+      transform:translate(-10px,0);
+      opacity: .5;
+    }
+
+    .previous .achievement:hover .achievement-scale {
+      transform:translate(10px,0);
+      opacity: .5;
+    }
+
+    .slick-active .achievement:hover .achievement-scale {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="play">
+    <div class="achievements">
+      <div class="achievements-header">
+        <a href="">Достижения</a>
+        <div class="achievements-counter">получено <span>6</span> из 20</div>
+      </div>
+      <div class="achievement-nav">
+        <div class="achievement-nav-left">
+          <svg x="0px" y="0px" viewBox="0 0 6 7"> <path d="M6,3.5L0,7V0L6,3.5z"/> </svg>
+        </div>
+        <div class="achievement-nav-right">
+          <svg x="0px" y="0px" viewBox="0 0 6 7"> <path d="M6,3.5L0,7V0L6,3.5z"/> </svg>
+        </div>
+      </div>
+      <div class="achievements_gallery">
+
+
+        <div class="achievements-slide">
+          <div class="achievement achievement--color-white achievement--in_group achievement--locked achievement--pb" name="achievement-type--aion-fortune-wheel">
+            <div class="achievement-scale">
+      			<div class="achievement-badge">
+      				<div class="achievement-icon">
+      					<svg class="achievement-rings" width="136" height="136" data-reactid=".1.0.1:7.0.1">
+      						<path class="achievement-ring achievement-ring--filled" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(3, 68, 68)"></path>
+      						<path class="achievement-ring achievement-ring--filled" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(123, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(243, 68, 68)"></path>
+      					</svg>
+      				</div>
+      			</div>
+      			<div class="achievement-name">Крылатая угроза</div>
+      			<div class="achievement-prize">
+      				<span class="achievement-prize_desc">Становишься опасным</span>
+      			</div>
+
+            <div class="achievement-hover_block">
+      				<div class="achievement-name">Крылатая угроза</div>
+							<div class="achievement-content">
+	      				<div class="achievement-prize">
+	      					<div class="achievement-prize_title">Награда</div>
+	      						<span class="achievement-prize_desc">Становишься опасным</span>
+	      				</div>
+	      				<div class="achievement-conditions">
+	      					<div class="achievement-conditions_title">Выполненные условия</div>
+	      					<div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить серебристых драконов</span>
+	      						<div class="achievement-condition_progress achievement-condition_progress--started">
+	      							<div class="achievement-condition_progress_bar">
+	      								<div class="achievement-condition_progress_bar_completed" style="width:70%"></div>
+	      							</div>
+	      							<span class="achievement-condition_progress_achieved">12000</span>
+	      							<span class="achievement-condition_progress_of">из</span>
+	      							<span class="achievement-condition_progress_total">20000</span>
+	      						</div>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+									 <div class="achievement-condition">
+	      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+	      						<span class="achievement-condition_desc">Убить главного дракона</span>
+	      					 </div>
+	      				</div>
+							</div>
+      			</div>
+          </div>
+          </div>
+        </div>
+
+        <div class="achievements-slide">
+          <div class="achievement achievement--color-white achievement--in_group achievement--locked achievement--multiple achievement--pb" name="achievement-type--aion-cap-levels">
+            <div class="achievement-scale">
+      			<div class="achievement-badge">
+      				<div class="achievement-icon">
+      					<svg class="achievement-rings" width="136" height="136" data-reactid=".1.0.1:7.0.1">
+      						<path class="achievement-ring achievement-ring--filled" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(3, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(123, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(243, 68, 68)"></path>
+      					</svg>
+      				</div>
+      			</div>
+      			<div class="achievement-name">Глава династии</div>
+            <div class="achievement-prize">
+      				<span class="achievement-prize_amount_plus">+</span>
+      				<span class="achievement-prize_amount_count">200</span>
+      				<span class="achievement-prize_amount_rouble">руб.</span>
+      			</div>
+
+            <div class="achievement-hover_block">
+            				<div class="achievement-name">Глава династии</div>
+                    <div class="achievement-prize">
+            					<div class="achievement-prize_title">Награда</div>
+            					<span class="achievement-prize_amount_plus">+</span>
+            					<span class="achievement-prize_amount_count">200</span>
+            					<span class="achievement-prize_amount_rouble">руб.</span>
+            					<span class="achievement-prize_amount_desc">на счет в&nbsp;Фогейме</span>
+            				</div>
+            				<div class="achievement-conditions">
+            					<div class="achievement-conditions_title">Выполненные условия</div>
+            					<div class="achievement-condition">
+            						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+            						<span class="achievement-condition_desc">Убить серебристых драконов</span>
+            						<div class="achievement-condition_progress achievement-condition_progress--started">
+            							<div class="achievement-condition_progress_bar">
+            								<div class="achievement-condition_progress_bar_completed" style="width:70%"></div>
+            							</div>
+            							<span class="achievement-condition_progress_achieved">12000</span>
+            							<span class="achievement-condition_progress_of">из</span>
+            							<span class="achievement-condition_progress_total">20000</span>
+            						</div>
+            					 </div>
+            					 <div class="achievement-condition">
+            						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+            						<span class="achievement-condition_desc">Убить главного дракона</span>
+            					 </div>
+            				</div>
+            			</div>
+
+          </div>
+          </div>
+        </div>
+
+        <div class="achievements-slide next">
+          <div class="achievement achievement--color-white achievement--locked achievement--in_group achievement--multiple achievement--pb" name="achievement-type--aion-first-million">
+            <div class="achievement-scale">
+      			<div class="achievement-badge">
+      				<div class="achievement-icon">
+      					<svg class="achievement-rings" width="136" height="136" data-reactid=".1.0.1:7.0.1">
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(3, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(123, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(243, 68, 68)"></path>
+      					</svg>
+      				</div>
+      			</div>
+      			<div class="achievement-name">Капиталист</div>
+      			<div class="achievement-prize">
+      				<span class="achievement-prize_desc">Слышишь этот звон в карманах?</span>
+      			</div>
+
+            <div class="achievement-hover_block">
+            				<div class="achievement-name">Капиталист</div>
+                    <div class="achievement-prize">
+            					<div class="achievement-prize_title">Награда</div>
+            					<div class="achievement-prize_desc">Слышишь этот звон в карманах?</div>
+            				</div>
+            				<div class="achievement-conditions">
+            					<div class="achievement-conditions_title">Выполненные условия</div>
+            					<div class="achievement-condition">
+            						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+            						<span class="achievement-condition_desc">Убить серебристых драконов</span>
+            						<div class="achievement-condition_progress achievement-condition_progress--started">
+            							<div class="achievement-condition_progress_bar">
+            								<div class="achievement-condition_progress_bar_completed" style="width:70%"></div>
+            							</div>
+            							<span class="achievement-condition_progress_achieved">12000</span>
+            							<span class="achievement-condition_progress_of">из</span>
+            							<span class="achievement-condition_progress_total">20000</span>
+            						</div>
+            					 </div>
+            					 <div class="achievement-condition">
+            						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+            						<span class="achievement-condition_desc">Убить главного дракона</span>
+            					 </div>
+            				</div>
+            			</div>
+
+          </div>
+          </div>
+        </div>
+
+
+
+        <div class="achievements-slide">
+          <div class="achievement achievement--color-white achievement--in_group achievement--locked achievement--multiple achievement--pb" name="achievement-type--aion-billionaire">
+            <div class="achievement-scale">
+      			<div class="achievement-badge">
+      				<div class="achievement-icon"></div>
+      			</div>
+      			<div class="achievement-name">Миллиардер</div>
+      			<div class="achievement-prize">
+      				<span class="achievement-prize_desc">Приручил бешеные деньги</span>
+      			</div>
+
+            <div class="achievement-hover_block">
+      				<div class="achievement-name">Point Blank</div>
+      				<div class="achievement-prize">
+      					<div class="achievement-prize_title">Награда</div>
+      					<div class="achievement-prize_desc">Приручил бешеные деньги</div>
+      				</div>
+      				<div class="achievement-conditions">
+      					<div class="achievement-conditions_title">Выполненные условия</div>
+      					<div class="achievement-condition">
+      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+      						<span class="achievement-condition_desc">Убить серебристых драконов</span>
+      						<div class="achievement-condition_progress achievement-condition_progress--started">
+      							<div class="achievement-condition_progress_bar">
+      								<div class="achievement-condition_progress_bar_completed" style="width:70%"></div>
+      							</div>
+      							<span class="achievement-condition_progress_achieved">12000</span>
+      							<span class="achievement-condition_progress_of">из</span>
+      							<span class="achievement-condition_progress_total">20000</span>
+      						</div>
+      					 </div>
+      					 <div class="achievement-condition">
+      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+      						<span class="achievement-condition_desc">Убить главного дракона</span>
+      					 </div>
+      				</div>
+      			</div>
+          </div>
+          </div>
+        </div>
+
+        <div class="achievements-slide">
+          <div class="achievement achievement--color-white achievement--in_group achievement--locked achievement--multiple achievement--pb" name="achievement-type--aion-arena-5-wins">
+            <div class="achievement-scale">
+      			<div class="achievement-badge">
+      				<div class="achievement-icon">
+      					<svg class="achievement-rings" width="136" height="136" data-reactid=".1.0.1:7.0.1">
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(3, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(123, 68, 68)"></path>
+      						<path class="achievement-ring" d="m 68, 2 a 66, 66 0 0,1 60.294 92.845" transform="rotate(243, 68, 68)"></path>
+      					</svg>
+      				</div>
+      			</div>
+      			<div class="achievement-name">Мастер поединка</div>
+            <div class="achievement-prize">
+      				<span class="achievement-prize_amount_plus">+</span>
+      				<span class="achievement-prize_amount_count">10</span>
+      				<span class="achievement-prize_amount_rouble">руб.</span>
+      			</div>
+
+            <div class="achievement-hover_block">
+      				<div class="achievement-name">Point Blank</div>
+                <div class="achievement-prize">
+        					<div class="achievement-prize_title">Награда</div>
+        					<span class="achievement-prize_amount_plus">+</span>
+        					<span class="achievement-prize_amount_count">10</span>
+        					<span class="achievement-prize_amount_rouble">руб.</span>
+        					<span class="achievement-prize_amount_desc">на счет в&nbsp;Фогейме</span>
+        				</div>
+      				<div class="achievement-conditions">
+      					<div class="achievement-conditions_title">Выполненные условия</div>
+      					<div class="achievement-condition">
+      						<i class="achievement-condition_check"><svg x="0px" y="0px"><path d="M6.8,7.6L3.6,4.4L2.5,6.5l4.1,4.7l6.3-8C13.6,4.3,14,5.6,14,7c0,3.9-3.1,7-7,7c-3.9,0-7-3.1-7-7c0-3.9,3.1-7,7-7c1.8,0,3.5,0.7,4.7,1.9L6.8,7.6z"/></svg></i>
+      						<span class="achievement-condition_desc">Одержи 5&nbsp;побед подряд на&nbsp;Арене Доблести одним персонажем</span>
+      					 </div>
+      				</div>
+      			</div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+
+  <script>
+  $('.achievements_gallery').slick({
+    infinite: false,
+    centerMode: false,
+    arrows: true,
+    dots: false,
+    draggable: false,
+    accessibility: false,
+    focusOnSelect: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    cssEase: 'ease-in-out',
+    speed: 350,
+    variableWidth: true,
+    waitForAnimate: true,
+    nextArrow: '.achievement-nav-right',
+    prevArrow: '.achievement-nav-left'
+  });
+
+
+  // $('.achievement').addClass('achievement--hover_available');
+
+  $('.slick-active .achievement').addClass('achievement--hover_available');
+
+  function activeSlide(clicker) {
+    $(clicker).on('click', function(){
+      $('.achievements-slide .achievement').removeClass('achievement--hover_available');
+      setTimeout( " $('.slick-active .achievement').addClass('achievement--hover_available'); ", 200);
+      $( ".slick-slide" ).removeClass( "previous" ).removeClass( "next" );
+      $( ".slick-current" ).prevAll('.slick-slide').addClass( "previous" );
+      $( ".slick-current" ).nextAll('.slick-slide').addClass( "next" );
+    });
+  }
+
+  activeSlide('.achievements-slide');
+  activeSlide('.slick-arrow');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Portal:User/macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <article class="feedback main-feedback" id="feedback_view">
+        {{  macros.lockout_notice(phrase('portal.account.comment-lockout'), lockout, lockout_time) }}
+        <div class="feedback-item">
+            {%  include 'Theme:Feedback:items_controls_partial.html.twig' with {'item': item} %}
+            <div class="feedback-item-content">
+                <span class="feedback-status">
+                    {% if item.status_category %}
+                        <a href="{{ portal_path(item.status_category) }}">
+                            {{ object_phrase(item.status_category) }}
+                        </a>
+                    {% else %}
+                        {{ item.status }}
+                        {# no link here because it's a worse case fallback #}
+                        {# every feedback should have a status_category! #}
+                    {% endif %}
+                </span>
+
+                <span class="feedback-item-type"><a href="{{ portal_path(item.category) }}">{{ object_phrase(item.category) }}</a></span>
+
+                <div class="header-buttons">
+                    {% show feedback_subscription_link %}
+                </div>
+
+                <h1>
+                    <a href="{{ portal_path(item) }}">{{ item.title }}</a>
+                </h1>
+
+                <div class="comment">
+                    <p>{{ item.getContentPlainHtml()|raw }}</p>
+                </div>
+
+                <div class="feedback-item-meta">
+                    <ul>
+                        <li><i class="fa fa-user"></i> {{ item.person.display_name }}</li>
+                        <li><a href="#comments"><i
+                                        class="fa fa-comment"></i> {{ phrase('portal.general.comments-count', { count: item.calc_num_comments }) }}</a></li>
+                        {% if item.getCustomDataSelection() %}
+                            <li><i class="fa fa-inbox"></i> {{ item.getCustomDataSelection().title }}</li>
+                        {% endif %}
+                        {% if item.labels|length %}
+                            <li>
+                                <i class="fa fa-tags"></i>
+                                {% for l in item.labels %}
+                                    <a
+                                    href="{{ path('portal_search_labels', { label: l }) }}">{{ l }}</a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="attached">
+                    {% if item.attachments|length > 0 %}
+                        <h3>{{ phrase('portal.feedback.attachments') }}</h3>
+                        {% for attachment in item.attachments %}
+                            <a href="{{ attachment.blob.downloadUrl }}" class="attachement">
+                                {% if attachment.blob.is_image %}
+                                    <img src="{{ attachment.blob.thumbnailUrl }}" alt="{{ attachment.blob.filename }}">
+                                {% else %}
+                                    {{ file_icon(attachment.blob) }}
+                                {% endif %}
+                                {{ attachment.blob.filename }}
+                                <span class="attachement-size">{{ attachment.blob.filesize }} bytes </span>
+                            </a><br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    {% show related_content %}
+
+    {% if item.calc_num_comments or new_comment_form %}
+        <div class="comment-box" id="comments">
+            <div class="titled-header">
+                <h1>{{ phrase('portal.general.comments-title', {count: item.calc_num_comments}) }}</h1>
+            </div>
+            {% show feedback_comments %}
+            {% show comment_form %}
+        </div>
+    {% endif %}
+
+{% endblock inner_content %}

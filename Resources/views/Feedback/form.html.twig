@@ -1,0 +1,75 @@
+{{ form_errors(form) }}
+{{ form_start(form) }}
+
+{% if form.category is defined %}
+<div class="feedback-form">
+    {{ form_errors(form.category) }}
+
+    <div class="main-input dpx-form">
+        <h3>{{ phrase('portal.feedback.form_i_have_a') }}:</h3>
+        <div class="question-type">
+            {{ form_widget(form.category) }}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="feedback-form-expanded as-no-dpui dpx-form"{% if form_was_submitted %} data-do-show="true"{% endif %}>
+    {% if is_user() %}
+        <div>
+            <div class="user-logged-in" href="#">
+                <i class="fa fa-user"></i> {{ phrase('portal.feedback.form_logged_in_as',
+                {'name': user.name, 'email': user.primary_email_address}) }}
+                <a href="{{ logout_path('portal') }}">{{ phrase('portal.feedback.form_logout') }}</a>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="bucket">
+        {{ form_label(form.title, phrase('portal.feedback.form_title')) }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, { style: 'width: 100%' }) }}
+    </div>
+
+    <div class="bucket">
+        {{ form_label(form.content, phrase('portal.feedback.form_tell_us_more')) }}
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content) }}
+    </div>
+
+    {{ form_widget(form.custom_data) }}
+
+    <div class="bucket new-ticket-attachments">
+        {{ form_label(form.attachments, phrase('portal.feedback.form_attach_files')) }}
+        {{ form_errors(form.attachments) }}
+        {{ form_widget(form.attachments) }}
+        {{ form_widget(form.more_attachments) }}
+    </div>
+
+    {% if form.name is defined %}
+        <div class="bucket">
+            {{ form_label(form.name, phrase('portal.forms.label_full_name')) }}
+            {{ form_errors(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+    {% endif %}
+
+    {% if form.email is defined %}
+        <div class="bucket">
+            {{ form_label(form.email.email, phrase('portal.feedback.form_email_not_shown')) }}
+            {{ form_errors(form.email.email) }}
+            {{ form_widget(form.email.email) }}
+        </div>
+    {% endif %}
+
+    {% if form.captcha is defined %}
+        <div class="bucket">
+            {{ form_errors(form.captcha) }}
+            {{ form_widget(form.captcha) }}
+        </div>
+    {% endif %}
+
+    <button class="main-input button" type="submit">{{ phrase('portal.feedback.form_btn_submit') }}</button>
+</div>
+{{ form_rest(form) }}
+{{ form_end(form) }}

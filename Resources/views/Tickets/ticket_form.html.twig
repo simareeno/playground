@@ -1,0 +1,26 @@
+<div id="edit_ticket_form">
+    <div class="dp_ticket_form dpx-form">
+        {{ form_errors(form) }}
+            {{ form_start(form, { attr: { class: 'form-ticket', novalidate: 'novalidate', name: 'ticket' } }) }}
+            <div class="dynamic-fields-container">
+                {% for widget in form.children if widget.vars.name not in ['_token', '_dp_csrf_token'] %}
+                    <div class="deskpro-form-widget field_{{ widget.vars.name }} {% if widget.vars.valid is defined and not widget.vars.valid %} form-error{% endif %}"
+                         data-field="{{ widget.vars.name }}">
+                        {{ form_row(widget) }}
+                    </div>
+                {% endfor %}
+            </div>
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+    </div>
+
+    <!-- BEGIN JS FORM -->
+    <div class="js_form_tpl" style="display: none;">
+        {% for widget in form_full.children if not widget.rendered and widget.vars.name not in ['_token', '_dp_csrf_token'] %}
+            <div class="column-full deskpro-form-widget field_{{ widget.vars.name }}" data-field="{{ widget.vars.name }}">
+                {{ form_row(widget) }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- END JS FORM -->

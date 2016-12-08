@@ -1,0 +1,18 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+  <div class="breadcrumbs">
+    {% show breadcrumbs %}
+  </div>
+
+  <header class="large-title">
+      <div class="header-buttons">
+          {% show rss_link %}
+          {% show kb_root_subscription_link %}
+      </div>
+      <h1>{{ phrase('portal.articles.section-title') }}</h1>
+      <p>{{ phrase('portal.articles.section-desc') }}</p>
+  </header>
+
+  {% show section kb with { articles_count: 5, with_tree: true } %}
+{% endblock inner_content %}

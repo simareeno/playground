@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html {% if language.is_rtl %}class="as-rtl" dir="rtl"{% endif %}>
+        <head>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+            <meta charset="utf-8" />
+            <title>{{ brand_setting('core.deskpro_name') }}</title>
+            <link href="{{ portal_css_url() }}" media="all" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('DeskPRO_PortalBundle_vendors_style.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+        </head>
+    <body>
+        <div class="world with-searchbox">
+
+            <div class="column-full">
+                {% if app.user and app.user.can_admin %}
+                    The portal has been disabled. You can re-enable the portal from <a href="{{ path('admin') }}#/portal/setup">Admin > Portal > Setup</a>.
+                {% else %}
+                    The portal has been disabled. If you are an agent, click the button below to go to the agent interface.
+                {% endif %}
+            </div>
+
+            <section class="welcome-news">
+
+                <ul class="big-button-collection big-buttons dpx-toggle-mobile">
+                    <li>
+                        <a href="{{ path('agent') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="title">Agent interface</span>
+                        </a>
+                    </li>
+                    {% if app.user and app.user.can_admin %}
+                    <li>
+                        <a href="{{ path('admin') }}">
+                            <i class="fa fa-gear"></i>
+                            <span class="title">Admin interface</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </section>
+        </div>
+    </body>
+    </html>
+

@@ -1,0 +1,20 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+    {% show breadcrumbs %}
+    </div>
+    <div class="downloads browse-page">
+    <header class="section-header padded">
+        <div class="header-buttons">
+            {% show rss_link %}
+            {% show download_cat_subscription_link %}
+        </div>
+        <h1>{{ object_phrase(category) }}</h1>
+    </header>
+    {% show download_cats_simple %}
+    <div class="column-full">
+        {% show download_list_detail %}
+    </div>
+    </div>
+{% endblock inner_content %}

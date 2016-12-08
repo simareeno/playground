@@ -1,0 +1,76 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+  <div class="breadcrumbs">
+    {% show breadcrumbs %}
+  </div>
+
+  <article class="news main-news">
+
+    <header class="large-title">
+        {% if type == 'own' and person.organization and person.organization_manager %}
+            <a class="button right" href="{{ path('portal_chats', { type: 'organization' }) }}">
+                {{ phrase('portal.chat.list_switch_to_organization') }}
+            </a>
+        {% endif %}
+        {% if type == 'organization' %}
+            <a class="button right" href="{{ path('portal_chats') }}">
+                {{ phrase('portal.chat.list_switch_to_my_chats') }}
+            </a>
+        {% endif %}
+        {% if type == 'organization' %}
+            <h1>{{ phrase('portal.chat.chat_logs_header_org') }}</h1>
+            <p>{{ phrase('portal.chat.chat_logs_desc_org') }}</p>
+        {% else %}
+            <h1>{{ phrase('portal.chat.chat_logs_header') }}</h1>
+            <p>{{ phrase('portal.chat.chat_logs_desc') }}</p>
+        {% endif %}
+    </header>
+
+    <table class="chat-list">
+        <tr>
+            <td class="table-header">
+                {{ phrase('portal.chat.list_date') }}
+            </td>
+            <td class="table-header">
+                {{ phrase('portal.chat.list_agent') }}
+            </td>
+            {% if type == 'organization' %}
+                <td class="table-header">
+                    {{ phrase('portal.chat.list_user') }}
+                </td>
+            {% endif %}
+            <td class="table-header">
+                {{ phrase('portal.chat.list_chat') }}
+            </td>
+        </tr>
+        {% for chat in pager %}
+            <tr class="item-row">
+                <td>
+                    <a class="overflow" href="{{ portal_path(chat) }}">{{ date(chat.date_created) }}</a>
+                </td>
+                <td>
+                    {% if chat.agent %}
+                        <a class="overflow" href="{{ portal_path(chat) }}">
+                            <span style="background: url({{ avatar_url(chat.agent) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>{{ chat.agent.display_name_user }}
+                        </a>
+                    {% endif %}
+                </td>
+                {% if type == 'organization' %}
+                    <td>
+                        <a class="overflow" href="{{ portal_path(chat) }}">
+                            <span style="background: url({{ avatar_url(chat.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>{{ chat.person.display_name_user }}
+                        </a>
+                    </td>
+                {% endif %}
+                <td>
+                    <a class="overflow" href="{{ portal_path(chat) }}">{{ chat.subject_preview }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+  {% show section chat_pager %}
+
+  </article>
+{% endblock inner_content %}

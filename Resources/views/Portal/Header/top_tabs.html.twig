@@ -1,0 +1,73 @@
+{% if tabs|length > 0 %}
+    <nav class="tabs">
+        <ul>
+            {% for tab in tabs %}
+
+                {% if tab == 'articles' %}
+                    <li{% if url_starts_with == 'kb' %} class="tab-active"{% endif %}>
+                        <a href="{{ path('portal_kb') }}">
+                            <img src="{{ asset('DeskPRO/Bundle/PortalBundle/Resources/img/icon-view-more.png', 'app_assets') }}">
+
+                            <div>
+                                <span class="title">{{ phrase('portal.general.nav-news') }}</span>
+                                <span class="subtitle">{{ phrase('portal.general.nav-news-desc') }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if tab == 'downloads' %}
+                    <li{% if url_starts_with == 'downloads' %} class="tab-active"{% endif %}>
+                        <a href="{{ path('portal_downloads') }}">
+                            <img src="{{ asset('DeskPRO/Bundle/PortalBundle/Resources/img/icon-star.png', 'app_assets') }}">
+
+                            <div>
+                                <span class="title">{{ phrase('portal.general.nav-downloads') }}</span>
+                                <span class="subtitle">{{ phrase('portal.general.nav-downloads-desc') }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if tab == 'feedback' %}
+                    <li{% if url_starts_with == 'feedback' %} class="tab-active"{% endif %}>
+                        <a href="{{ path('portal_feedback') }}">
+                            <img src="{{ asset('DeskPRO/Bundle/PortalBundle/Resources/img/icon-shield.png', 'app_assets') }}">
+
+                            <div>
+                                <span class="title">{{ phrase('portal.general.nav-feedback') }}</span>
+                                <span class="subtitle">{{ phrase('portal.general.nav-feedback-desc') }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if tab == 'newticket' %}
+                    <li{% if url_starts_with == 'new-ticket' %} class="tab-active"{% endif %}>
+                        <a href="{{ path('portal_new_ticket') }}">
+                            <img src="{{ asset('DeskPRO/Bundle/PortalBundle/Resources/img/icon-shield.png', 'app_assets') }}">
+
+                            <div>
+                                <span class="title">{{ phrase('portal.general.nav-newticket') }}</span>
+                                <span class="subtitle">{{ phrase('portal.general.nav-newticket-desc') }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if tab == 'news' %}
+                    <li{% if url_starts_with == 'news' %} class="tab-active"{% endif %}>
+                        <a href="{{ path('portal_news') }}">
+                            <img src="{{ asset('DeskPRO/Bundle/PortalBundle/Resources/img/icon-star.png', 'app_assets') }}">
+
+                            <div>
+                                <span class="title">{{ phrase('portal.general.nav-news') }}</span>
+                                <span class="subtitle">{{ phrase('portal.general.nav-news-desc') }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}

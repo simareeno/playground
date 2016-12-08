@@ -1,0 +1,52 @@
+<div id="new_ticket_page">
+
+    <!-- BEGIN NEW TICKET FORM -->
+    <div class="dp_ticket_form dpx-form{% if show_ticket_suggestions %} dpx-with-ticket-deflection{% endif %}">
+
+        {# avoid putting an absolute action the GET query is significant for defaults #}
+        <form method="POST" class="form-ticket" novalidate data-save-draft="new_ticket{{ app.user ? '-' ~ app.user.id : '' }}" name="ticket" enctype="multipart/form-data">
+
+        {% if form_errors|length > 0 %}
+            <div class="column-full">
+                <div class="bucket">
+                    <div class="form-error-list" style="max-width: 620px;">
+                        <h1>There are some errors with your submission.</h1>
+                        <ul>
+                            {% for error in form_errors %}
+                                {% set error_view = error.origin.createView() %}
+                                <li>
+                                        <span>{{ phrase_form_error(error) }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="dynamic-fields-container">
+            {% for widget in form.children if not widget.rendered and widget.vars.name not in ['_token', '_dp_csrf_token'] %}
+                {% set hidden = widget.vars.name == 'department' and app.request.get('hide_department') %}
+                <div class="column-full deskpro-form-widget field_{{ widget.vars.name }}"
+                     data-field="{{ widget.vars.name }}"
+                     style="{% if hidden %}display: none;{% endif %}">
+                    {{ form_row(widget) }}
+                </div>
+            {% endfor %}
+        </div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+    <!-- END NEW TICKET FORM -->
+
+    <!-- BEGIN JS FORM -->
+    <div class="js_form_tpl" style="display: none;">
+        {% for widget in form_full.children if not widget.rendered and widget.vars.name not in ['_token', '_dp_csrf_token'] %}
+            <div class="column-full deskpro-form-widget field_{{ widget.vars.name }}" data-field="{{ widget.vars.name }}">
+                {{ form_row(widget) }}
+            </div>
+        {% endfor %}
+    </div>
+    <!-- END JS FORM -->
+
+</div>

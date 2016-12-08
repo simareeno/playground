@@ -1,0 +1,14 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+   <header class="section-header">
+        <h1>{{ phrase('portal.account.section-title-usersource-email') }}</h1>
+    </header>
+
+   {{ phrase('portal.account.usersource-set-email-desc') }}
+
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    <button type="submit">{{ phrase('portal.account.email-btn-usersource-set') }}</button>
+    {{ form_end(form) }}
+{% endblock inner_content %}

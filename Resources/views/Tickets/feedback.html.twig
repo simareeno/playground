@@ -1,0 +1,147 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+
+
+
+
+    <div class="ticket-success-blurb">
+    <div class="icon-mark"></div>
+    <h1>{{ phrase('user.tickets.rate_support') }}</h1>
+      <span class="agent-avatar agent-avatar-mid"
+      style="background-image: url({{ avatar_url(message.person, 36) }});"></span>
+      <p>{{ phrase('portal.tickets.rate-intro', {name: message.person.display_name_user, subject: ticket.subject}) }}</p>
+    <div class="footer">
+        <article class="news kb-article dpx-form padded">
+            {% if not setrating %}
+                {# this is shown when the user resolves a ticket #}
+                <p>{{ phrase('portal.tickets.rate-question') }}</p>
+                <form class="form-ticket" action="{{ path('portal_tickets_feedback', {'ticket_ref': ticket.ref, 'auth': ticket.auth, 'message_id': message.id}) }}" method="post">
+                    <div class="dp-choice-widget-group with-dpx">
+                        <div class="radio-button dpx-radio-button" tabindex="0">
+                            <input type="radio" id="feedback_rating_p" name="rating" value="1" {% if feedback.rating == 1 %}checked="checked"{% endif %} />
+                            <label style="text-align: left" class="title" for="feedback_rating_p">{{ phrase('portal.tickets.rate-positive') }}</label>
+                        </div>
+                        <div class="radio-button dpx-radio-button" tabindex="0">
+                            <input id="feedback_rating_0" type="radio" name="rating" value="0" {% if feedback.rating == 0 %}checked="checked"{% endif %} />
+                            <label class="title" style="text-align: left" for="feedback_rating_0">{{ phrase('portal.tickets.rate-neutral') }}</label>
+                        </div>
+                        <div class="radio-button dpx-radio-button" tabindex="0">
+                            <input type="radio" id="feedback_rating_n" name="rating" value="-1" {% if feedback.rating == -1 %}checked="checked"{% endif %} />
+                            <label class="title" style="text-align: left" for="feedback_rating_n">{{ phrase('portal.tickets.rate-negative') }}</label>
+                        </div>
+                    </div>
+                    <textarea name="message" style="width: 520px; height: 60px;" placeholder="{{ phrase('portal.tickets.feedback_message_leave_comment') }}">{{ feedback.message }}</textarea>
+                    <br />
+                    <button class="dp-btn dp-btn-primary" type="submit" style="margin-top: 10px;">{{ phrase('portal.feedback.submit_feedback') }}</button>
+                </form>
+            {% else %}
+                {# this is shown when clicking an email link, #}
+                <p>{{ phrase('user.tickets.rate-thanks-vialink') }}</p>
+
+                <form action="{{ path('portal_tickets_feedback', {'ticket_ref': ticket.ref, 'auth': ticket.auth, 'message_id': message.id}) }}" method="post">
+                    <input type="hidden" name="rating" value="{{ feedback.rating }}" />
+                    <textarea name="message" style="width: 520px; height: 60px;" placeholder="{{ phrase('portal.tickets.feedback_message_leave_comment') }}">{{ feedback.message }}</textarea>
+
+                    <br />
+                    <button class="dp-btn dp-btn-primary" type="submit" style="margin-top: 10px;">{{ phrase('portal.feedback.submit_feedback') }}</button>
+                </form>
+            {% endif %}
+        </article>
+    </div>
+</div>
+
+
+
+
+
+
+    {#<article>#}
+{#<div class="column-full">#}
+{#<header class="large-title">#}
+            {#<h1>{{ phrase('user.tickets.rate_support') }}</h1>#}
+        {#</header>#}
+
+        {#<article class="news kb-article dpx-form padded">#}
+
+        {#<form class="form-ticket" action="{{ path('portal_tickets_feedback', {'ticket_ref': ticket.ref, 'auth': ticket.auth, 'message_id': message.id}) }}" method="post">#}
+
+        {#<div class="rate-article">#}
+            {#<div class="titled-header">#}
+                          {#<span class="agent-avatar agent-avatar-mid"#}
+                          {#style="background-image: url({{ avatar_url(message.person, 36) }});"></span>#}
+                          {#<p>{{ phrase('portal.tickets.rate-intro', {name: message.person.display_name_user, subject: ticket.subject}) }}</p>#}
+                          {#<p>{{ phrase('portal.tickets.rate-question') }}</p>#}
+            {#</div>#}
+
+            {#&#123;&#35;<div class="rate-article">&#35;&#125;#}
+                        {#<div class=" dp-choice-widget-group with-dpx">#}
+                            {#<div class="radio-button dpx-radio-button" tabindex="0">#}
+                                {#<input type="radio" id="feedback_rating_p" name="rating" value="1" {% if feedback.rating == 1 %}checked="checked"{% endif %} />#}
+                                {#<label style="text-align: left" class="title" for="feedback_rating_p">{{ phrase('portal.tickets.rate-positive') }}</label>#}
+                            {#</div>#}
+                            {#<div class="radio-button dpx-radio-button" tabindex="0">#}
+                                {#<input id="feedback_rating_0" type="radio" name="rating" value="0" {% if feedback.rating == 0 %}checked="checked"{% endif %} />#}
+                                {#<label class="title" style="text-align: left" for="feedback_rating_0">{{ phrase('portal.tickets.rate-neutral') }}</label>#}
+                            {#</div>#}
+                            {#<div class="radio-button dpx-radio-button" tabindex="0">#}
+                                {#<input type="radio" id="feedback_rating_n" name="rating" value="-1" {% if feedback.rating == -1 %}checked="checked"{% endif %} />#}
+                                {#<label class="title" style="text-align: left" for="feedback_rating_n">{{ phrase('portal.tickets.rate-negative') }}</label>#}
+                            {#</div>#}
+                        {#</div>#}
+            {#</div>#}
+        {#&#123;&#35;</div>&#35;&#125;#}
+
+        {#</form>#}
+        {#</article>#}
+
+
+            {#{% if not setrating %}#}
+
+
+                                  {#<label class="dp-rate-box dp-positive">#}
+                                      {#<i>#}
+                                          {#☺#}
+                                      {#</i>#}
+                                      {#<span>#}
+
+                                      {#</span>#}
+                                  {#</label>#}
+                                  {#<label class="dp-rate-box dp-neutral">#}
+                                      {#<i>#}
+                                          {#&mdash;#}
+                                      {#</i>#}
+                                      {#<span>#}
+
+                                      {#</span>#}
+                                  {#</label>#}
+                                  {#<label class="dp-rate-box dp-negative">#}
+                                      {#<i>#}
+                                          {#☹#}
+                                      {#</i>#}
+                                      {#<span>#}
+
+                                      {#</span>#}
+                                  {#</label>#}
+                                  {#<textarea name="message" style="width: 520px; height: 60px;" placeholder="{{ phrase('portal.tickets.feedback_message_leave_comment') }}">{{ feedback.message }}</textarea>#}
+
+                                  {#<button class="dp-btn dp-btn-primary" type="submit" style="margin-top: 10px;">{{ phrase('portal.feedback.submit_feedback') }}</button>#}
+
+                      {#</form>#}
+          {#{% else %}#}
+              {#<p>{{ phrase('user.tickets.rate-thanks-vialink') }}</p>#}
+
+              {#<form action="{{ path('user_tickets_feedback_save', {'ticket_ref': ticket.ref, 'auth': ticket.auth, 'message_id': message.id}) }}" method="post">#}
+                  {#&#123;&#35;{{ form_token() }}&#35;&#125;#}
+                  {#<input type="hidden" name="rating" value="{{ feedback.rating }}" />#}
+                  {#<textarea name="message" style="width: 520px; height: 60px;" placeholder="{{ phrase('user.tickets.feedback_message_leave_comment') }}">{{ feedback.message }}</textarea>#}
+
+                  {#<br />#}
+                  {#<button class="dp-btn dp-btn-primary" type="submit" style="margin-top: 10px;">{{ phrase('user.feedback.submit_feedback') }}</button>#}
+              {#</form>#}
+          {#{% endif %}#}
+    {#</article>#}
+{% endblock inner_content %}

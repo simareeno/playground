@@ -1,0 +1,23 @@
+{% if pager|length > 0 %}
+<div class="sidebar-list">
+  <div class="sidebar-content">
+    <h1>{{ phrase('portal.sidebar.top_articles_title') }}</h1>
+    <ul>
+      {% for article in pager %}
+        <li>
+          <a href="{{ portal_path(article) }}"><i class="fa fa-file-text-o"></i> {{ article.translated_title }}</a>
+        <span class="meta">
+          {% if article.person %}
+            {{ phrase('portal.sidebar.article_posted_by', { name: article.person.display_name_user }) }}
+          {% endif %}
+          {# todo: these need better styles, leaving out for now #}
+          {#<span class="text-tag rating-tag">12 <i class="fa fa-caret-down"></i></span>#}
+          {#<span class="text-tag comment-tag">12<i class="fa fa-comment"></i></span>#}
+        </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <hr>
+</div>
+{% endif %}

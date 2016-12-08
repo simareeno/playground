@@ -1,0 +1,6 @@
+{% if rss_link is defined and rss_link|length > 0 %}
+<a href="{{ rss_link }}">
+    {{ phrase('portal.general.rss_subscribe') }}
+    <i class="fa fa-rss"></i>
+</a>
+{% endif %}

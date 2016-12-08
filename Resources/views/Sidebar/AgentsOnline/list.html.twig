@@ -1,0 +1,20 @@
+<div class="agents-online">
+  <div class="sidebar-content">
+    <h1>Available Agents{% if online_agents_count > 0 %} <span class="text-tag">{{ online_agents_count }} online</span>{% endif %}</h1>
+    <div>
+        {% if online_agents_count > 0 %}
+        <ul>
+            {% for agent in online_agents %}
+            <li>
+                <span class="agent-avatar agent-avatar-tiny" style="background: url({{ avatar_url(agent, 36) }}) no-repeat; background-size: cover"></span>
+                <span class="agent">{{ agent.display_name_user }}</span>
+            </li>
+            {% endfor %}
+    </ul>
+    {% else %}
+        {{ phrase('portal.sidebar.agents_none', { new_ticket_url: path('portal_new_ticket') }) }}
+    {% endif %}
+    </div>
+  </div>
+  <hr>
+</div>

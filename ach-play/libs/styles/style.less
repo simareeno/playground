@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+  user-select:none;
+}
+
+body {
+  background-color:#5780ac;
+}
+
+.play {
+  background-image: url(img/bg.jpg);
+  height:1770px;
+  background-repeat: no-repeat;
+}
+
+.achievements {
+  position: absolute;
+  top: 1090px;
+  left: 797px;
+  // width:469px;
+  // overflow: hidden;
+
+  &-header {
+    margin-bottom:30px;
+
+    a {
+      font-family: PT Sans, sans-serif;
+      font-size:24px;
+      color:black;
+      margin-left:30px;
+
+      &:hover {
+        color:red;
+      }
+    }
+  }
+
+  &-link {
+    position: absolute;
+    color:#245fd9;
+    left: 29px;
+    top: 41px;
+    font-family: PT Sans;
+    font-size: 16px;
+    text-decoration: underline;
+
+    &:hover {
+      color:red;
+    }
+  }
+
+  &-counter {
+    font-family: Arial, sans-serif;
+    color:#999;
+    font-size:14px;
+    position: absolute;
+    top: 5px;
+    left: 175px;
+
+    span {
+      font-size:18px;
+      color:#fc0;
+      font-weight: bold;
+    }
+  }
+
+  &_gallery {
+    width:469px;
+    position: relative;
+    // top: 10px;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  margin-left: -70px;
+
+  li {
+    display:inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: black;
+    margin: 0 10px 0;
+
+    &.slick-active {
+      background: #fc0;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
+
+.slick {
+
+  &-slide {
+    outline:none;
+    // transform: scale(.5);
+    // transition: scale 1s, opacity .2s;
+    // opacity: 0.5;
+  }
+
+  &-track {
+    padding: 20px 0;
+    height: 500px;
+  }
+
+}
+
+.achievement {
+
+	&-content {
+		max-height: 200px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		padding-right: 15px;
+
+		&::-webkit-scrollbar {
+			height: 10px;
+			width: 10px;
+			background: rgba(0, 0, 0, .1);
+			border-radius: 10px;
+			margin-left: 10px;
+			transform: translate(10px,0);
+		}
+			&::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, .2);
+			transition: background .2s ease-in-out;
+			border-radius: 10px;
+			transform: translate(10px,0);
+
+			&:hover {
+				background: rgba(0, 0, 0, .3);
+				transition: background .2s ease-in-out;
+			}
+		}
+			&::-webkit-scrollbar-corner {
+			background: transparent;
+		}
+	}
+
+  &--color-white {
+
+      &.achievement--hover_available:hover .achievement-badge .achievement-icon,
+      .achievement--hovered .achievement-badge .achievement-icon {
+        background-color: #999;
+        box-shadow: 0 0 0 12px #fff;
+      }
+
+			.achievement-icon-placeholder {
+				box-shadow: 0 0 0 12px white !important;
+				background-color: #999 !important;
+			}
+
+      &.achievement--unlocked .achievement-prize_desc {
+        color:black;
+      }
+
+      &.achievement--locked .achievement-icon:after {
+        opacity: .5;
+      }
+
+      .achievement-icon {
+        background-color:#999;
+      }
+
+			.achievement-hover_block {
+				background-color: white;
+				box-shadow: 0 10px 40px 0 rgba(0,0,0,.4) !important;
+			}
+
+			.achievement-ring {
+				stroke: #999 !important;
+
+				&--filled {
+					stroke: #fac704 !important;
+				}
+			}
+
+			.achievement-condition_progress_bar {
+				background-color: #999;
+			}
+
+			.achievement-condition_progress_bar_completed {
+				background-color: #000;
+			}
+
+			.achievement-condition_progress_achieved,
+			.achievement-conditions_title,
+			.achievement-prize_title {
+				color: #000;
+			}
+
+			.achievement-condition--achieved {
+				.achievement-condition_check path {
+					fill: #000;
+				}
+
+				.achievement-condition_desc {
+					color: #000;
+				}
+		}
+  }
+}
+
+.achievement-nav {
+  position: absolute;
+  top: 0px;
+  right: 90px;
+
+  &-right {
+    left: 29px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &-left {
+    border-radius: 4px 0 0 4px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slick-disabled {
+
+  svg {
+    fill: #cfd0d3!important;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cfd0d3;
+
+  &:hover {
+
+    svg {
+      fill:red;
+    }
+  }
+
+  svg {
+    width: 8px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    transition: fill .2s;
+  }
+}
+
+.achievements-slide:hover .achievement-scale {
+  transform: scale(.6);
+}
+
+.slick-current:hover .achievement-scale {
+  transform: scale(1);
+}
+
+.achievement-scale {
+  transform: scale(.5);
+  transition: transform .3s, opacity .3s;
+  opacity: .3;
+}
+
+.slick-center .achievement-scale {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.achievement--in_group.achievement {
+  padding:0!important;
+}
+
+.achievement-hover_block, .achievement-hover_block {
+  left: -30px;
+}

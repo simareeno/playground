@@ -1,0 +1,50 @@
+{% import 'Theme:Tickets:macros.html.twig' as macros %}
+{% if ticket.resolved %}
+    <div class="ticket-reply-closed">
+        <h1>{{ phrase('portal.tickets.view_now_closed') }}</h1>
+        {% if ticket.date_resolved %}
+            <p>{{ phrase('portal.tickets.view_closed', { ago: date_ago(ticket.date_resolved, null, false), day: ticket.date_resolved|date('day') }) }}</p>
+        {% endif %}
+        <hr>
+        <p class="footer">{{ phrase('portal.tickets.view_closed_more', { kb_url: path('portal_kb'), new_ticket_url: path('portal_new_ticket') })|raw }}</p>
+
+        {% if ticket.resolved and has_permission('tickets.reopen_resolved') %}
+        <a href="{{ portal_path(ticket, 'unresolve') }}" class="button post-link">
+            {{ phrase('portal.tickets.mark-unresolved') }}
+        </a>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if not ticket.resolved %}
+
+    <div class="ticket-reply dpx-form" id="ticket-reply-form">
+        <div class="ticket-reply-header">
+            {{ phrase('portal.tickets.view_reply_or_close', { close_url: portal_path(ticket, 'resolve') }) }}
+        </div>
+        {{ form_errors(form) }}
+        {{ form_start(form, { attr: { class: 'form-ticket' } }) }}
+        {% if form_errors|length > 0 %}
+            <div class="column-full">
+                <div class="bucket">
+                    <div class="form-error-list" style="max-width: 620px;">
+                        <h1>{{ phrase('portal.tickets.view_reply_errors') }}</h1>
+                        <ul>
+                            {% for error in form_errors %}
+                                {% set error_view = error.origin.createView() %}
+                                <li>
+                                    <span>{{ phrase_form_error(error) }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {{ form_widget(form.ticket_message) }}
+        {{ form_widget(form.attachments) }}
+        <div class="as-no-dpui">{{ form_widget(form.more_attachments) }}</div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endif %}

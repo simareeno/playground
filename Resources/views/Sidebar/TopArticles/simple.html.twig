@@ -1,0 +1,23 @@
+{% if pager|length %}
+<div class="content-list-wrap simple as-articles {% if pager|length %}with-items{% else %}with-no-items{% endif %}">
+  <div class="sidebar-content">
+    <h1>{{ phrase('portal.sidebar.top_articles_title') }}</h1>
+
+    <ul class="content-list no-padding">
+      {% for article in pager %}
+        <li>
+          <i class="fa fa-file-text-o"></i>
+          <a href="{{ portal_path(article) }}">
+            {{ article.translated_title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% if show_category_link %}
+    {# this would be the link to view all top articles (a feature we dont have yet) #}
+  {% endif %}
+  </div>
+</div>
+    <hr>
+{% endif %}

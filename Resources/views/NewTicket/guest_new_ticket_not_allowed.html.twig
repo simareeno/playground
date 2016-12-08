@@ -1,0 +1,10 @@
+<div class="ticket-not-available">
+    {% if can_open_ticket %}
+        <h1>{{ phrase('portal.tickets.need-login_title') }}</h1>
+        <p>{{ phrase('portal.tickets.need-login_desc', {login_url: path('portal_login')}) }}</p>
+    {% else  %}
+        <h1>{{ phrase('portal.tickets.not-allowed_title') }}</h1>
+
+        <p>{{ phrase('portal.tickets.not-allowed_desc') }}</p>
+    {% endif %}
+</div>

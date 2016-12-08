@@ -1,0 +1,71 @@
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Portal:User/macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <article class="news kb-article">
+        {{  macros.lockout_notice(phrase('portal.account.comment-lockout'), lockout, lockout_time) }}
+        <header>
+            <div class="header-button-container">
+                <div class="header-buttons">
+                    {% show download_subscription_link %}
+                </div>
+            </div>
+
+            <h1>{{ file.title }}</h1>
+
+            <div class="article-meta">
+                <span class="agent-avatar agent-avatar-mini"><img src="{{ avatar_url(file.person, 20) }}"></span>
+                {{ phrase('portal.articles.by-line', { name: file.person.display_name_user, date: file.date_published | date('day') }) }}
+                <span class="comments"><i class="fa fa-comments"></i> <a
+                            href="#comments">{{ phrase('portal.general.comments-count', {count: file.calc_num_comments}) }}</a></span>
+            </div>
+            {% if file.status != 'published' and file.status != 'archived' and app.user.is_agent %}
+                <div class="sub-note">{{ phrase('portal.downloads.view-as-agent') }}</div>
+            {% endif %}
+        </header>
+
+        <div class="article-extras as-top">
+            {% if file.blob and file.blob.is_image %}
+                <a href="{{ portal_path(file, 'save') }}" id="file-download-link"><img style="max-width: 100%; max-height: 400px;" src="{{ portal_path(file, 'serve') }}" alt="{{ file.title }}"/></a><br>
+            {% elseif file.blob %}
+                {{ content_icon(file) }}
+                <a href="{{ portal_path(file, 'save') }}" id="file-download-link">{{ file.filename }}</a>
+                ({{ file.readableFileSize }})
+            {% elseif file.fileurl %}
+                <a href="{{ file.fileurl }}" id="file-download-link">{{ file.filename }}</a><br>
+            {% endif %}
+        </div>
+
+        <div class="article-content padded">
+            {{ file.content|raw }}
+        </div>
+
+        {% if file.labels|length %}
+            <div class="tag-list">
+                <ul>
+                    <li class="tag-list-header"><i class="fa fa-tags"></i> {{ phrase('portal.general.tags') }}</li>
+                    {% for l in file.labels %}
+                        <li class="tag-list-item"><a href="{{ path('portal_search_labels', { label: l }) }}">{{ l }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </article>
+
+    {% show download_ratings %}
+    {% show related_content %}
+
+    {% if file.calc_num_comments or new_comment_form %}
+    <div class="comment-box" id="comments">
+        <div class="titled-header">
+            <h1>{{ phrase('portal.general.comments-title', {count: file.calc_num_comments}) }}</h1>
+        </div>
+        {% show download_comments %}
+        {% show comment_form %}
+    </div>
+    {% endif %}
+
+{% endblock inner_content %}

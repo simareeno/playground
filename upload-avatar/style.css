@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/bg.png);
+  width:1900px;
+  position: relative;
+}
+
+.wrap {
+  position: relative;
+  width: 134px;
+  height: 134px;
+  overflow: hidden;
+  top:100px;
+  left:880px;
+  border-radius: 50%;
+}
+
+.mask {
+  opacity: 0;
+}
+
+.upload, .progress {
+  position: absolute;
+  top: 134px;
+  left: 4px;
+  font: 14px Arial;
+  color: white;
+  text-align: center;
+  transition: top .3s, opacity .3s;
+  z-index: 6;
+  max-width: 124px;
+  line-height: 18px;;
+}
+
+.upload__image {
+  margin-bottom: 10px;
+}
+
+.click .progress {
+  animation: blink 2.5s infinite, dissapear 3s forwards;
+}
+
+.click .mask {
+  opacity: 1;
+}
+
+.image {
+  background:#1ea0d6;
+  width:128px;
+  height:128px;
+  position: relative;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  z-index: 5;
+  transition: background .3s;
+  transition-delay: 2s;
+}
+
+.circle {
+  border-radius: 50%;
+  transition: background-color .3s;
+}
+
+.circle:hover .image, .circle.click .image {
+  background: #194d63;
+}
+
+.circle.click .upload{
+  top: -95px!important;
+}
+
+.circle.click .progress{
+  top: 53px;
+  left: 18px;
+}
+
+.circle:hover .upload {
+  opacity: 1;
+  top: 28px;
+}
+
+.mask.full {
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+
+.progress-white {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  transition: padding .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 5px;
+}
+
+.fill-white {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.mask {
+  clip: rect(0px, 134px, 134px, 67px);
+  border-radius: 50%;
+  width:134px;
+  height:134px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+
+.fill {
+  clip: rect(0px, 67px, 134px, 0px);
+  transform: rotate(0deg);
+  background-color: #fc0;
+  border-radius: 50%;
+  width:inherit;
+  height:inherit;
+  position: absolute;
+  transition: transform 1s;
+}
+
+.click .full, .click .fill {
+  transform: rotate(180deg);
+  transition-delay: 2s;
+}
+
+.click .progress-white {
+  padding: 0px;
+}
+
+.click .image {
+  animation: jake 3.2s forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes blink {
+  0% {opacity:1}
+  50% {opacity:0}
+  100% {opacity: 1}
+}
+
+@keyframes jake {
+  0% {background:#1ea0d6}
+  95% {background:#1ea0d6}
+  100% {background:transparent; background-image: url(img/jake.png)}
+}
+
+@keyframes dissapear {
+  0% {visibility:visible}
+  95% {visibility:visible}
+  100% {visibility:hidden}
+}

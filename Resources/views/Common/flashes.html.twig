@@ -1,0 +1,11 @@
+{% if flashes|length > 0 %}
+    <div class="flashes">
+        {% for type, flashMessages in flashes %}
+            {% for flash in flashMessages %}
+                <div class="flash flash-{{ type }}">
+                    {{ flash }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endif %}

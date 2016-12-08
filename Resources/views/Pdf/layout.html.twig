@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html {% if language.is_rtl %}class="as-rtl" dir="rtl"{% endif %}>
+<head>
+    <title>{% if page_title is defined %}{{ page_title }}{% else %}{{ brand_setting('core.deskpro_name') }}{% endif %}</title>
+
+    <style type="text/css">
+        @page {
+            margin-top: 2cm;
+            margin-bottom: 2.54cm;
+            margin-left: 3.175cm;
+            margin-right: 3.175cm;
+        }
+    </style>
+    <link href="{{ asset('DeskPRO_PortalBundle_style.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="brand {% if portal_custom_logo() %}with-logo{% endif %}">
+        <a href="{{ path('portal_home') }}">
+            {% if portal_custom_logo() %}
+                <img alt="{{ brand_setting('core.deskpro_name') }}"
+                     src="{{ portal_custom_logo() }}"
+                     class="logo" />
+            {% else %}
+                <h1>{{ brand_setting('core.deskpro_name') }}</h1>
+            {% endif %}
+        </a>
+    </div>
+    <br />
+    {% block inner_content %}{% endblock inner_content %}
+</body>
+</html>

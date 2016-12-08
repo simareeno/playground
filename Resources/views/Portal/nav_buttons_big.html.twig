@@ -1,0 +1,68 @@
+<ul class="big-button-collection big-buttons dpx-toggle-mobile">
+
+  {% for tab in get_ordered_tabs() %}
+
+    {% if 'articles' == tab %}
+
+      {% if can_use_articles() and show_tab_articles() %}
+        <li class="item-kb">
+          <a href="{{ path('portal_kb') }}">
+            <i class="fa fa-list-alt"></i>
+            <span class="title">{{ phrase('portal.general.nav-kb') }}</span>
+            <span class="subtitle">{{ phrase('portal.general.nav-kb-desc') }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% elseif 'news' == tab %}
+
+      {% if can_use_news() and show_tab_news() %}
+        <li class="item-news">
+          <a href="{{ path('portal_news') }}">
+            <i class="fa fa-calendar-o"></i>
+            <span class="title">{{ phrase('portal.general.nav-news') }}</span>
+            <span class="subtitle">{{ phrase('portal.general.nav-news-desc') }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% elseif 'feedback' == tab %}
+
+      {% if can_use_feedback() and show_tab_feedback() %}
+        <li class="item-feedback">
+          <a href="{{ path('portal_feedback') }}">
+            <i class="fa fa-thumbs-o-up"></i>
+            <span class="title">{{ phrase('portal.general.nav-feedback') }}</span>
+            <span class="subtitle">{{ phrase('portal.general.nav-feedback-desc') }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% elseif 'downloads' == tab %}
+
+      {% if can_use_downloads() and show_tab_downloads() %}
+        <li class="item-downloads {{ is_page_downloads() ? 'active' }}">
+          <a href="{{ path('portal_downloads') }}">
+            <i class="fa fa-files-o"></i>
+            <span class="title">{{ phrase('portal.general.nav-downloads') }}</span>
+            <span class="subtitle">{{ phrase('portal.general.nav-downloads-desc') }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% elseif 'newticket' == tab %}
+
+      {% if can_view_tickets_link() and show_tab_tickets() %}
+        <li class="item-newticket">
+          <a href="{{ path('portal_new_ticket') }}">
+            <i class="fa fa-envelope-o"></i>
+            <span class="title">{{ phrase('portal.general.nav-newticket') }}</span>
+            <span class="subtitle">{{ phrase('portal.general.nav-newticket-desc') }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% endif %}
+
+  {% endfor %}
+</ul>

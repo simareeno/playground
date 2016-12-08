@@ -1,0 +1,24 @@
+{% extends 'Theme:Tickets:base_view.html.twig' %}
+
+{% block page_specific_content %}
+    {% if rerendering %}
+        <strong>{{ phrase('portal.tickets.switched-department-rerender') }}</strong>
+    {% endif %}
+
+    <div id="edit_ticket_page">
+        {% show ticket_form %}
+    </div>
+
+    <div class="column-full">
+        <div class="bucket">
+            <a href="{{ portal_path(ticket) }}">{{ phrase('portal.tickets.cancel-ticket-edit') }}</a>
+        </div>
+    </div>
+{% endblock page_specific_content %}
+
+{% block doc_end %}
+    <!-- DESKPRO_TICKET_DISPLAY -->
+    <script type="text/javascript">
+        {{ ticket_display_js|raw }}
+    </script>
+{% endblock doc_end %}

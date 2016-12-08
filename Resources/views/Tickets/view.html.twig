@@ -1,0 +1,11 @@
+{% set cls = "column-half-plus wide" %}
+{% extends 'Theme:Tickets:base_view.html.twig' %}
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block page_specific_content %}
+  <div class="ticket-messages">
+    {% show ticket_timeline %}
+    {% show ticket_reply %}
+  </div>
+{% endblock page_specific_content %}

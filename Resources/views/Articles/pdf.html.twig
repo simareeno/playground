@@ -1,0 +1,55 @@
+{% extends 'Theme:Pdf:layout.html.twig' %}
+{% block inner_content %}
+
+    <div class="breadcrumbs">
+        {% show pdf_breadcrumbs %}
+    </div>
+
+    <article class="news kb-article">
+        <header>
+
+            <h1>{{ article.translated_title }}</h1>
+
+            <div class="article-meta">
+                <span style="background: url({{ avatar_url(article.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>
+                {{ article.person.display_name_user }}
+                -
+                {{ article.date_published | date('Y-m-d') }}
+                -
+                <span class="comments"><i class="fa fa-comments-o"></i> <a href="#comments">{{ phrase('portal.general.comments-count', {count: article.calc_num_comments}) }}</a></span>
+                -
+                {{ phrase('portal.general.in') }} <a href="{{ portal_path(article.primary_category) }}">{{ object_phrase(article.primary_category) }}</a>
+            </div>
+            {% if article.status != 'published' and article.status != 'archived' and app.user.is_agent %}
+                      <div class="sub-note">{{ phrase('portal.articles.view-as-agent') }}</div>
+                    {% endif %}
+        </header>
+
+        <div class="article-content padded dpx-kb-article-content">
+            {{ article.translated_content|raw }}
+        </div>
+
+        {% if article.labels|length %}
+            <div class="tag-list">
+                <ul>
+                    <li class="tag-list-header"><i class="fa fa-tags"></i> {{ phrase('portal.general.tags') }}</li>
+                    {% for l in  article.labels %}
+                        <li class="tag-list-item"><a href="{{ path('portal_search_labels', { label: l }) }}">{{ l }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </article>
+
+    {% show kb_attachments %}
+    {% show related_content %}
+
+    {% if article.num_comments %}
+        <div class="comment-box" id="comments">
+            <div class="titled-header">
+                <h1>{{ phrase('portal.general.comments-title', {count: article.calc_num_comments}) }}</h1>
+            </div>
+            {% show kb_article_comments %}
+        </div>
+    {% endif %}
+{% endblock inner_content %}

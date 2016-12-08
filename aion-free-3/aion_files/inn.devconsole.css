@@ -1,0 +1,102 @@
+#DevConsole {
+	border: 2px solid #ababab;
+	color: #EFEFEF;
+	width: 100%;
+	height: 1px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 1000;
+}
+
+	#DevConsole .content {
+		position: relative;
+		width: 100%;
+		padding: 20px;
+		font: 12px Courier New;
+		z-index: 1002;
+	}
+	#DevConsole .bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		opacity: 0.8;
+		z-index: 1001;
+	}
+
+	#DevConsole .control {
+		display: block;
+		width: 400px;
+		border-right: 1px solid #ababab;
+		float: left;
+	}
+
+	#DevConsole .console {
+		width: auto;
+		height: 270px;
+		overflow-y: scroll;
+		margin: 0 20px 0 20px;
+		padding-left: 40px;
+	}
+
+	
+	#DevConsole .logString {
+		border-bottom: 1px dashed #444444;
+		padding: 5px 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	#DevConsole .logStringHeader {
+		float: left;
+		width: 130px;
+		color: white;
+	}
+
+	#DevConsole .logStringContent {
+		padding-left: 150px;
+		color: #cdcdcd;
+	}
+
+		#DevConsole .logStringContent .json {
+			cursor: pointer;
+		}
+
+		#DevConsole .logStringContent .json-error {
+			color: red;
+		}
+
+		#DevConsole .logStringContent .json-success {
+			color: #a0e411;
+			-webkit-transition: opacity 0.5s ease;
+			-moz-transition: opacity 0.5s ease;
+			-ms-transition: opacity 0.5s ease;
+			-o-transition: opacity 0.5s ease;
+			transition: opacity 0.5s ease;
+		}
+
+		#DevConsole .logStringContent .json-success.hide {
+			opacity: 0;
+		}
+
+	#DevConsole.open {
+		height: 300px;
+		opacity: 1;
+	}
+
+	#DevConsole.close {
+		height: 1px;
+		opacity: 0;
+	}
+
+	#DevConsole.open, #DevConsole.close {
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		-ms-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
+	}

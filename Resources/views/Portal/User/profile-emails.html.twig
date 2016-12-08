@@ -1,0 +1,135 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <section class="column-full">
+        <div class="column-full">
+            <div>
+                <header class="section-header">
+                    <h1>{{ phrase('portal.account.section-title-your-account') }}</h1>
+                </header>
+            </div>
+        </div>
+        <div class="column-full">
+            <div>
+                <nav class="tabs secondary-tabs">
+                    <ul>
+                        <li class="tab-inactive">
+                            <a href="{{ path('portal_user_profile') }}">
+                                <div>
+                                    <span class="title">
+                                        {{ phrase('portal.account.section-title-profile') }}
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="tab-active active">
+                            <a href="{{ path('portal_user_profile_emails') }}">
+                                <div>
+                                    <span class="title">
+                                        {{ phrase('portal.account.section-title-emails') }}
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="column-full">
+
+            <div class="titled-header minor">
+                <h1>{{ phrase('portal.account.your-emails') }}</h1>
+            </div>
+
+            <section class="padded">
+                <table>
+                    {% for email in person.emails %}
+                        <tr>
+                            <td nowrap>{{ email.email }}</td>
+                            {% if person.emails|length > 1 %}
+                                {% if email.isPrimary %}
+                                    <td nowrap style="white-space: nowrap;" colspan="2">
+                                        {{ phrase('portal.account.email-primary-description') }}
+                                    </td>
+                                {% else %}
+                                    <td nowrap style="white-space: nowrap;">
+                                        <a class="button button-secondary button-small"
+                                           id="{{ email.email }}"
+                                           href="{{ path('portal_user_profile_emails', { new_primary: email.id }) }}">
+                                            {{ phrase('portal.account.email-btn-make-primary') }}
+                                        </a>
+                                    </td>
+                                    <td nowrap style="white-space: nowrap;">
+                                        <a class="button button-small cancel"
+                                           href="{{ path('portal_user_profile_emails', { remove_email: email.id }) }}">
+                                            {{ phrase('portal.account.email-btn-remove') }}
+                                        </a>
+                                    </td>
+                                {% endif %}
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </section>
+
+            {%  if pending_emails|length  > 0 %}
+
+                <div class="titled-header minor" style="margin-top: 25px;">
+                    <h1>{{ phrase('portal.account.your-pending-email-addresses') }}</h1>
+                </div>
+
+                <section class="padded">
+                    <table>
+                        {% for saved_form_id, email in pending_emails %}
+                            <tr>
+                                <td nowrap>{{ email }}</td>
+                                <td nowrap style="white-space: nowrap;">
+                                    <a class="button button-secondary button-small"
+                                       href="{{ path('portal_user_profile_emails_resend_validation', { id: saved_form_id}) }}">
+                                        {{ phrase('portal.account.email-btn-resend-validation') }}
+                                    </a>
+                                </td>
+                                <td nowrap style="white-space: nowrap;">
+                                    <a class="button button-small cancel"
+                                       href="{{ path('portal_user_profile_emails_remove_pending', { id: saved_form_id}) }}">
+                                        {{ phrase('portal.account.email-btn-remove') }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </section>
+
+            {% endif %}
+
+            {% if add_email_form %}
+                <div class="titled-header minor" style="margin-top: 25px;">
+                    <h1>{{ phrase('portal.account.email-add') }}</h1>
+                </div>
+
+                <section class="padded">
+                    <p style="margin: 15px 0;">
+                        {{ phrase('portal.account.email-add-description') }}
+                    </p>
+
+                    <div class="column-half">
+                        {{ form_start(add_email_form, { attr: { class: 'form-ticket' } }) }}
+                        {{ form_errors(add_email_form) }}
+                        {{ form_row(add_email_form.email) }}
+                        {{ form_rest(add_email_form) }}
+                        <div class="column-full">
+                            <div class="bucket">
+                                <button class="button" type="submit">{{ phrase('portal.forms.label_save') }}</button>
+                            </div>
+                        </div>
+                        {{ form_end(add_email_form) }}
+                    </div>
+                </section>
+            {% endif %}
+        </section>
+    </section>
+{% endblock inner_content %}

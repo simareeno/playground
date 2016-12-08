@@ -1,0 +1,56 @@
+{% if is_guest() %}
+  {% if display_registration_link %}
+    <li class="register-greeting">
+      <a href="{{ path('portal_user_registration') }}" class="button-small button-marked">{{ phrase('portal.account.login-register-header') }}</a>
+    </li>
+  {% endif %}
+
+  {% if show_auth %}
+    {% if display_registration_link %}
+      <li class="register-or-signup">
+        <span><hr> {{ phrase('portal.general.or') }} <hr></span>
+      </li>
+    {% endif %}
+    <li>
+      <div class="dropdown-group">
+        <a href="{{ path('portal_login') }}" id="top-login-btn" class="button-small button-marked clickaway-dropdown" data-clickaway-target="top-login-dropdown">{{ phrase('portal.account.login-btn') }} <i
+                  class="fa fa-caret-down"></i></a>
+      </div>
+    </li>
+  {% endif %}
+{% else %}
+  <li class="welcome item-profile">
+    <span class="agent-greeting">
+      <span class="agent-avatar agent-avatar-mini" style="background: url({{ avatar_url(user, 36) }}) no-repeat; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ avatar_url(user, 36) }}',sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ avatar_url(user, 36) }}', sizingMethod='scale')";"></span>
+      {{ phrase('portal.account.welcome-back') }} {{ app.user.first_name }}
+      <span class="mobile-expand"><i class="fa fa-angle-double-down"></i></span>
+    </span>
+    <span class="disc"></span>
+    <a class="profile-link hideable" href="{{ path('portal_user_profile') }}">{{ phrase('portal.account.section-title-your-account') }}</a>
+  </li>
+
+  {% if ticket_count > 0 and can_use_tickets() %}
+  <li class="welcome item-tickets hideable">
+    <span class="disc"></span>
+    <a class="tickets-link dpx-ticket-count" href="{{ path('portal_tickets') }}">{{ phrase('portal.general.nav-tickets') }} ({{ ticket_count }})</a>
+  </li>
+  {% endif %}
+
+  {% if chat_count > 0 and can_use_chat() %}
+  <li class="welcome item-chat hideable">
+    <span class="disc"></span>
+    <a class="chat-link" href="{{ path('portal_chats') }}">{{ phrase('portal.general.nav-chat') }} ({{ chat_count }})</a>
+  </li>
+  {% endif %}
+
+  {% if user.organization and user.organization_manager and ticket_count_org > 0 and can_use_tickets() %}
+  <li class="welcome item-org hideable">
+    <span class="disc"></span>
+    <a href="{{ path('portal_tickets', { type: 'organization' }) }}" class="dpx-ticket-count-org org-tickets-link">{{ phrase('portal.general.nav-tickets-org') }} ({{ ticket_count_org }})</a>
+  </li>
+  {% endif %}
+
+  <li class="welcome item-logout hideable">
+    <a href="{{ logout_path('portal') }}" id="top-logout-btn" class="button-small button-marked logout-link">{{ phrase('portal.account.logout-btn') }}</a>
+  </li>
+{% endif %}

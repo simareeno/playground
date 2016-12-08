@@ -1,0 +1,14 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <article class="news kb-article">
+        <header>
+            <h1>{{ phrase('portal.error.403-title') }}</h1>
+
+            <div class="article-meta">
+                <p>{{ phrase('portal.error.403-desc') }}</p>
+                <p>{{ phrase('portal.error.contact') }}</p>
+            </div>
+        </header>
+    </article>
+{% endblock inner_content %}

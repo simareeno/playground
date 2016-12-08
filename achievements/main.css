@@ -1,0 +1,84 @@
+html {
+	background: #181818;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.page {
+	width: 100%;
+	min-width: 1000px;
+	height: 100%;
+	display: table;
+}
+
+.page-section {
+	display: table-row;
+}
+
+.title {
+	text-align: center;
+}
+
+.achievement-page_title {
+	font: 48px/56px 'PT Sans','Trebuchet MS',Arial,sans-serif;
+	color: #fff;
+	margin: 72px 0 28px;
+}
+
+.about-achievements a {
+	color: #57a0e3;
+	font: 18px/18px Arial,sans-serif;
+	text-decoration: none;
+	transition: color .2s;
+}
+
+.about-achievements a:hover {
+	color: #ff2323;
+	transition: color 0s;
+}
+
+.page-header,
+.page-content,
+.page-footer {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+}
+
+.page-content--centered {
+	vertical-align: middle;
+}
+
+.page-header,
+.page-footer {
+	height: 0;
+}
+
+.page-content {
+	padding-top: 35px;
+}
+
+.container {
+	width: auto;
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+achievements-group .group {
+	margin: 84px 0 0;
+}
+
+.group:last-child {
+    margin: 84px 0;
+}

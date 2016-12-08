@@ -1,0 +1,100 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <div class="search-results">
+        <div class="search-results-content">
+            <div class="form-ticket">
+                <form method="post" novalidate>
+                   <div class="form-widget">
+                       {{ phrase('portal.general.show') }}
+                       <select name="type">
+                           <option value="all"{% if type == 'all' %} selected="selected"{% endif %}>
+                               {{ phrase('portal.general.everything') }}
+                           </option>
+                           <option value="articles"{% if type == 'articles' %} selected="selected"{% endif %}>
+                               {{ phrase('portal.general.nav-kb') }}
+                           </option>
+                           <option value="news"{% if type == 'news' %} selected="selected"{% endif %}>
+                               {{ phrase('portal.general.nav-news') }}
+                           </option>
+                           <option value="downloads"{% if type == 'downloads' %} selected="selected"{% endif %}>
+                               {{ phrase('portal.general.nav-downloads') }}
+                           </option>
+                           <option value="feedback"{% if type == 'feedback' %} selected="selected"{% endif %}>
+                               {{ phrase('portal.general.nav-feedback') }}
+                           </option>
+                       </select>
+                       {{ phrase('portal.general.tagged_with') }}
+                       <input type="text" name="label" value="{{ label }}" style="width:250px;" />
+                       <button class="button button-small button-blank">
+                           {{ phrase('portal.general.btn-go') }}
+                       </button>
+                   </div>
+                </form>
+            </div>
+            <div class="search-result-count">
+                {% if pageinfo is not null and pageinfo.total_results %}
+                    {% if label %}
+                        {{ phrase('portal.general.x-search-results', { num: num_results, query: label }) }}
+                    {% else %}
+                        {{ phrase('portal.general.x-search-results-no-query', { num: num_results }) }}
+                    {% endif %}
+                {% else %}
+                    {{ phrase('portal.general.label-search-enter-label') }}
+                {% endif %}
+            </div>
+            <div class="search-results">
+                <div class="search-results-content">
+                    {% if results|length > 0 %}
+                        <ul class="search-result-items">
+                            {% for result_item in results %}
+                                {% set result = result_item['object'] %}
+                                {% set type = result_item['type'] %}
+                                <li class="search-result-item">
+                                    <h1><a href="{{ portal_path(result) }}">{{ result.title }}</a></h1>
+                                    <div class="search-result-meta">
+                                        {% set cats = get_secure_content_cats(result) %}
+                                        {% if cats|length > 0 %}
+                                        <i class="fa fa-tags"></i>
+                                        {% for cat in cats %}
+                                            <a href="{{ portal_path(cat) }}">
+                                                {% if cat.title is defined %}
+                                                    {{ cat.title }}
+                                                {% elseif cat.name is defined %}
+                                                    {{ cat.name }}
+                                                {% else %}
+                                                    {{ portal_path(cat) }}
+                                                {% endif %}
+                                            </a>
+                                            {% if not loop.last %}
+                                                <i class="fa fa-angle-right"></i>
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% endif %}
+                                        {% if result.date_published is not null %}
+                                            <hr>
+                                            <span>{{ date(result.date_published) }}</span>
+                                        {% endif %}
+                                        {% if result.calc_num_comments > 0 %}
+                                            <hr>
+                                            <a href="{{ portal_path(result) }}#comments">
+                                                {{ phrase('portal.general.comments-count', { count: result.calc_num_comments }) }}
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                    <p>{{ result.search_summary }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if pageinfo is not null and pager.haveToPaginate %}
+                        {{ pagerfanta(pager) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock inner_content %}

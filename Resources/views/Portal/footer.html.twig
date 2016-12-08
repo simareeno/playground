@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <hr>
+  <div class="quick-jump as-touch-focus">
+    <i class="fa fa-navicon"></i> {{ phrase('portal.general.nav-quick-jump') }}
+    <div class="dropdown-content">
+      <ul>
+        <li class="item-home"><a href="{{ path('portal_home') }}"><i class="fa fa-home"></i> {{ brand_setting('core.deskpro_name') }}</a></li>
+        {% if can_use_articles() %}<li class="item-kb"><a href="{{ path('portal_kb') }}"><i class="fa fa-columns"></i> {{ phrase('portal.general.nav-kb') }}</a></li>{% endif %}
+        {% if can_use_news() %}<li class="item-news"><a href="{{ path('portal_news') }}"><i class="fa fa-file-text-o"></i> {{ phrase('portal.general.nav-news') }}</a></li>{% endif %}
+        {% if can_use_downloads() %}<li class="item-downloads"><a href="{{ path('portal_downloads') }}"><i class="fa fa-cloud-download"></i> {{ phrase('portal.general.nav-downloads') }}</a></li>{% endif %}
+        {% if can_use_feedback() %}<li class="item-feedback"><a href="{{ path('portal_feedback') }}"><i class="fa fa-list-alt"></i> {{ phrase('portal.general.nav-feedback') }}</a></li>{% endif %}
+        {% if can_view_tickets_link() %}<li class="item-newticket"><a href="{{ path('portal_new_ticket') }}"><i class="fa fa-comments"></i> {{ phrase('portal.general.nav-newticket') }}</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="back-to-top">
+    <a onclick="window.scrollTo(0,0); return false;">{{ phrase('portal.general.top') }} <i class="fa fa-angle-double-up"></i></a>
+  </div>
+
+  <a href="https://www.deskpro.com/" class="footer-mark">
+    <span class="logo-wrapper"><span class="deskpro-logo"></span></span>
+    <span class="tagline">{{ phrase('portal.general.software_provided_by') }} <strong>DeskPRO</strong></span>
+  </a>
+</footer>

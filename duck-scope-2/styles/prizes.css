@@ -1,0 +1,58 @@
+.prizes {
+	position: relative;
+}
+
+.prizes__list {
+	position: absolute;
+	width: 1136px;
+	overflow-x: scroll;
+	touch-action: pan-x pan-y !important;
+	transition: transform .4s ease-in-out;
+}
+
+.prizes__list::-webkit-scrollbar {
+    display: none;
+}
+
+.prizes__list-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+
+.prizes__list--utochka .prizes__list-wrapper {
+	width: 3200px
+}
+
+.prizes__list--czar .prizes__list-wrapper {
+	width: 1700px
+}
+
+.slider--state-utochka .prizes__list--utochka {
+	opacity: 1;
+	transform: translate(0px, 0);
+	transition: transform .4s .2s ease-in-out;
+}
+
+.slider--state-czar .prizes__list--czar {
+	opacity: 1;
+	transform: translate(0px, 0);
+	transition: transform .4s .2s ease-in-out;
+}
+
+.slider--state-utochka .prizes__list--czar {
+	transform: translate(1200px, 0);
+	transition: transform .4s ease-in-out;
+}
+
+.slider--state-czar .prizes__list--utochka {
+	transform: translate(-1730px, 0);
+	transition: transform .4s ease-in-out;
+}
+
+
+.prizes__list--active {
+	transform: translate(1230px, 0)!important;
+	transition: transform .4s ease-in-out;
+}

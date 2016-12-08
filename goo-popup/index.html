@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <script src="Tween.js"></script>
+  <script src="RequestAnimationFrame.js"></script>
+  <script src="emerge.js"></script>
+  <meta charset="UTF-8">
+  <title>Buff popup</title>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="popup emerge">
+    <div class="popup__content">
+      <div class="header">Используй бафф</div>
+      <div class="buffname"><span class="number">+<span class="count">15</span>%<span> на счет</div>
+      <div class="desc">Прямо сейчас пополни счет и получи на 15% больше бонусных рублей. Бафф можно использовать только один раз.</div>
+      <div class="daysleft">осталось 2 дня</div>
+      <div class="button"><img src="img/button.png" alt=""></div>
+      <div class="close"><img src="img/close.png" alt=""></div>
+    </div>
+
+    <div class="bottle">
+
+      <svg x="0px" y="0px" viewBox="0 0 198.2 262.2">
+      <path fill="#A7D9F5" d="M184.8,31.1C184.8,31.1,184.8,31.1,184.8,31.1C184.8,31.1,184.8,31.1,184.8,31.1L180.3,48l-0.5-0.1
+      	c-1.6,1.4-5.3,2.1-10.4,2.2l-9.1,37c30.2,23.7,45.1,64,34.5,103.5c-10.4,38.8-41.8,64.9-79.1,71c-13.4,2.2-26.9-2-40.9-5.8
+      	c-13.5-3.6-27.1-6.4-37.1-13.1C6.1,221.2-6.9,178.7,3.6,139.4c10.2-38,41.1-64.9,77.4-71.7l12-38.1c-4.4-2.6-7.1-5-7.8-7.1l-0.5-0.1
+      	l0.4-1.4c0,0,0,0,0,0h0l4.1-15.5c0,0,0,0,0,0l0,0L89.3,5l0,0c2.8-6.7,25.3-6.7,51.1,0.2s45.3,18.1,44.4,25.4l0,0L184.8,31.1z"/>
+      </svg>
+
+      <div class="wave wave1">
+        <svg x="0px" y="0px" viewBox="0 0 198 105">
+        <path fill="#2668af">
+          <animate
+          dur="10"
+          calcMode="spline"
+          keyTimes="
+            0;
+            0.5;
+            1"
+          keySplines="
+            .26,.34,.64,.76;
+            .26,.34,.64,.76"
+          repeatCount="indefinite"
+          attributeName="d"
+          from="M198,14.6c-1.8,1.1-14.9,7.6-50.7,5.6c-40.7-2.3-49.3-16-88.7-19.3C23.1-2.1,0.4,3.5,0.2,3.6c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.8,6.3c8.8-1.1,16.7-2.9,23.8-5.1c29.3-10.4,52.7-33.9,61.4-66.4C196.5,27.1,197.6,20.8,198,14.6z"
+          to="M198,14.6c-1.8,1.1-14.9,7.6-50.7,5.6c-40.7-2.3-49.3-16-88.7-19.3C23.1-2.1,0.4,3.5,0.2,3.6c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.8,6.3c8.8-1.1,16.7-2.9,23.8-5.1c29.3-10.4,52.7-33.9,61.4-66.4C196.5,27.1,197.6,20.8,198,14.6z"
+          values="M198,14.6c-1.8,1.1-14.9,7.6-50.7,5.6c-40.7-2.3-49.3-16-88.7-19.3C23.1-2.1,0.4,3.5,0.2,3.6
+    	c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.8,6.3c8.8-1.1,16.7-2.9,23.8-5.1
+    	c29.3-10.4,52.7-33.9,61.4-66.4C196.5,27.1,197.6,20.8,198,14.6z;
+      M198,14.3c-1.8-1.4-15.2-10.9-50.8-10.3c-40.7,0.7-46.7,15-86.5,15C23,19,0.7,4,0.2,3.6
+      	c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.7,6.3c8.8-1.1,16.8-2.9,23.9-5.1
+      	c29.2-10.4,52.6-33.9,61.3-66.4C196.5,27,197.6,20.6,198,14.3z;
+      M198,14.6c-1.8,1.1-14.9,7.6-50.7,5.6c-40.7-2.3-49.3-16-88.7-19.3C23.1-2.1,0.4,3.5,0.2,3.6
+  c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.8,6.3c8.8-1.1,16.7-2.9,23.8-5.1
+  c29.3-10.4,52.7-33.9,61.4-66.4C196.5,27.1,197.6,20.8,198,14.6z;"/>
+        </path>
+        </svg>
+      </div>
+
+      <div class="wave wave2">
+        <svg x="0px" y="0px" viewBox="0 0 198 105">
+        <path fill="#3987de">
+          <animate
+          dur="10"
+          calcMode="spline"
+          keyTimes="
+                0;
+                0.5;
+                1"
+          keySplines="
+                .26,.34,.64,.76;
+                .26,.34,.64,.76"
+          repeatCount="indefinite"
+          attributeName="d"
+          from="M198,14.3c-1.8-1.4-15.2-10.9-50.8-10.3c-40.7,0.7-46.7,15-86.5,15C23,19,0.7,4,0.2,3.6c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.7,6.3c8.8-1.1,16.8-2.9,23.9-5.1c29.2-10.4,52.6-33.9,61.3-66.4C196.5,27,197.6,20.6,198,14.3z"
+          to="M198,14.3c-1.8-1.4-15.2-10.9-50.8-10.3c-40.7,0.7-46.7,15-86.5,15C23,19,0.7,4,0.2,3.6c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.7,6.3c8.8-1.1,16.8-2.9,23.9-5.1c29.2-10.4,52.6-33.9,61.3-66.4C196.5,27,197.6,20.6,198,14.3z"
+          values="      M198,14.3c-1.8-1.4-15.2-10.9-50.8-10.3c-40.7,0.7-46.7,15-86.5,15C23,19,0.7,4,0.2,3.6
+                	c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.7,6.3c8.8-1.1,16.8-2.9,23.9-5.1
+                	c29.2-10.4,52.6-33.9,61.3-66.4C196.5,27,197.6,20.6,198,14.3z;
+                  M198,14.6c-1.8,1.1-14.9,7.6-50.7,5.6c-40.7-2.3-49.3-16-88.7-19.3C23.1-2.1,0.4,3.5,0.2,3.6
+            	c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.8,6.3c8.8-1.1,16.7-2.9,23.8-5.1
+            	c29.3-10.4,52.7-33.9,61.4-66.4C196.5,27.1,197.6,20.8,198,14.6z;
+                  M198,14.3c-1.8-1.4-15.2-10.9-50.8-10.3c-40.7,0.7-46.7,15-86.5,15C23,19,0.7,4,0.2,3.6
+                    c-1.8,32.5,11.6,64.3,37.6,81.9c10,6.8,23.6,9.5,37.1,13.1c11.8,3.2,23.4,6.7,34.7,6.3c8.8-1.1,16.8-2.9,23.9-5.1
+                    c29.2-10.4,52.6-33.9,61.3-66.4C196.5,27,197.6,20.6,198,14.3z;"/>
+        </path>
+        </svg>
+
+        <div id="move1">
+          <div id="bubble1" class="bubble bubble1"></div>
+        </div>
+        <div  class="bubble bubble2"></div>
+        <div  class="bubble bubble3"></div>
+        <div  class="bubble bubble4"></div>
+        <div id="move2">
+          <div id="bubble5" class="bubble bubble5"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="shadow"><img src="img/shadow.png" alt=""></div>
+<div class="overlay"></div>
+
+
+<svg>
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="5" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -11" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
+
+
+
+
+
+
+<script>
+	var position;
+	var move1 = document.getElementById('move1');
+  var move2 = document.getElementById('move2');
+	var tween, tweenBack, tween2, tweenBack2;
+	init();
+  init2();
+	animate();
+	function init() {
+		position = {x: 0};
+		tween = new TWEEN.Tween(position)
+			.to({x: 60}, 10000)
+			.easing(TWEEN.Easing.Linear.None)
+			.onUpdate(update);
+    tweenBack = new TWEEN.Tween(position)
+			.to({x: 0}, 10000)
+			.easing(TWEEN.Easing.Linear.None)
+			.onUpdate(update);
+		tween.chain(tweenBack);
+		tweenBack.chain(tween);
+		tween.start();
+	}
+
+  function init2() {
+    position2 = {x: 0};
+    tween2 = new TWEEN.Tween(position2)
+      .to({x: -40}, 14000)
+      .easing(TWEEN.Easing.Linear.None)
+      .onUpdate(update);
+    tweenBack2 = new TWEEN.Tween(position2)
+      .to({x: 0}, 14000)
+      .easing(TWEEN.Easing.Linear.None)
+      .onUpdate(update);
+    tween2.chain(tweenBack2);
+    tweenBack2.chain(tween2);
+    tween2.start();
+  }
+	function animate( time ) {
+		requestAnimationFrame( animate );
+		TWEEN.update( time );
+	}
+	function update() {
+    move1.style.WebkitTransform = "translate(" + position.x + "px)";
+    move2.style.WebkitTransform = "translate(" + position2.x + "px)";
+  }
+
+  $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block chat_attachment %}
+    <div class="dpx-attachment">
+        {% if attachment.is_image %}
+            <a href="#" class="dpx-attachment-full-image">
+                <img class="thumbnail" src="{{ attachment.download_url }}" />
+                {{ attachment.filename }} ({{ attachment.filesize_readable }})
+            </a>
+        {% else %}
+            <a href="{{ attachment.download_url }}?dl=1" class="dpx-attachment-file-icon" data-content-type="{{ attachment.content_type }}">
+                {{ attachment.filename }} ({{ attachment.filesize_readable }})
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block chat_message %}
+    <div class="chat-message {{ message.origin == 'agent' ? 'chat-message-agent' : 'chat-message-user' }}">
+          <span class="author">
+              {% if message.author %}
+                  <span class="avatar" style="background-image: url({{ avatar_url(message.author, 36) }});"></span>
+              {% endif %}
+              {% if message.origin == 'agent' %}
+                {{ message.author ? message.author.display_name_user : '' }}
+              {% else %}
+                {{ phrase('portal.chat.you') }}
+              {% endif %}
+          </span>
+          <span class="messages">
+            <p class="message-time">{{ date(message.date_created, 'time') }}</p>
+            <p>
+                {% if message.metadata.blob is defined %}
+                    {% set attachment = message.metadata.blob %}
+                    <div class="file-list">
+                        {{ block('chat_attachment') }}
+                    </div>
+                {% elseif message.is_html %}
+                    {{message.content|raw}}
+                {% else %}
+                    {{message.content}}
+                {% endif %}
+            </p>
+              {#<div class="chat-image-attached">#}
+              {#<img src="../img/sample-polar-bear.png" alt="A polar bear">#}
+              {#<span class="meta">You attached: polar_bear_license.png (226kb)</span>#}
+              {#</div>#}
+              {#<ul class="file-list">#}
+              {#<li>#}
+              {#<a href="#">#}
+              {#<span class="thumbnail file"><i class="fa fa-link"></i></span> Can I buy part-time or 'light' agent licenses?#}
+              {#</a>#}
+              {#</li>#}
+              {#</ul>#}
+          </span>
+    </div>
+{% endblock %}
+
+{% block inner_content %}
+  <div class="breadcrumbs">
+    {% show breadcrumbs %}
+  </div>
+
+  <article class="chat chat-log">
+
+        <header class="section-header">
+            <h1>{{ phrase('portal.chat.log_title', { person: chat.agent.display_name_user }) }}</h1>
+            <h2>{{ date(chat.date_created, 'day') }} ({{ date_ago(chat.date_created) }})</h2>
+        </header>
+
+        {# INFO / CHAT FIELDS #}
+        <hr>
+        <table>
+            <tr>
+              <td>{{ phrase('portal.chat.log_department') }}</td>
+              <td>{{ chat.department ? chat.department.user_title : '-' }}</td>
+            </tr>
+            <tr>
+              <td>{{ phrase('portal.chat.log_agents') }}</td>
+              <td>{% for agent in chat.agent_participants %}{{ agent.display_name_user }}{% if not loop.last %}, {% endif %}{% endfor %}</td>
+            </tr>
+            <tr>
+              <td>{{ phrase('portal.chat.log_chat_time') }}</td>
+              <td>{{ date_diff(chat.date_created, chat.date_ended) }}</td>
+            </tr>
+            {% for custom in custom_data %}
+                {% if custom['value'] %}
+                    <tr>
+                      <td>{{ custom['label'] }}</td>
+                      <td>{{ custom['value'] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+
+
+        {# LINKED TO TICKET #}
+        {%  if linked_ticket %}
+        <hr>
+        <div class="assigned-to-ticket">
+            {{ phrase('portal.chat.log_linked_ticket') }}:
+            <a href="{{ portal_path(linked_ticket) }}">{{ linked_ticket.subject }}</a>
+            <a href="{{ portal_path(linked_ticket) }}" class="button">{{ phrase('portal.chat.log_view_linked_ticket') }}</a>
+        </div>
+        {% endif %}
+
+
+        {# FILES IN CHAT #}
+        <div class="titled-header">
+            <h1>Files &amp; Links on this Chat</h1>
+        </div>
+        <ul class="file-list">
+            {% for attachment in chat_attachments %}
+                <li>
+                    {{ block('chat_attachment') }}
+                </li>
+            {% endfor %}
+            {#<li>#}
+              {#<a href="#">#}
+                {#<span class="thumbnail file"><i class="fa fa-link"></i></span> Can I buy part-time or 'light' agent licenses?#}
+              {#</a>#}
+            {#</li>#}
+        </ul>
+
+  {% for message in chat_messages %}
+    {% if message.is_sys %}
+         <div class="chat-message chat-event">
+          {% if message.author %}
+            <span class="avatar" style="background-image: url({{ avatar_url(message.author, 36) }});"></span>
+          {% endif %}
+          <span class="title">
+              {% if message.metadata.phrase_id %}
+                    {% if message.is_html %}
+                        {{ phrase('portal.chat.'~ message.metadata.phrase_id, message.metadata, true) }}
+                    {% else %}
+                        {{ phrase('portal.chat.'~ message.metadata.phrase_id, message.metadata) }}
+                    {% endif %}
+                {% elseif message.is_html %}
+                    {{message.content|raw}}
+                {% else %}
+                    {{message.content}}
+                {% endif %}
+              {{ date(message.date_created, 'time') }}
+          </span>
+          <hr>
+        </div>
+    {% else %}
+        {{ block('chat_message') }}
+    {% endif %}
+{% endfor %}
+
+
+  </article>
+{% endblock inner_content %}

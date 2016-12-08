@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" data-area="ru">
+<head>
+	<meta charset="UTF-8" />
+	<title>4game web-components</title>
+
+	<link rel="stylesheet" type="text/css" href="https://ru.4game.com/r/css/blocks.css" />
+	<link rel="stylesheet" type="text/css" href="https://ru.4game.com/r/css/games.css" />
+	<link rel="stylesheet" type="text/css" href="https://ru.4game.com/b/bRub/bRub.css" />
+
+	<style type="text/css">
+		html {
+			background: #181818;
+		}
+
+		#components-placeholder {
+			top: 90px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.components_controller {
+			top: 0;
+			left: 50%;
+			width: 462px;
+			min-height: 40px;
+			border-radius: 0 0 8px 8px;
+			background: #ccc;
+			margin-left: -241px;
+			padding: 10px;
+			position: absolute;
+			z-index: 2;
+		}
+	</style>
+
+	<!--
+	<script>WebComponents={workersUrl:'https://ru.4game.com/packages/web-components/out'};</script>
+	<script src="https://ru.4game.com/packages/web-components/out/widgets.js"></script>
+	-->
+
+	<script>WebComponents={workersUrl:'../node_modules/web-components/out'};</script>
+	<script src="../node_modules/web-components/out/widgets.js"></script>
+
+	<!-- Скрипты для тестирования интеграции с компонентами Фогейма -->
+	<script src="https://ru.4game.com/packages/requirejs/require.js"></script>
+	<script src="https://ru.4game.com/packages/jade/runtime.js"></script>
+	<script src="https://ru.4game.com/r/js/i18n/ru/rules/plural.js"></script>
+	<script src="https://ru.4game.com/r/js/global/templates.js"></script>
+
+	<script>
+		(function() {
+			var baseUrl = live();
+
+			require.config({
+				baseUrl: '../out',
+				config: {
+					'block': {
+						prefix: resolve('/r/js/b')
+					},
+					'i18n': {
+						default: resolve('/r/js/i18n/ru/4game.com'),
+						inn: resolve('/r/js/i18n/ru/inn')
+					},
+					'packages/4game-api-client': {
+						'v1':{
+							'baseUrl':'https://ru-api.4gametest.com'
+						},
+						'v2':{
+							'baseUrl':'https://api2.4gametest.com'
+						},
+						'options':{
+							'cookieName':'inn-user',
+							'vkAppId':'2405070',
+							'fbAppId':'133137163426999',
+							'okAppId':'1127388672',
+							'returnUrl':'/complete-social-auth/',
+							'gatewayUrl':'https://qa.4gametest.com',
+							'accessToken': 'ndFI_I_5Gg7iomQ6msE8ywRkwjK0NY8vTt7lDa-zEK9Dxsl3a5OXdechf2S1amnHsOzps6msTbcuYvsQcnakS1KENzguT91uU_ay4kW5E4XsZ8ICZols3-r6d7KGX0UPycEu30T5YemZDq4OniJK8sJUF4DwN9xLft4Wmi8l7IzyuCZNj8aO9GgGw-HoZ-ixtsfAwAmytHB8L0YuPRD4i-w'
+						}
+					},
+					'components/store/purchase':{
+						'9': "{\"silver-talisman\":{\"productId\":7075498,\"productPrice\":1,\"events\":{\"enable\":\"aion-silver-talisman-enable\",\"disable\":\"aion-silver-talisman-disable\"}}}"
+					}
+				},
+				paths: {
+					'packages/react': resolve('/packages/react/react'),
+
+					'packages/che': resolve('/packages/che/public/js/app-min'),
+					'packages/jquery': resolve('/packages/jquery/jquery.min'),
+					'packages/lodash': resolve('/packages/lodash/dist/lodash.compat'),
+					'packages/event-bus': resolve('/packages/event-bus/out/event-bus-requirejs.min'),
+					'packages/4game-api-client': resolve('/packages/4game-api-client/out/4game-api'),
+					'packages/underscore': resolve('/packages/underscore/underscore'),
+					'packages/backbone': resolve('/packages/backbone/backbone'),
+					'packages/bacon': resolve('/packages/bacon/dist/Bacon', qa('feature-achievements')),
+
+					'css': resolve('/packages/require-css/css.min'),
+					'i18n': resolve('/packages/requirejs-plugins/lib/i18n'),
+					'block': resolve('/packages/requirejs-plugins/lib/block'),
+
+					'jade_templates': resolve('/r/components/jade-template'),
+					'global': resolve('/r/js/global', qa('feature-achievements')),
+
+					'components': resolve('/r/components', qa('feature-achievements')),
+					'component': resolve('/js/requirejs-component'),
+
+					'presenters': resolve('/r/js/presenters', qa('feature-achievements')),
+					'streams': resolve('/r/js/streams', qa('feature-achievements')),
+				},
+				shim: {
+					'packages/jquery': {
+						exports: 'jQuery'
+					},
+					'packages/underscore': {
+						exports: '_'
+					},
+					'packages/backbone': {
+						'deps': [
+							'packages/underscore',
+							'packages/jquery'
+						],
+						'exports': 'Backbone'
+					}
+				},
+				'map': {
+					'*': {
+						'$': 'packages/jquery',
+						'jQuery': 'packages/jquery',
+						'jquery': 'packages/jquery',
+						'underscore': 'packages/underscore'
+					}
+				},
+				deps: ['packages/che', 'global/web-components']
+			});
+
+			define('packages/web-components', function() {
+				return WebComponents;
+			});
+
+			define('web-components/bundle', function() {
+				return function() {
+					require(['bundle']);
+				};
+			});
+
+			function live() {
+				return 'https://ru.4game.com';
+			}
+
+			// Example: qa('feature-pb-collection') => https://pb-collection-ru.4gametest.com/
+			function qa(branch) {
+				return 'https://' + (branch ? branch.replace(/^feature-/, '') + '-' : '') + 'ru.4gametest.com';
+			}
+
+			function vagrant() {
+				return 'http://ru.4game.com.vgl';
+			}
+
+			function resolve(path, overideBaseUrl) {
+				return [overideBaseUrl || baseUrl, path.replace(/^\//, '')].join('/');
+			}
+		})();
+	</script>
+</head>
+<body>
+	<div
+		class="components_controller"
+		data-js-widgets="component!components-selector"
+		data-react-props='{"placeholder": "#components-placeholder"}'
+	></div>
+	<div id="components-placeholder"></div>
+</body>
+</html>

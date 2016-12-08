@@ -1,0 +1,22 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block inner_content %}
+  <div class="breadcrumbs">
+    {% show breadcrumbs %}
+  </div>
+
+  <article class="news main-news">
+
+    <header class="large-title">
+        <div class="header-buttons">
+            {% show rss_link %}
+            {% show news_root_subscription_link %}
+        </div>
+        <h1>{{ phrase('portal.news.section-title') }}</h1>
+        <p>{{ phrase('portal.news.section-desc') }}</p>
+    </header>
+
+    {% show news_cats_tabs %}
+    {% show news_list_full %}
+  </article>
+{% endblock inner_content %}

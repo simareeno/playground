@@ -1,0 +1,30 @@
+{
+  "name": "sasha-prosti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simareeno/sasha-prosti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simareeno/sasha-prosti/issues"
+  },
+  "homepage": "https://github.com/simareeno/sasha-prosti#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.3",
+    "less": "^2.5.1",
+    "less-plugin-autoprefix": "^1.4.2"
+  }
+}

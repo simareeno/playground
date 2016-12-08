@@ -1,0 +1,25 @@
+<div class="content-list-wrap simple as-news {% if pager|length %}with-items{% else %}with-no-items{% endif %}">
+  {% if pager|length %}
+    <ul>
+      {% for item in pager %}
+        <li>
+          <div class="date-tag">
+            <span class="month">{{ item.date_published | date('M') }}</span>
+            <span class="day">{{ item.date_published | date('j') }}</span>
+          </div>
+          <a href="{{ portal_path(item) }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <strong>{{ phrase('portal.news.none') }}</strong>
+  {% endif %}
+
+  {% if show_category_link and pager|length > 0 %}
+    <div class="list-meta">
+      <a href="{{ category ? portal_path(category) : path('portal_news') }}">
+        {{ phrase('portal.news.view-x-news', {count: pager|length}) }}<i class="fa fa-caret-right"></i>
+      </a>
+    </div>
+  {% endif %}
+</div>

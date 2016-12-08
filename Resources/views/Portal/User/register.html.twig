@@ -1,0 +1,31 @@
+{% set cls = "column-half-plus wide" %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Portal:User/macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+
+    <header class="large-title">
+        <h1>{{ phrase('portal.account.section-title-register') }}</h1>
+        <p>{{ phrase('portal.account.section-desc-register') }}</p>
+    </header>
+
+    <section class="padded">
+        {{  macros.lockout_notice(phrase('portal.account.register-lockout'), lockout, lockout_time) }}
+        <div class="form-ticket dpx-form">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_rest(form) }}
+            <div class="form-widget bucket">
+                <button type="submit">{{ phrase('portal.account.register-btn') }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock inner_content %}

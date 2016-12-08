@@ -1,0 +1,42 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<link href="{{ asset('DeskPRO_PortalBundle_vendors_style.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+
+<!--[if lte IE 8]>
+<script type="text/javascript" src="{{ asset('html5shiv/dist/html5shiv.min.js', 'vendor_assets') }}"></script>
+<![endif]-->
+
+<!--[if IE]>
+<link href="{{ asset('DeskPRO_PortalBundle_iestyle.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+<link href="{{ asset('DeskPRO_PortalBundle_ie9style.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link href="{{ asset('DeskPRO_PortalBundle_ie8style.css', 'app_assets') }}" media="all" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% set favicon = portal_custom_favicon() %}
+
+{% if favicon %}
+<link rel="icon" href="{{ favicon.url }}" type="{{ favicon.type }}">
+{% endif %}
+
+<style type="text/css">
+    {# This is copy+pasted from dpx.scss. It needs to be inline because it needs to be instant. #}
+    body .as-no-dpui { display: block; }
+    body .as-dpui { display: none; }
+    body.with-dpui .as-no-dpui { display: none; }
+    body.with-dpui .as-dpui { display: block; }
+    body.with-js .with-dpx { visibility: hidden; }
+    body.with-js .with-dpx { visibility: hidden; }
+    .without-dpui .dpx-placeholder { display: none; }
+    body.with-js.with-dpui.with-pageload-dpx-done .dpx-placeholder { display: none; }
+    body.with-js.without-dpui.with-pageload-done .with-dpx { visibility: visible; }
+    body.with-js.with-dpui.with-pageload-dpx-done .with-dpx { visibility: visible; }
+</style>
+
+<link href="{{ asset('DeskPRO_PortalBundle_print_style.css', 'app_assets') }}" media="print" rel="stylesheet" type="text/css" />
+
+{% include 'Theme:Internal:custom-head-include.html.twig' %}

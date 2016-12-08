@@ -1,0 +1,14 @@
+{% for category in category_children %}
+    <div class="column-half{% if loop.index0 % 2 == 1 %} omega{% endif %}">
+        <article class="article-categories">
+            <header>
+                <h1>
+                    <a href="{{ portal_path(category) }}">{{ object_phrase(category) }}</a>
+                </h1>
+                <hr>
+            </header>
+
+            {% show download_list_detail with {category: category.id, show_category_link: true } %}
+        </article>
+    </div>
+{% endfor %}

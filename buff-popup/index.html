@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <title>Buff popup</title>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="popup">
+    <div class="popup__content">
+      <div class="buffname"><img src="img/icon.png" alt=""> +30% <span>на счет</span></div>
+      <div class="header"><img src="img/header.png" alt=""></div>
+      <div class="texts"><img src="img/texts.png" alt=""></div>
+      <div class="button"><img src="img/button.png" alt=""></div>
+      <div class="close"><img src="img/close.png" alt=""></div>
+    </div>
+
+    <div class="bubbles">
+
+      <div class="rotate-group rotate-group1">
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble4"></div>
+        <div class="bubble bubble2"></div>
+      </div>
+
+      <div class="rotate-group rotate-group2">
+        <div class="bubble bubble3"></div>
+        <div class="bubble bubble6"></div>
+        <div class="bubble bubble7"></div>
+      </div>
+
+    </div>
+
+    <div class="potion-wrap-wrap">
+    <div class="potion-wrap">
+
+    <div class="potion">
+      <svg viewBox="0 0 480 148">
+        <path fill="#06428b">
+          <animate
+
+            dur="10"
+
+            calcMode="spline"
+
+            keyTimes="
+                  0;
+                  0.5;
+                  1"
+
+            keySplines="
+                  0.5 0.75 0.9 1;
+                  0.5 0.75 0.9 1"
+
+            repeatCount="indefinite"
+
+            attributeName="d"
+
+            from="M0,8.5c0,0,51.3-11,138-5.5c93.8,6,116.7,25.5,216,20.7c94.7-4.5,126-15.2,126-15.2V148H0V8.5z"
+
+            to="M0,8.5c0,0,51.3-11,138-5.5c93.8,6,116.7,25.5,216,20.7c94.7-4.5,126-15.2,126-15.2V148H0V8.5z"
+
+            values="M0,8.5c0,0,51.3-11,138-5.5c93.8,6,116.7,25.5,216,20.7c94.7-4.5,126-15.2,126-15.2V148H0V8.5z;
+                    M0,8.5c0,0,51.1,18.1,138,15.2c99.8-3.2,116.6-23.3,216-20.5C450.2,6,480,8.5,480,8.5V148H0V8.5z;
+                    M0,8.5c0,0,51.3-11,138-5.5c93.8,6,116.7,25.5,216,20.7c94.7-4.5,126-15.2,126-15.2V148H0V8.5z;"/>
+        </path>
+      </svg>
+    </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="shadow"><img src="img/shadow.png" alt=""></div>
+<div class="overlay"></div>
+
+
+
+<!-- BOTTOM M0,5.5c0,0,51.1,2.5,138,4.8c96,2.6,117.1-5.2,216-5.2c94.8,0,126,0.4,126,0.4v51H0V5.5z
+BOTTOM2 M0,8.5c0,0,51.1,18.1,138,15.2c99.8-3.2,116.6-23.3,216-20.5C450.2,6,480,8.5,480,8.5V148H0V8.5z
+
+TOP M0,5.5c0,0,51.1-2.8,138-0.4c96,2.6,117.1,5.2,216,5.2c94.8,0,126-4.8,126-4.8v51H0V5.5z
+TOP2 M0,8.5c0,0,51.3-11,138-5.5c93.8,6,116.7,25.5,216,20.7c94.7-4.5,126-15.2,126-15.2V148H0V8.5z -->
+
+
+<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 56.5" style="enable-background:new 0 0 480 56.5;" xml:space="preserve">
+<path class="st0" d="M0,5.5c0,0,51.1,9.5,138,11.9C234,19.9,255.1,0,354,0c94.8,0,126,5.5,126,5.5v51H0V5.5z"/>
+</svg> -->
+
+<!-- <svg viewbox="0 0 100 100">
+  <path fill="#1EB287">
+    <animate
+             attributeName="d"
+             dur="1440ms"
+             repeatCount="indefinite"
+             values="M 0,0
+                     C 50,0 50,0 100,0
+                     100,50 100,50 100,100
+                     50,100 50,100 0,100
+                     0,50 0,50 0,0
+                     Z;
+
+                     M 0,0
+                     C 50,0 50,0 100,0
+                     100,50 100,50 100,100
+                     50,100 50,100 0,100
+                     0,50 0,50 0,0
+                     Z;
+
+                     M 50,0
+                     C 75,25 75,25 100,50
+                     75,75 75,75 50,100
+                     25,75 25,75 0,50
+                     25,25 25,25 50,0
+                     Z;
+
+                     M 25,50
+                     C 37.5,25 37.5,25 50,0
+                     75,50 75,50 100,100
+                     50,100 50,100 0,100
+                     12.5,75 12.5,75 25,50
+                     Z;
+
+                     M 25,50
+                     C 37.5,25 37.5,25 50,0
+                     75,50 75,50 100,100
+                     50,100 50,100 0,100
+                     12.5,75 12.5,75 25,50
+                     Z;
+
+                     M 50,0
+                     C 77.6,0 100,22.4 100,50
+                     100,77.6 77.6,100 50,100
+                     22.4,100, 0,77.6, 0,50
+                     0,22.4, 22.4,0, 50,0
+                     Z;
+
+                     M 50,0
+                     C 77.6,0 100,22.4 100,50
+                     100,77.6 77.6,100 50,100
+                     22.4,100, 0,77.6, 0,50
+                     0,22.4, 22.4,0, 50,0
+                     Z;
+
+                     M 100,0
+                     C 100,50 100,50 100,100
+                     50,100 50,100 0,100
+                     0,50 0,50 0,0
+                     50,0 50,0 100,0
+                     Z;"/>
+    <animate
+             attributeName="fill"
+             dur="1440ms"
+             repeatCount="indefinite"
+             keyTimes="0;
+                       .0625;
+                       .208333333;
+                       .3125;
+                       .395833333;
+                       .645833333;
+                       .833333333;
+                       1"
+             values="#1eb287;
+                     #1eb287;
+                     #1ca69e;
+                     #188fc2;
+                     #188fc2;
+                     #bb625e;
+                     #ca5f52;
+                     #1eb287;"/>
+  </path>
+</svg> -->
+
+
+</body>
+</html>

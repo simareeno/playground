@@ -1,0 +1,1571 @@
+@import url("//st1-ru.4game.com/-/3853895001/pointblank/b/bWidePageMaxWidth/bWidePageMaxWidth.css");
+.pPb_bClear {
+  clear: both;
+}
+html,
+.bGlobalLayout {
+  background: #1e2022;
+}
+.pPb_bDailyEvents {
+  position: relative;
+  background: #1e2022 url('//st1-ru.4game.com/-/2068083978/pointblank/b/pPb/pPb_bDailyEvents/bg.jpg') top center no-repeat;
+  background-size: contain;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* Если нет .pPb_bDailyEvents__eContainer для неавторизованных пользователей */
+}
+.pPb_bDailyEvents__mEmpty {
+  box-sizing: border-box;
+  height: 100%;
+  padding-bottom: 390px;
+}
+.pPb_bDailyEvents__mEmpty .pPb_bDailyEvents__eHeader {
+  height: 100%;
+}
+.pPb_bDailyEvents__eHeader {
+  padding-top: 35px;
+  min-height: 650px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid #303132;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  margin-bottom: -2px;
+}
+.pPb_bDailyEvents__eTitle {
+  font: 48px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #fff;
+  margin: 150px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.pPb_bDailyEvents__ePblink {
+  color: #57a0e3;
+  text-decoration: none;
+  padding-left: 52px;
+  position: relative;
+}
+.pPb_bDailyEvents__ePblink::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 7px;
+  background: url('//st2-ru.4game.com/-/810680938/pointblank/b/pPb/pPb_bDailyEvents/pb_logo.png') no-repeat;
+}
+.pPb_bDailyEvents__ePblink:hover {
+  color: red;
+}
+.pPb_bDailyEvents__eHeadDesc {
+  font: 28px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #fff;
+  margin: 50px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.pPb_bDailyEvents__eContainer {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  padding-bottom: 60px;
+  text-align: center;
+}
+.pPb_bDailyEvents__eContainer__mHidden {
+  display: none;
+}
+.pPb_bDailyEvents__eBoxPrize {
+  padding: 55px 45px 0;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+}
+.pPb_bDailyEvents__eBoxPrize::after {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+.pPb_bDailyEvents__eBoxPrize__mType_Center {
+  text-align: center;
+}
+.pPb_bDailyEvents__eBoxPrize__mType_Image {
+  padding-top: 84px;
+  min-height: 450px;
+}
+.pPb_bDailyEvents__eBoxPrizePreview {
+  position: absolute;
+  left: -160px;
+  top: -146px;
+}
+.pPb_bDailyEvents__eBoxPrizeTitle {
+  color: #fff;
+  text-transform: uppercase;
+  font: bold 28px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 0 0 30px rgba(0, 128, 255, 0.8);
+}
+.pPb_bDailyEvents__eBoxPrize__mType_Image .pPb_bDailyEvents__eBoxPrizeTitle {
+  padding-top: 68px;
+  margin-left: 345px;
+}
+.pPb_bDailyEvents__eBoxPrizeImage {
+  float: left;
+  width: 300px;
+  margin-right: 10px;
+}
+.pPb_bDailyEvents__eBoxPrizeDesc {
+  color: #878787;
+  font: 20px/28px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  margin-top: 21px;
+  position: relative;
+}
+.pPb_bDailyEvents__eBoxPrize__mType_Image .pPb_bDailyEvents__eBoxPrizeDesc {
+  margin-left: 345px;
+}
+.pPb_bDailyEvents__eBoxPrize__mType_Center .pPb_bDailyEvents__eBoxPrizeDesc {
+  margin: 21px auto 0;
+  max-width: 760px;
+}
+.pPb_bDailyEvents__eBoxPrizeDesc p {
+  margin: 0;
+}
+.pPb_bDailyEvents__eBoxPrizeDesc p + p {
+  margin-top: 10px;
+}
+.pPb_bDailyEvents__eGoods {
+  padding: 80px 0 0;
+  display: block;
+  margin: 0 auto;
+  width: 1010px;
+}
+@media (max-width: 1099px) {
+  .pPb_bDailyEvents__eGoods {
+    width: 810px;
+  }
+}
+.pPb_bDailyEvents__eGoods::after {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+.pPb_bDailyEvents__eGoods base-spinner {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+.pPb_bDailyEvents__eGoods pb-prize,
+.pPb_bDailyEvents__eGoods pb-superprize {
+  float: left;
+}
+.pPb_bDailyEvents__eGoods pb-prize {
+  height: 230px;
+}
+.pPb_bDailyEvents__eGoodsItem {
+  margin: 5px 6px;
+}
+.pPb_bDailyEvents__eGoodsSuperprize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 92px;
+  height: 92px;
+  overflow: hidden;
+}
+.pPb_bDailyEvents__eGoodsSuperprize::before {
+  content: 'Суперприз';
+  text-transform: uppercase;
+  font: 12px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  position: absolute;
+  left: -36px;
+  top: 22px;
+  background-color: #fdcb02;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px 4px;
+  text-align: center;
+  width: 135px;
+  transform: rotate(315deg);
+}
+.pPb_bDailyEvents__eGoodsItem__mSize_Big {
+  display: block;
+  text-align: left;
+}
+.pPb_bDailyEvents__eGoodsTitle {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  flex: 1;
+}
+.pPb_bDailyEvents__eGoodsPreview {
+  text-align: center;
+  flex: 1;
+}
+.pPb_bDailyEvents__eGoodsPreview img {
+  max-width: 100%;
+}
+.pPb_bDailyEvents__eGoodsItem__mSize_Big .pPb_bDailyEvents__eGoodsPreview {
+  margin-top: 13px;
+  min-height: 125px;
+}
+.pPb_bDailyEvents__eGoodsDate {
+  color: #878787;
+  font-size: 14px;
+  line-height: 24px;
+}
+.pPb_bDailyEvents__eGoodsPrice {
+  min-width: 2em;
+}
+.pPb_bDailyEvents__eNotInMarket {
+  display: block;
+  border: 1px solid #404451;
+  border-radius: 3px;
+  padding: 4px 10px;
+  color: #fff;
+  font: 14px/18px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+  width: 112px;
+  box-sizing: border-box;
+  margin-top: -3px;
+  float: left;
+}
+.pPb_bDailyEvents__eGoodsHead {
+  float: left;
+  width: 235px;
+}
+.pPb_bDailyEvents__eGoodsProps {
+  list-style: none;
+  font-size: 0;
+  padding: 32px 0 0;
+  margin-right: -30px;
+  clear: both;
+}
+.pPb_bDailyEvents__eGoodsProp {
+  color: #878787;
+  vertical-align: top;
+  font: 14px/32px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  width: 50%;
+  box-sizing: border-box;
+  position: relative;
+  padding-right: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.pPb_bDailyEvents__eGoodsLabel {
+  overflow: hidden;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.pPb_bDailyEvents__eGoodsLabel::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  left: 3px;
+  margin-right: -100%;
+  background: linear-gradient(to right, transparent 2px, #66687d 3px) repeat-x;
+  background-size: 3px 1px;
+}
+.pPb_bDailyEvents__eSpacer {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.pPb_bDailyEvents__eFAQ {
+  padding: 75px 0;
+  clear: both;
+  border-top: 2px solid #303132;
+}
+.pPb_bDailyEvents__eFAQLink {
+  color: #57a0e3;
+  font: 23px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+.pPb_bDailyEvents__eFAQLink:hover {
+  color: red;
+}
+.pPb_bDailyEvents__eFAQLink::before {
+  content: '';
+  float: left;
+  width: 70px;
+  height: 47px;
+  margin-top: 5px;
+  background: url('//st2-ru.4game.com/-/3229914646/pointblank/b/pPb/pPb_bDailyEvents/faq_quest.png') no-repeat;
+}
+.pPb_bDailyEvents__eFAQDesc {
+  font: 16px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #878787;
+  margin: 10px 0 0;
+}
+.pPb_bDailyEvents_eFooter {
+  display: block;
+  border-top: 2px solid #303132;
+  background-color: #1e2022;
+}
+.pPb_bDailyEvents daily-event-list {
+  display: inline-block;
+  margin-top: 20px;
+}
+.pPb_bLayout {
+  background: url('//st1-ru.4game.com/-/3301826056/pointblank/b/pPb/pPb_bLayout/bg_apb.png') repeat #000000;
+  position: relative;
+  color: #fff;
+  padding-top: 35px;
+}
+.pPb_bLayout a:link,
+.pPb_bLayout a:active,
+.pPb_bLayout a:visited {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.pPb_bLayout a:hover {
+  color: #fbb90a !important;
+  border-bottom-color: #fbb90a !important;
+}
+.pPb_bLayout .bWidePageMaxWidth {
+  position: relative;
+  overflow: hidden;
+}
+.pPb_bLayout .bFooter .bWidePageMaxWidth {
+  overflow: visible;
+}
+.pPb_bLayout .bPageFooterList__eHeaderText {
+  border-bottom: 1px dashed;
+}
+.pPb_bLayout .bPageFooterList__eHeaderText {
+  color: #ffffff;
+}
+.pPb_bLayout .bPageFooterList__eHeaderText:hover,
+.pPb_bLayout .bPageFooterList__eHeaderText__mState_Active {
+  color: #fbb90a;
+}
+.pPb_bLayout .bPageFooterList__eHeaderText__mState_Active:hover {
+  color: #ffffff;
+}
+.pPb_bLayout .bPageFooter__mType_New {
+  border-top: 0;
+}
+.pPb_bSlides {
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  /* Поведение внутренних элементов при выбранном слайде */
+}
+.pPb_bSlidesGun {
+  position: absolute;
+  z-index: 2;
+  width: 534px;
+  height: 319px;
+  background: url('//st2-ru.4game.com/-/325993719/pointblank/b/pPb/pPb_bSlides/gun.png') no-repeat 0 0;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: margin 0.55s ease-in;
+  transition: margin 0.55s ease-in;
+}
+.pPb_bSlidesSelector {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  z-index: 3;
+}
+.pPb_bSlidesSelectorWrapper {
+  display: inline-block;
+  position: relative;
+  font-size: 0px;
+}
+.pPb_bSlidesSelector__Item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 104px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 8px 0 0;
+  border: 1px solid #000;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.pPb_bSlidesSelector__Item_mPos_2 {
+  margin-right: 60px;
+}
+.pPb_bSlidesSelector__Item_mPos_3 {
+  margin-left: 60px;
+  *left: 60px;
+}
+.pPb_bSlidesSelector__Item_mPos_4 {
+  margin-right: 0;
+}
+.pPb_bSlidesSelector__ItemImg {
+  width: 104px;
+  vertical-align: middle;
+}
+.pPb_bSlidesSelector__eLabel {
+  width: 104px;
+  height: 64px;
+  background: url('//st1-ru.4game.com/-/848898998/pointblank/b/pPb/pPb_bSlides/pPb_bSlidesSelector__eLabel.png') no-repeat 0 0;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  -webkit-transition: left 0.55s ease-in;
+  transition: left 0.55s ease-in;
+}
+.pPb_bSlidesVideoLink {
+  width: 104px;
+  height: 88px;
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  margin-left: -52px;
+  z-index: 4;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.pPb_bSlidesVideoLink__eLink {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+}
+.pPb_bSlidesVideoLink__eImg {
+  vertical-align: top;
+  border: 0;
+}
+.pPb_bSlidesSlide {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: left 0.55s ease-in;
+  transition: left 0.55s ease-in;
+}
+.pPb_bSlidesSlide__Logo {
+  position: absolute;
+  left: 70px;
+  top: 21px;
+  width: 570px;
+  height: 92px;
+  background: url('//st2-ru.4game.com/-/1307881179/pointblank/b/pPb/pPb_bSlides/logo_pointblank.png') no-repeat 0px -92px;
+  z-index: 10;
+}
+.pPb_bSlidesSlide__Logo .pPb_bSlidesSlide__Logo_txt {
+  display: none;
+}
+.pPb_bSlidesSlide__eText {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  line-height: 16px;
+  position: absolute;
+  left: 70px;
+  top: 128px;
+  width: 550px;
+}
+.pPb_bSlidesSlide__eTextRow {
+  display: inline-block;
+  padding: 4px 12px;
+}
+.pPb_bSlidesSlide__eTextRow:first-child {
+  padding-top: 8px;
+  padding-right: 12px;
+}
+.pPb_bSlidesSlide__eTextRow:last-child {
+  padding-bottom: 8px;
+}
+.pPb_bSlidesSlide__eContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: left 0.55s ease-in;
+  transition: left 0.55s ease-in;
+}
+.pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eContent {
+  background: url('//st3-ru.4game.com/-/1202098848/pointblank/b/pPb/pPb_bSlides/bg_pointblank_1.jpg') no-repeat 50% 0;
+}
+.pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__Logo {
+  margin: 0px;
+  background-position: 0 -92px;
+}
+.pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__Logo_txt {
+  display: none;
+}
+.pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eText {
+  color: #fff;
+}
+.pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eTextRow {
+  background: rgba(0, 0, 0, 0.7);
+}
+.pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eContent {
+  background: url('//st1-ru.4game.com/-/3104345024/pointblank/b/pPb/pPb_bSlides/bg_pointblank_2.jpg') no-repeat 50% 0;
+}
+.pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__Logo {
+  background-position: 0 -92px;
+}
+.pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__Logo_txt {
+  display: none;
+}
+.pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eText {
+  color: #fff;
+}
+.pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eTextRow {
+  background: rgba(47, 46, 41, 0.7);
+}
+.pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__eContent {
+  background: url('//st2-ru.4game.com/-/3946222800/pointblank/b/pPb/pPb_bSlides/bg_pointblank_3.jpg') no-repeat 50% 0;
+}
+.pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__Logo {
+  background-position: 0 -92px;
+}
+.pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__Logo_txt {
+  display: none;
+}
+.pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__eText {
+  color: #fff;
+}
+.pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__eTextRow {
+  background: rgba(47, 46, 41, 0.7);
+}
+.pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__eContent {
+  background: url('//st3-ru.4game.com/-/1426034901/pointblank/b/pPb/pPb_bSlides/bg_pointblank_4.jpg') no-repeat 50% 0;
+}
+.pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__Logo {
+  background-position: 0 -92px;
+}
+.pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__Logo_txt {
+  display: none;
+}
+.pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__eText {
+  color: #fff;
+}
+.pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__eTextRow {
+  background: rgba(27, 29, 20, 0.7);
+}
+.pPb_bSlides_mSlide_1 .pPb_bSlidesSlide_mPos_1 {
+  left: 0;
+}
+.pPb_bSlides_mSlide_1 .pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eContent {
+  left: 0;
+}
+.pPb_bSlides_mSlide_1 .pPb_bSlidesGun {
+  margin-left: -100px;
+}
+.pPb_bSlides_mSlide_1 .pPb_bSlidesSelector__eLabel {
+  left: 1px;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesSlide_mPos_1 {
+  left: -100%;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eContent {
+  left: 100%;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesSlide_mPos_2 {
+  left: 0;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eContent {
+  left: 0;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesGun {
+  margin-left: 0;
+}
+.pPb_bSlides_mSlide_2 .pPb_bSlidesSelector__eLabel {
+  left: 115px;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_1,
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_2 {
+  left: -100%;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eContent,
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eContent {
+  left: 100%;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_3 {
+  left: 0;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__eContent {
+  left: 0;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesGun {
+  margin-left: -120px;
+}
+.pPb_bSlides_mSlide_3 .pPb_bSlidesSelector__eLabel {
+  left: 341px;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_1,
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_2,
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_3 {
+  left: -100%;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_1 .pPb_bSlidesSlide__eContent,
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_2 .pPb_bSlidesSlide__eContent,
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_3 .pPb_bSlidesSlide__eContent {
+  left: 100%;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_4 {
+  left: 0;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSlide_mPos_4 .pPb_bSlidesSlide__eContent {
+  left: 0;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesGun {
+  margin-left: -200px;
+}
+.pPb_bSlides_mSlide_4 .pPb_bSlidesSelector__eLabel {
+  left: 455px;
+}
+.pPb_bTournament {
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+  max-width: 85%;
+  min-width: 80%;
+  padding: 50px 0;
+  z-index: 6;
+  display: none;
+}
+.pPb_bTournament__eWrapper {
+  position: relative;
+  background: #fff;
+  z-index: 6;
+}
+.pPb_bTournament__mShow1.pPb_bTournament__mState1 {
+  display: block;
+}
+.pPb_bTournament__mShow2.pPb_bTournament__mState2 {
+  display: block;
+}
+.pPb_bTournament__mShow3.pPb_bTournament__mState3 {
+  display: block;
+}
+.pPb_bTournament__mType_narrow {
+  max-width: 80%;
+  min-width: 79%;
+}
+.pPb_bTournament__mType_hidden {
+  display: none;
+}
+.pPb_bTournament__eHeading {
+  margin: 0 0 10px;
+  color: #343434;
+  font: bold 40px/40px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+}
+.pPb_bTournament__eSubHeading {
+  margin: 0 0 20px;
+  color: #000;
+  font: bold 25px/30px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+}
+.pPb_bTournament__eSubHeading__mPos_center {
+  text-align: center;
+}
+.pPb_bTournament__eText {
+  margin: 0 0 25px;
+  color: #000;
+  font: 15px/20px Arial, sans-serif;
+  text-align: left;
+}
+.pPb_bTournament__eInfoTbl {
+  width: 100%;
+  margin: 50px 0;
+  border-collapse: collapse;
+}
+.pPb_bTournament__eInfoTblHeadingLeftTop {
+  width: 70%;
+  padding-right: 70px;
+  vertical-align: bottom;
+}
+.pPb_bTournament__eInfoTblHeadingRightTop {
+  width: 30%;
+  vertical-align: bottom;
+}
+.pPb_bTournament__eInfoTblHeadingLeft {
+  width: 70%;
+  padding-right: 70px;
+  vertical-align: top;
+}
+.pPb_bTournament__eInfoTblHeadingRight {
+  width: 30%;
+  vertical-align: top;
+}
+.pPb_bTournament__eInfoTbl__mType_vs .pPb_bTournament__eInfoTblHeadingLeft {
+  width: 37%;
+  padding-right: 30px;
+}
+.pPb_bTournament__eInfoTbl__mType_vs .pPb_bTournament__eInfoTblHeadingRight {
+  width: 63%;
+}
+.pPb_bTournament__eLogo {
+  margin-bottom: 20px;
+}
+.pPb_bTournament__eDate {
+  float: left;
+  margin-right: 15px;
+}
+.pPb_bTournament__eTip {
+  display: inline-block;
+  width: 50%;
+  font: 13px/18px Arial, sans-serif;
+  vertical-align: top;
+}
+.pPb_bTournament__eTranslation {
+  display: table;
+  margin: 50px 0;
+}
+.pPb_bTournament__eTranslationLeft {
+  display: table-cell;
+  width: 68%;
+  padding-right: 40px;
+  vertical-align: top;
+}
+.pPb_bTournament__eTranslationRight {
+  display: table-cell;
+  width: 27%;
+  vertical-align: top;
+}
+.pPb_bTournament__eNextCount {
+  text-align: center;
+}
+.pPb_bTournament__eNextCount__mState_video {
+  margin-top: 40px;
+}
+.pPb_bTournament__eNextCount__mState_video .pPb_bTournament__eNextCountLeft {
+  width: 25%;
+}
+.pPb_bTournament__eNextCountLeft {
+  display: inline-block;
+  width: 35%;
+  margin: 0 20px 0 0;
+  vertical-align: top;
+}
+.pPb_bTournament__eNextCountRight {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+}
+.pPb_bTournament__eTDate {
+  position: relative;
+  display: inline-block;
+  width: 99px;
+  margin-right: 15px;
+  vertical-align: top;
+}
+.pPb_bTournament__eTDateItemWrap {
+  position: relative;
+  display: inline-block;
+  font-size: 52px;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  /* 
+		используем значения в пикселях, иначе в Хроме будут 
+		визуальные баги из-за дробных размеров
+		*/
+  line-height: 70px;
+  width: 47px;
+  height: 73px;
+  vertical-align: top;
+  -webkit-perspective: 63px;
+  perspective: 63px;
+}
+.pPb_bTournament__eTDateItem {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid  #101010;
+  color: #fff;
+  padding: 1px 0 0;
+  text-align: center;
+  width: 100%;
+  padding-left: 1px;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  /* Сразу выносим слой на GPU  */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  background-color: #060606;
+  background-image: linear-gradient(top, #424242, #060606);
+}
+.pPb_bTournament__eTDateItem:before,
+.pPb_bTournament__eTDateItem:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0.63em;
+}
+.pPb_bTournament__eTDateItem:before {
+  left: 0;
+  right: 0;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  background: white;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.4;
+  height: 1px;
+}
+.pPb_bTournament__eTDateItem:after {
+  height: 2px;
+  left: -1px;
+  right: -1px;
+  border-left: 1px solid  #fff;
+  border-right: 1px solid  #fff;
+  opacity: 0.6;
+}
+.pPb_bTournament__eTDateLabel {
+  position: absolute;
+  display: block;
+  font: bold 15px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+  bottom: -2.5em;
+  left: 0;
+}
+.pPb_bTournament__ePlay {
+  display: none;
+}
+.pPb_bTournament__ePlay__mShow1.pPb_bTournament__eState1 {
+  display: block;
+}
+.pPb_bTournament__ePlay__mShow2.pPb_bTournament__eState2 {
+  display: block;
+}
+.pPb_bTournament__ePlayPrev {
+  display: inline-block;
+  vertical-align: top;
+}
+.pPb_bTournament__ePlayPrevDesc {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin: 0 0 0 15px;
+}
+.pPb_bRecord {
+  position: relative;
+  background: url("/pointblank/b/bTournaments/i/bg.gif") 0 0 repeat;
+  z-index: 5;
+}
+.pPb_bRecord:before,
+.pPb_bRecord:after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 10px;
+  width: 49%;
+  height: 3px;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+.pPb_bRecord:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+.pPb_bRecord__ePreviews {
+  margin: 0 0 40px;
+  white-space: nowrap;
+}
+.pPb_bRecord__ePreviewItem {
+  width: 160px;
+  display: inline-block;
+  margin: 0 30px 0 0;
+  vertical-align: top;
+  white-space: normal;
+}
+.pPb_bRecord__ePrevName {
+  margin: 10px 0 0;
+  font: 13px/15px Arial, sans-serif;
+  color: #4c4545;
+}
+.pPb_bRecord__ePrevDesc {
+  margin: 0;
+  font: 13px/15px Arial, sans-serif;
+  color: #4c4545;
+}
+.pPb_bRecord__eLink {
+  color: #0685b5;
+}
+.pPb_bRecord__ePrevImg {
+  vertical-align: top;
+  border: none;
+}
+.pPb_bRecord__ePrevLink {
+  text-decoration: none;
+}
+.pPb_bRecord__eWrapper {
+  padding: 50px 0;
+  width: 750px;
+  margin: 0 auto;
+}
+.pPb_bShootingRange__eGame {
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+.pPb_bShootingRange__eGame__eCanvas#main_stage,
+.pPb_bShootingRange__eGame__eCanvas#zoom_stage,
+.pPb_bShootingRange__eGame__eCanvas#bullet_stage,
+.pPb_bShootingRange__eGame__eCanvas#collimator_stage {
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
+  position: absolute;
+}
+.pPb_bShootingRange__eGame__eCanvas#zoom_stage {
+  top: 50%;
+  left: 50%;
+  margin: -162px 0 0 -230px;
+}
+.pPb_bShootingRange__eGame__eBg,
+.pPb_bShootingRange__eGame__eCollimator {
+  top: 0;
+  left: 50%;
+  height: 560px;
+  position: absolute;
+}
+.pPb_bShootingRange__eGame__eBg {
+  width: 1200px;
+  margin-left: -600px;
+}
+.pPb_bShootingRange__eGame__eCollimator {
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.pPb_bShootingRange__eGame__eCollimator:before {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+.pPb_bShootingRange__eGame__eCollimator__eImage {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pPb_bShootingRange__eGame__eButton {
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.pPb_bShootingRange__eGame__eTitle,
+.pPb_bShootingRange__eGame__eControls {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  font: bold 40px/25px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #ffffff;
+}
+.pPb_bShootingRange__eGame__eTitle {
+  left: 53px;
+}
+.pPb_bShootingRange__eGame__eControls {
+  top: 27px;
+  right: 30px;
+  width: 126px;
+  font-size: 18px;
+  text-align: center;
+  background: url('//st3-ru.4game.com/-/1440777919/pointblank/b/pPb/pPb_bShootingRange/i/shot-controls.png') top center no-repeat;
+  padding-top: 93px;
+  display: none;
+}
+.pPb_bShootingRange__eGame__eCounter {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 126px;
+  padding-top: 93px;
+}
+.pPb_bShootingRange__eGame__eCounter__eCount {
+  position: absolute;
+  font-size: 60px;
+  color: #FFF;
+  vertical-align: top;
+  line-height: 55px;
+  right: 130px;
+  line-height: 1em;
+  bottom: -6px;
+}
+.pPb_bShootingRange__eGame__eCounter__eText {
+  font: 13px/15px Arial;
+  color: #FFF;
+}
+.pPb_bShootingRange__eGame__eCounter__eLink {
+  font: 11px/15px Arial;
+  color: #9F9999;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.pPb_bShootingRange__eGame__ePreloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.pPb_bShootingRange__eGame__ePreloader:before {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+.pPb_bShootingRange__eGame__ePreloader__eBody {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.pPb_bShootingRange__eGame__ePreloader__eTitle {
+  font: bold 18px/25px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.pPb_bShootingRange__eGame__ePreloader__eBar {
+  display: inline-block;
+  width: 165px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.pPb_bShootingRange__eGame__ePreloader__mError .pPb_bShootingRange__eGame__ePreloader__eBar {
+  display: none;
+}
+.pPb_bShootingRange__eGame__eMessage {
+  width: 100%;
+  margin-top: 10px;
+  position: absolute;
+}
+.pPb_bShootingRange__eGame__eMessage .bInfoMessage {
+  display: inline-block;
+}
+/* 4Game Logo*/
+/* new UI */
+/* Internal page */
+/* Userbar */
+.pPb_bShootingItems {
+  padding: 30px 20px 20px;
+  background: url("//st2-ru.4game.com/-/4202466413/pointblank/b/pPb/pPb_bShootingItems/bg_full.gif") center top;
+}
+.pPb_bShootingItems__eWrapper {
+  background: url("//st3-ru.4game.com/-/3581809507/pointblank/b/pPb/pPb_bShootingItems/bg.gif") center top;
+}
+.pPb_bShootingItems__eList {
+  font-size: 0;
+  margin: 5px 0 0;
+  padding: 0 0 15px 0;
+  overflow: hidden;
+  display: block;
+}
+.pPb_bShootingItems__eList__eItem {
+  display: inline-block;
+  font-size: 16px;
+  width: 16.6%;
+  min-width: 192px;
+  height: 234px;
+  vertical-align: top;
+  position: relative;
+}
+@media (max-width: 1250px) and (min-width: 1060px) {
+  .pPb_bShootingItems__eList__eItem {
+    width: 20%;
+  }
+}
+@media (max-width: 1060px) {
+  .pPb_bShootingItems__eList__eItem {
+    width: 25%;
+  }
+}
+.pPb_bShootingItems__eList__eItem__mSuperPrize {
+  float: left;
+  width: 32.3%;
+  min-width: 384px;
+  height: 468px;
+  margin-bottom: -5px;
+}
+@media (max-width: 1250px) and (min-width: 1060px) {
+  .pPb_bShootingItems__eList__eItem__mSuperPrize {
+    width: 40%;
+  }
+}
+@media (max-width: 1060px) {
+  .pPb_bShootingItems__eList__eItem__mSuperPrize {
+    width: 50%;
+  }
+}
+.pPb_bShootingItems__eList__eItem__mSuperPrize .pPb_bShootingItems__eList__eItem__eContent {
+  background: url("//st3-ru.4game.com/-/1849918612/pointblank/b/pPb/pPb_bShootingItems/bg_main.gif");
+}
+.pPb_bShootingItems__eList__eItem__eContent {
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+.pPb_bShootingItems__eItemTable {
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.pPb_bShootingItems__eItemTable__eInnerRow {
+  display: table-row;
+}
+.pPb_bShootingItems__eItemTable .pPb_bShootingItems__eInnerItem {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pPb_bShootingItems__eItemTable .pPb_bShootingItems__eInnerItem__mCardOrder_first,
+.pPb_bShootingItems__eItemTable .pPb_bShootingItems__eInnerItem__mCardOrder_third,
+.pPb_bShootingItems__eItemTable .pPb_bShootingItems__eInnerItem__mOrder_first,
+.pPb_bShootingItems__eItemTable .pPb_bShootingItems__eInnerItem__mOrder_fourth {
+  height: 1px;
+  vertical-align: top;
+}
+.pPb_bShootingItems__eInnerItem__mOrder_first {
+  padding-top: 40px;
+  text-align: center;
+  background: radial-gradient(ellipse at center, rgba(255, 228, 0, 0.2) 0%, transparent 70%);
+}
+.pPb_bShootingItems__eInnerItem__mOrder_fourth,
+.pPb_bShootingItems__eInnerItem__mCardOrder_first,
+.pPb_bShootingItems__eInnerItem__mCardOrder_second,
+.pPb_bShootingItems__eInnerItem__mCardOrder_third {
+  text-align: center;
+}
+.pPb_bShootingItems__eInnerItem__mOrder_fourth {
+  background: #eab207;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.pPb_bShootingItems__eInnerItem__mCardOrder_first {
+  padding: 20px 20px 0;
+}
+.pPb_bShootingItems__eInnerItem__mCardOrder_third {
+  height: 40px;
+  padding-bottom: 20px;
+}
+.pPb_bShootingItems__eInnerItemImage,
+.pPb_bShootingItems__eInnerItem__eImage {
+  max-width: 100%;
+}
+.pPb_bShootingItems__eSticker {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.pPb_bShootingItems__eRow {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.pPb_bShootingItems__eLeftCol {
+  display: table-cell;
+  width: 50%;
+  padding: 0 15px 0 30px;
+  vertical-align: top;
+}
+.pPb_bShootingItems__eRightCol {
+  display: table-cell;
+  width: 50%;
+  padding: 0 30px 0 15px;
+  vertical-align: top;
+}
+.pPb_bShootingItems__eBlockTitle {
+  position: relative;
+  margin: 0 0 5px;
+  font: bold 36px/36px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
+}
+.pPb_bShootingItems__eTitle {
+  margin: 0 0 5px;
+  font: bold 18px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.pPb_bShootingItems__eTitle__mType_light {
+  margin: 0 0 10px;
+  color: #fff;
+}
+.pPb_bShootingItems__eTitle__mSize_big {
+  font: bold 22px/22px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+}
+.pPb_bShootingItems__eTitle__mSize_small {
+  font: bold 15px/18px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+}
+.pPb_bShootingItems__eText {
+  margin: 0;
+  font: 13px/15px Arial, sans-serif;
+  color: #000;
+}
+.pPb_bShootingItems__eText__mType_light {
+  margin: 0 0 10px;
+  color: #fff;
+}
+.pPb_bShootingItems__eText__mPosition_right {
+  width: 90px;
+  padding: 10px;
+  float: right;
+  border: 1px solid #5f5f5f;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.pPb_bShootingItems__eText__mType_stat {
+  font: 13px/13px Arial, sans-serif;
+  color: #fff;
+  border-bottom: 1px dotted #5f5f5f;
+  margin: 0 0 10px;
+}
+.pPb_bShootingItems__eText__mType_shadow {
+  margin: 0;
+  font: 15px/39px Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.pPb_bShootingItems__eStatItem {
+  padding: 0 2px 5px 0;
+  background: url("//st3-ru.4game.com/-/1849918612/pointblank/b/pPb/pPb_bShootingItems/bg_main.gif");
+}
+.pPb_bShootingItems__eStatItem__mPosition_right {
+  padding: 0 0 5px 2px;
+  float: right;
+}
+.pPb_bShootingItems__eCardPrice {
+  display: inline-block;
+  font: 11px/13px Arial, sans-serif;
+  color: #000;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 20px;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+.pPb_bShootingItems__eForm {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+}
+.pPb_bShootingItems__ePrize {
+  border-radius: 10px;
+  padding: 50px 20px 27px;
+  text-align: center;
+}
+.pPb_bShootingItems__ePrize__eImg,
+.pPb_bShootingItems__ePrize__eTitle,
+.pPb_bShootingItems__ePrize__eButton {
+  text-align: center;
+}
+.pPb_bShootingItems__ePrize__eHeading {
+  font: bold 25px/25px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  margin: 5px 0 10px;
+}
+.pPb_bShootingItems__ePrize__eText {
+  font: 18px/20px Arial, sans-serif;
+  margin: 0 0 5px;
+}
+.pPb_bShootingItems__ePrize__mLux .pPb_bShootingItems__ePrize__eText,
+.pPb_bShootingItems__ePrize__mLux .pPb_bShootingItems__ePrize__eHeading {
+  color: #fff;
+}
+.pPb_bShootingItems__ePrize__mLux .pPb_bShootingItems__ePrize__eImg {
+  background: radial-gradient(ellipse at center, rgba(255, 228, 0, 0.2) 0%, transparent 70%);
+}
+.pPb_bShootingInvite {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: url("//st3-ru.4game.com/-/364573527/pointblank/b/pPb/pPb_bShootingItems/referral-invite.png") no-repeat center;
+  cursor: pointer;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+.pPb_bPrizes {
+  background: #fff;
+  box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.pPb_bPrizes__eHeading {
+  float: left;
+  width: 210px;
+  text-align: center;
+}
+.pPb_bPrizes__eHeadingText {
+  font: bold 22px/120px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0 20px;
+}
+.pPb_bPrizes__eAmount {
+  float: right;
+  width: 130px;
+  height: 120px;
+  text-align: center;
+  background: #ffc71d;
+}
+.pPb_bPrizes__eAmount:before {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  content: '';
+  margin-left: -5px;
+  vertical-align: middle;
+}
+.pPb_bPrizes__eAmount__eVerticalAlign {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pPb_bPrizes__eAmountText,
+.pPb_bPrizes__eAmountNumber {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  margin: 0;
+  padding: 0 20px;
+}
+.pPb_bPrizes__eAmountNumber {
+  font: 32px/18px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.pPb_bPrizes__eAmountText {
+  font: 15px/18px Arial, sans-serif;
+  margin-top: 7px;
+}
+.pPb_bPrizes__eItems {
+  left: -10px;
+  height: 120px;
+  font-size: 0;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.pPb_bPrizes__ePrize {
+  display: inline-block;
+  width: 16.6%;
+  min-width: 115px;
+  height: 120px;
+  font-size: 15px;
+  vertical-align: top;
+  position: relative;
+}
+@media (max-width: 1085px) {
+  .pPb_bPrizes__ePrize {
+    width: 20%;
+  }
+}
+.pPb_bPrizes__ePrize__eContent {
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  background: #fef6f7;
+  padding: 15px 10px 0;
+  position: absolute;
+}
+.pPb_bPrizes__ePrize__eTime,
+.pPb_bPrizes__ePrize__eTitle {
+  margin: 0;
+}
+.pPb_bPrizes__ePrize__eTime {
+  font: 12px/15px Arial, sans-serif;
+}
+.pPb_bPrizes__ePrize__eImg {
+  height: 45px;
+}
+.pPb_bPrizes__ePrize__eTitle {
+  font: bold 15px/15px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+}
+.pPb_bPromoPopup {
+  width: 415px;
+}
+.pPb_bPromoPopup__eBanners {
+  font-size: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.pPb_bPromoPopup__eBanner {
+  display: inline-block;
+  width: 63px;
+  height: 17px;
+  font: bold 10px/17px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #a68989;
+  list-style: none;
+  background: #631416 url('/pointblank/c/cPoint-blank/promo-popup-banner.jpg') no-repeat;
+  margin: 0 3px;
+  padding: 154px 0 0;
+  vertical-align: top;
+}
+.pPb_bPromoPopup__eBanner__mImg2 {
+  background-position: -63px 0;
+}
+.pPb_bPromoPopup__eBanner__mImg3 {
+  background-position: -126px 0;
+}
+.pPb_bPromoPopup__eBanner__mImg4 {
+  background-position: -189px 0;
+}
+.pPb_bPromoPopup__eBanner__mImg5 {
+  background-position: -252px 0;
+}
+.pPb_bPromoPopup__eBanner__mImg6 {
+  background-position: -315px 0;
+}
+.pPb_bPromoPopup__eCaption,
+.pPb_bPromoPopup__eTitle,
+.pPb_bPromoPopup__eDesc,
+.pPb_bPromoPopup__eControl {
+  text-align: center;
+}
+.pPb_bPromoPopup__eCaption,
+.pPb_bPromoPopup__eTitle,
+.pPb_bPromoPopup__eDesc {
+  margin: 0;
+}
+.pPb_bPromoPopup__eCaption {
+  font: bold 40px/40px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #ffffff;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+.pPb_bPromoPopup__eTitle {
+  font: bold 18px/24px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #edad27;
+}
+.pPb_bPromoPopup__eDesc {
+  font: 13px/20px Arial, sans-serif;
+  color: #ffffff;
+  margin-top: 15px;
+}
+.pPb_bPromoPopup__eControl {
+  margin: 25px 0;
+}
+.pPb_bVeteranPopup {
+  width: 483px;
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), -moz-radial-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), -webkit-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), -webkit-radial-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), -o-radial-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), -ms-radial-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-image: url("//st1-ru.4game.com/-/2280916067/pointblank/b/pPb/bPb_bVeteranPopup/i/bg_items.png"), radial-gradient(center 190px, circle contain, rgba(255, 255, 255, 0.1), rgba(47, 47, 47, 0.5));
+  background-repeat: no-repeat;
+  background-position: 50% 223px;
+}
+.pPb_bVeteranPopup__eCaption {
+  background: url('//st1-ru.4game.com/-/2561620316/pointblank/b/pPb/bPb_bVeteranPopup/i/stars.png') top center no-repeat;
+  height: 60px;
+}
+.pPb_bVeteranPopup__eTitle {
+  font: 700 30px/35px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+.pPb_bVeteranPopup__bContent {
+  font: 18px/28px Arial, sans-serif;
+  text-align: center;
+  padding: 0 50px 254px;
+}
+.pPb_bVeteranPopup__eLink {
+  color: #f8bb00;
+}
+.pPb_bVeteranPopup__eControl {
+  text-align: center;
+}
+.pPb_bSltvPopup {
+  width: 520px;
+  position: relative;
+}
+.pPb_bSltvPopup__ePersonages {
+  width: 100%;
+  height: 230px;
+}
+.pPb_bSltvPopup__ePersonages:after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 370px;
+  background: url('//st3-ru.4game.com/-/3194261635/pointblank/b/pPb/pPb_bSltvPopup/i/personages.png') center no-repeat;
+  position: absolute;
+  top: -129px;
+}
+.pPb_bSltvPopup__eBg {
+  position: absolute;
+  top: -25px;
+  width: 570px;
+  height: 528px;
+  background: url('//st3-ru.4game.com/-/1996404324/pointblank/b/pPb/pPb_bSltvPopup/i/bg.jpg') center no-repeat;
+  margin-left: -25px;
+  border-radius: 15px;
+}
+.pPb_bSltvPopup__eTitle {
+  font: 700 30px/35px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  color: #edad27;
+  position: relative;
+}
+.pPb_bSltvPopup__bContent {
+  font: 18px/28px Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 30px;
+  position: relative;
+}
+.pPb_bSltvPopup__bBotton {
+  text-align: center;
+  padding-bottom: 15px;
+  position: relative;
+}

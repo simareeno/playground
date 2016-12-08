@@ -1,0 +1,2 @@
+(function(){define(["module","./helpers"],function(t,e){var i;return i=e.prepareConfig(t.config()),{shareInWall:function(t){return e.popupCentralized(e.urlConstructor("https://www.facebook.com/dialog/feed",{app_id:i.appId,link:t.url,caption:e.smartQuotes(t.title),description:e.smartQuotes(t.text),picture:t.img,redirect_uri:e.locationOrigin()+"/complete-social-auth/",display:"popup"}))}}})}).call(this);
+//# sourceMappingURL=facebook.js.map

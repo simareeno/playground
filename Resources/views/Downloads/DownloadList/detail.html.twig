@@ -1,0 +1,67 @@
+{% if pager|length > 0 %}
+    <ul class="download-list">
+        {% for dl in pager %}
+            <li class="download-item">
+                <div class="controls">
+                    <ul>
+                        <li class="the-file">
+                            <a href="{{ portal_path(dl, 'serve') }}?dl=1"
+                               class="dpx-download-popup"
+                               data-filename="{{ dl.realTitle }}"
+                               data-filesize="{{ dl.readableFileSize }}"
+                            {% if not dl.fileurl %}data-date-uploaded="{{ dl.date_created | date('Y-m-d') }}"{% endif %}
+                               data-vote-count="{{ dl.total_rating }}"
+                               data-vote-url="{{ portal_path(dl, 'vote_up') }}">
+
+                                {{ phrase('portal.downloads.download') }}
+                                <i class="fa fa-download"></i>
+                            </a>
+                        </li>
+                        {%- if dl.calc_num_comments > 0 -%}
+                            <li>
+                                <a href="{{ portal_path(dl) }}#comments">
+                                    <i class="fa fa-comments"></i>
+                                    {{ dl.calc_num_comments }}
+                                </a>
+                            </li>
+                        {%- endif -%}
+                        <li class="the-cudos as-vote-widget">
+                            <a href="{{ portal_path(dl, 'vote_up') }}" class="post-link as-vote-btn">
+                                <i class="fa fa-thumbs-up as-vote-animate"></i> <span class="as-vote-count" data-votes="{{ dl.total_rating }}">{{ dl.total_rating }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <h1>
+                    {{ content_icon(dl) }}
+                    <a href="{{ portal_path(dl) }}">
+                        {{ dl.realTitle }}
+                    </a>
+                </h1>
+                {% if not dl.fileurl %}
+                <span class="date">
+                    {{ phrase('portal.downloads.uploaded-on') }}: {{ dl.date_created | date('Y-m-d') }}
+                </span>
+                {%  endif %}
+
+                <p>
+                    {{ dl.content_desc|raw }}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if show_category_link %}
+        <div class="list-meta">
+            <a href="{{ category ? portal_path(category) : path('portal_downloads') }}">
+                {{ phrase('portal.downloads.view-x-files', {count: pager|length}) }}
+                <i class="fa fa-caret-right"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if show_pager %}
+        {% show download_pager %}
+    {% endif %}
+{% else %}
+    <strong>{{ phrase('portal.downloads.none') }}</strong>
+{% endif %}

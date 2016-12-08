@@ -1,0 +1,46 @@
+.buttons {
+	position: relative;
+	top: 282px;
+}
+
+.buttons__list {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	/*transition: opacity .2s ease-in-out;*/
+}
+
+.button + .button {
+	padding-left: 30px;
+}
+
+
+/* Utochka */
+
+.slider--state-utochka .buttons__list--utochka {
+	opacity: 1;
+	transform: translate(0px, 0);
+	transition: transform .6s ease-in-out, opacity .2s linear;
+}
+
+.slider--state-utochka .buttons__list--czar {
+	opacity: 0;
+	transform: translate(200px, 0);
+	transition: transform .4s ease-in-out, opacity .2s linear;
+}
+
+
+/* Czar */
+
+.slider--state-czar .buttons__list--czar {
+	opacity: 1;
+	transition: transform .6s ease-in-out, opacity .2s linear;
+}
+
+.slider--state-czar .buttons__list--utochka {
+	opacity: 0;
+	transform: translate(-200px, 0);
+	transition: transform .4s ease-in-out, opacity .2s linear;
+}

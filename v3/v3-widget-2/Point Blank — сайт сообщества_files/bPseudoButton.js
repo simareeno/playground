@@ -1,0 +1,2 @@
+(function(){define(["packages/jquery"],function(e){return{moduleEvents:{"progress-start":"setProgress","progress-stop":"removeProgress"},removeProgress:function(t){if(t===this.element)return e(this.element).removeClass("bPseudoButton__mState_Loading")},setProgress:function(t){if(t===this.element)return e(this.element).addClass("bPseudoButton__mState_Loading")}}})}).call(this);
+//# sourceMappingURL=bPseudoButton.js.map

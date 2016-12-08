@@ -1,0 +1,13 @@
+body {
+	margin:0;
+}
+
+.pattern1 svg {
+	width: 1200px;
+	stroke:#000000;
+	fill:none
+}
+
+.path {
+	fill:none;
+}

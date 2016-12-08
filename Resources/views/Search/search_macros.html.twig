@@ -1,0 +1,74 @@
+{% macro search_result(result) %}
+    {% if result['type'] == 'news' %}
+        {{ _self.news_search_result(result['object']) }}
+    {% elseif result['type'] == 'ticket' %}
+        {{ _self.ticket_search_result(result['object']) }}
+    {% elseif result['type'] == 'article' %}
+        {{ _self.article_search_result(result['object']) }}
+    {% elseif result['type'] == 'feedback' %}
+        {{ _self.feedback_search_result(result['object']) }}
+    {% elseif result['type'] == 'download' %}
+        {{ _self.dl_search_result(result['object']) }}
+    {% endif %}
+{% endmacro %}
+
+{% macro article_search_result(article) %}
+    <li>
+    {{ content_icon(article) }}
+        <a href="{{ portal_path(article) }}">
+          <span class="item-title">{{ article.title }}</span>
+          <p>{{ article.realContent|html_content_preview(350) }}</p>
+        </a>
+        <div class="article-meta">
+          {{ phrase('portal.general.by_2') }} <span style="background: url({{ avatar_url(article.person, 36) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>{{ article.person.display_name_user }} {{ phrase('portal.general.on') }} {{ article.date_published|date('day') }}<hr>
+          <span class="comments"><i class="fa fa-comments"></i> <a href="{{ portal_path(article) }}#comments">{{ phrase('portal.general.comments-count', { count: article.calc_num_comments }) }}</a></span>
+          <hr>
+          {{ phrase('portal.general.in') }} <a href="{{ portal_path(article.primary_category) }}">{{ article.primary_category }}</a>
+        </div>
+  </li>
+{% endmacro %}
+
+{% macro ticket_search_result(ticket) %}
+    <li>
+        {{ content_icon(ticket) }}
+        <a href="{{ portal_path(ticket) }}">
+          <span class="item-title">{{ ticket.subject }}</span>
+        </a>
+        <div class="article-meta">
+            {{ phrase('portal.tickets.search-last-activity') }} {{ ticket.getLastActivityDate()|date('full') }}
+        </div>
+  </li>
+{% endmacro %}
+
+{% macro dl_search_result(dl) %}
+  <li>
+    {{ content_icon(dl) }}
+    <a href="{{ portal_path(dl) }}">
+      <span class="item-title">
+        {{ dl.title }}
+      </span>
+    </a>
+  </li>
+{% endmacro %}
+
+{% macro feedback_search_result(feedback) %}
+  <li>
+    <a href="{{ portal_path(feedback) }}">
+      <span class="item-title">
+          <span class="feedback-count"><i class="fa fa-thumbs-up"></i>{{ feedback.total_rating >= 0 ? (feedback.total_rating > 0 ? '+' : '') : '-' }}{{ feedback.total_rating }}</span>
+          {{ feedback.title }}
+      </span>
+      <p>{{ feedback.getContentPlainHtml()|html_content_preview(350) }}</p>
+    </a>
+  </li>
+{% endmacro %}
+
+
+{% macro news_search_result(news) %}
+    <li>
+        <a href="{{ portal_path(news) }}">
+          <span class="item-title"><span class="date-posted"><i class="fa fa-calendar-o"></i> {{ date_ago(news.date_published) }}</span>{{ news.title }}</span>
+          <p>{{ news.realContent|html_content_preview(350) }}</p>
+        </a>
+  </li>
+{% endmacro %}

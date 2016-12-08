@@ -1,0 +1,26 @@
+{% if article.attachments|length > 0 %}
+    <div class="related">
+        <div class="titled-header">
+            <h1>{{ phrase('portal.general.attachments') }}</h1>
+        </div>
+        <ul>
+    {% for attachment in article.attachments %}
+        {% set blob = attachment.blob %}
+        <li>
+            <a href="{{ portal_path(attachment, 'serve') }}">
+
+                {% if blob and blob.is_image %}
+                    <img
+                         src="{{ blob.thumbnailUrl }}" alt="{{ blob.filename }}"
+                         /><br>
+                {% elseif blob %}
+                    {{ content_icon(attachment) }}
+                {% endif %}
+                {% if blob %}{{ blob.filename }}{% endif %}
+                [{{ attachment.readableFileSize }}]
+            </a>
+        </li>
+    {% endfor %}
+        </ul>
+    </div>
+{% endif %}

@@ -1,0 +1,2985 @@
+@-moz-keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  13% {
+    background-position: 0 -20px;
+  }
+  26% {
+    background-position: 0 -40px;
+  }
+  39% {
+    background-position: 0 -60px;
+  }
+  52% {
+    background-position: 0 -80px;
+  }
+  65% {
+    background-position: 0 -100px;
+  }
+  78% {
+    background-position: 0 -120px;
+  }
+  91% {
+    background-position: 0 -140px;
+  }
+  100% {
+    background-position: 0 0px;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  13% {
+    background-position: 0 -20px;
+  }
+  26% {
+    background-position: 0 -40px;
+  }
+  39% {
+    background-position: 0 -60px;
+  }
+  52% {
+    background-position: 0 -80px;
+  }
+  65% {
+    background-position: 0 -100px;
+  }
+  78% {
+    background-position: 0 -120px;
+  }
+  91% {
+    background-position: 0 -140px;
+  }
+  100% {
+    background-position: 0 0px;
+  }
+}
+@-ms-keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  13% {
+    background-position: 0 -20px;
+  }
+  26% {
+    background-position: 0 -40px;
+  }
+  39% {
+    background-position: 0 -60px;
+  }
+  52% {
+    background-position: 0 -80px;
+  }
+  65% {
+    background-position: 0 -100px;
+  }
+  78% {
+    background-position: 0 -120px;
+  }
+  91% {
+    background-position: 0 -140px;
+  }
+  100% {
+    background-position: 0 0px;
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  13% {
+    background-position: 0 -20px;
+  }
+  26% {
+    background-position: 0 -40px;
+  }
+  39% {
+    background-position: 0 -60px;
+  }
+  52% {
+    background-position: 0 -80px;
+  }
+  65% {
+    background-position: 0 -100px;
+  }
+  78% {
+    background-position: 0 -120px;
+  }
+  91% {
+    background-position: 0 -140px;
+  }
+  100% {
+    background-position: 0 0px;
+  }
+}
+@keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  13% {
+    background-position: 0 -20px;
+  }
+  26% {
+    background-position: 0 -40px;
+  }
+  39% {
+    background-position: 0 -60px;
+  }
+  52% {
+    background-position: 0 -80px;
+  }
+  65% {
+    background-position: 0 -100px;
+  }
+  78% {
+    background-position: 0 -120px;
+  }
+  91% {
+    background-position: 0 -140px;
+  }
+  100% {
+    background-position: 0 0px;
+  }
+}
+.userbar-container {
+  /* HTML5 display-role reset for older browsers */
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font: 14px/20px Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  position: relative;
+  /* Делаем отступы от центральных элементов чтоб при маленьком размере ничего не слипалось */
+}
+.userbar-container div,
+.userbar-container span,
+.userbar-container applet,
+.userbar-container object,
+.userbar-container iframe,
+.userbar-container h1,
+.userbar-container h2,
+.userbar-container h3,
+.userbar-container h4,
+.userbar-container h5,
+.userbar-container h6,
+.userbar-container p,
+.userbar-container blockquote,
+.userbar-container pre,
+.userbar-container a,
+.userbar-container abbr,
+.userbar-container acronym,
+.userbar-container address,
+.userbar-container big,
+.userbar-container cite,
+.userbar-container code,
+.userbar-container del,
+.userbar-container dfn,
+.userbar-container em,
+.userbar-container img,
+.userbar-container ins,
+.userbar-container kbd,
+.userbar-container q,
+.userbar-container s,
+.userbar-container samp,
+.userbar-container small,
+.userbar-container strike,
+.userbar-container strong,
+.userbar-container sub,
+.userbar-container sup,
+.userbar-container tt,
+.userbar-container var,
+.userbar-container b,
+.userbar-container u,
+.userbar-container i,
+.userbar-container center,
+.userbar-container dl,
+.userbar-container dt,
+.userbar-container dd,
+.userbar-container ol,
+.userbar-container ul,
+.userbar-container li,
+.userbar-container fieldset,
+.userbar-container form,
+.userbar-container label,
+.userbar-container legend,
+.userbar-container table,
+.userbar-container caption,
+.userbar-container tbody,
+.userbar-container tfoot,
+.userbar-container thead,
+.userbar-container tr,
+.userbar-container th,
+.userbar-container td,
+.userbar-container article,
+.userbar-container aside,
+.userbar-container canvas,
+.userbar-container details,
+.userbar-container embed,
+.userbar-container figure,
+.userbar-container figcaption,
+.userbar-container footer,
+.userbar-container header,
+.userbar-container hgroup,
+.userbar-container menu,
+.userbar-container nav,
+.userbar-container output,
+.userbar-container ruby,
+.userbar-container section,
+.userbar-container summary,
+.userbar-container time,
+.userbar-container mark,
+.userbar-container audio,
+.userbar-container video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.userbar-container article,
+.userbar-container aside,
+.userbar-container details,
+.userbar-container figcaption,
+.userbar-container figure,
+.userbar-container footer,
+.userbar-container header,
+.userbar-container hgroup,
+.userbar-container menu,
+.userbar-container nav,
+.userbar-container section {
+  display: block;
+}
+.userbar-container ol,
+.userbar-container ul {
+  list-style: none;
+}
+.userbar-container blockquote,
+.userbar-container q {
+  quotes: none;
+}
+.userbar-container blockquote:before,
+.userbar-container blockquote:after,
+.userbar-container q:before,
+.userbar-container q:after {
+  content: '';
+  content: none;
+}
+.userbar-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.userbar-container.userbar-state--mmo .userbar-control--mmo {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--desktop .userbar-control--desktop {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--mobile .userbar-control--mobile {
+  color: #ffce0a;
+}
+.userbar-container .userbar-control {
+  color: #fff;
+}
+.userbar-container .userbar-control .userbar-control-title--arrow:before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%228px%22%20height%3D%228px%22%20viewBox%3D%220%200%208%208%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C6%20L1%2C-5.68434189e-14%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M6%2C1%20L0%2C1%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C1%20L7%2C7%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+}
+.userbar-container .userbar-loader {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,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') no-repeat;
+}
+.userbar-container .userbar-game--active .userbar-game-name {
+  color: #ffce0a;
+}
+.userbar-container .userbar-game--active .userbar-game-icon-container:before {
+  border-color: #ffce0a;
+}
+.userbar-container .userbar-game-name {
+  color: rgba(255, 255, 255, 0.75);
+}
+.userbar-container .userbar-list-item--dashed:before,
+.userbar-container .userbar-skeleton-cell--dashed,
+.userbar-container .userbar-dash-line:before,
+.userbar-container .userbar-dash-line:after {
+  border-color: rgba(255, 255, 255, 0.23);
+}
+.userbar-container .userbar-dash-arrow {
+  border-top-color: rgba(255, 255, 255, 0.23);
+  border-right-color: rgba(255, 255, 255, 0.23);
+}
+@media (max-width: 700px) {
+  .userbar-container {
+    display: none;
+  }
+}
+.userbar-container.userbar-state--other:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  min-height: 35px;
+  content: '';
+  background: #2d2d33;
+  position: absolute;
+  z-index: 1;
+}
+.userbar-container.userbar-state--main .userbar-control {
+  line-height: 55px;
+}
+.userbar-container.userbar-state--main .userbar-skeleton-cell {
+  height: 55px;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo.userbar-state--mmo .userbar-control--mmo,
+.userbar-container.userbar-state--install.userbar-state--desktop.userbar-state--mmo .userbar-control--mmo,
+.userbar-container.userbar-state--install.userbar-state--mobile.userbar-state--mmo .userbar-control--mmo {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo.userbar-state--desktop .userbar-control--desktop,
+.userbar-container.userbar-state--install.userbar-state--desktop.userbar-state--desktop .userbar-control--desktop,
+.userbar-container.userbar-state--install.userbar-state--mobile.userbar-state--desktop .userbar-control--desktop {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo.userbar-state--mobile .userbar-control--mobile,
+.userbar-container.userbar-state--install.userbar-state--desktop.userbar-state--mobile .userbar-control--mobile,
+.userbar-container.userbar-state--install.userbar-state--mobile.userbar-state--mobile .userbar-control--mobile {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-control,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-control,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-control {
+  color: #fff;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-control .userbar-control-title--arrow:before,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-control .userbar-control-title--arrow:before,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-control .userbar-control-title--arrow:before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%228px%22%20height%3D%228px%22%20viewBox%3D%220%200%208%208%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C6%20L1%2C-5.68434189e-14%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M6%2C1%20L0%2C1%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C1%20L7%2C7%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-loader,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-loader,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-loader {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,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') no-repeat;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-game--active .userbar-game-name,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-game--active .userbar-game-name,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-game--active .userbar-game-name {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-game--active .userbar-game-icon-container:before,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-game--active .userbar-game-icon-container:before,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-game--active .userbar-game-icon-container:before {
+  border-color: #ffce0a;
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-game-name,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-game-name,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-game-name {
+  color: rgba(255, 255, 255, 0.75);
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-skeleton-cell--dashed,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-skeleton-cell--dashed,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-skeleton-cell--dashed,
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-dash-line:before,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-dash-line:before,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-dash-line:before,
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-dash-line:after,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-dash-line:after,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-dash-line:after {
+  border-color: rgba(255, 255, 255, 0.23);
+}
+.userbar-container.userbar-state--install.userbar-state--mmo .userbar-dash-arrow,
+.userbar-container.userbar-state--install.userbar-state--desktop .userbar-dash-arrow,
+.userbar-container.userbar-state--install.userbar-state--mobile .userbar-dash-arrow {
+  border-top-color: rgba(255, 255, 255, 0.23);
+  border-right-color: rgba(255, 255, 255, 0.23);
+}
+.userbar-container.userbar-state--install .userbar-tray-container {
+  background: #2d2d33;
+}
+.userbar-container.userbar-state--play {
+  min-width: 1000px;
+  display: block;
+}
+.userbar-container.userbar-state--play .userbar-tray-container {
+  position: absolute;
+}
+.userbar-container.userbar-state--payment-poll .userbar-billing-control .userbar-dropdown-control-text {
+  display: none;
+}
+.userbar-container.userbar-state--payment-poll .userbar-billing-control .userbar-dropdown-control .userbar-loader {
+  display: inline-block !important;
+}
+.userbar-container.userbar-state--mmo .userbar-control--mmo {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--mmo .userbar-control--mmo .userbar-control-title {
+  opacity: 1;
+}
+.userbar-container.userbar-state--mmo .userbar-control--mmo .userbar-dash-line {
+  width: 10px;
+}
+.userbar-container.userbar-state--mmo .userbar-control--mmo .userbar-dash-arrow {
+  top: -4px;
+}
+.userbar-container.userbar-state--desktop .userbar-control--desktop {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--desktop .userbar-control--desktop .userbar-control-title {
+  opacity: 1;
+}
+.userbar-container.userbar-state--desktop .userbar-control--desktop .userbar-dash-line {
+  width: 10px;
+}
+.userbar-container.userbar-state--desktop .userbar-control--desktop .userbar-dash-arrow {
+  top: -4px;
+}
+.userbar-container.userbar-state--mobile .userbar-control--mobile {
+  color: #ffce0a;
+}
+.userbar-container.userbar-state--mobile .userbar-control--mobile .userbar-control-title {
+  opacity: 1;
+}
+.userbar-container.userbar-state--mobile .userbar-control--mobile .userbar-dash-line {
+  width: 10px;
+}
+.userbar-container.userbar-state--mobile .userbar-control--mobile .userbar-dash-arrow {
+  top: -4px;
+}
+.userbar-container.userbar-state--mmo .userbar-tray,
+.userbar-container.userbar-state--desktop .userbar-tray,
+.userbar-container.userbar-state--mobile .userbar-tray {
+  margin-top: 0;
+}
+.userbar-container.userbar-state--simple .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--simple .userbar-skeleton-cell--dashed {
+  border-bottom-color: transparent !important;
+}
+.userbar-container.userbar-state--simple .userbar-dash-line:before,
+.userbar-container.userbar-state--simple .userbar-dash-line:after {
+  border-top-color: transparent !important;
+}
+.userbar-container.userbar-state--simple .userbar-list--controls,
+.userbar-container.userbar-state--simple .userbar-control-title--extended {
+  display: none;
+}
+.userbar-container.userbar-state--simple .userbar-control-title--simple {
+  display: block;
+}
+.userbar-container.userbar-state--simple .userbar-control--logo {
+  cursor: default;
+}
+.userbar-container.userbar-state--simple .userbar-tray-container {
+  position: absolute;
+}
+.userbar-container.userbar-state--area-eu .userbar-control-title--simple {
+  visibility: hidden;
+}
+.userbar-container.userbar-state--collapsed .userbar-games-list {
+  -webkit-transition: opacity 75ms;
+  -moz-transition: opacity 75ms;
+  -ms-transition: opacity 75ms;
+  -o-transition: opacity 75ms;
+  transition: opacity 75ms;
+  opacity: 0;
+}
+.userbar-container.userbar-state--link-to-media.userbar-state--main .userbar {
+  margin-top: 13px;
+}
+.userbar-container.userbar-state--link-to-media.userbar-state--main .userbar-control--logo {
+  display: none;
+}
+.userbar-container.userbar-state--link-to-media.userbar-state--main .userbar-flip-logo {
+  visibility: visible;
+  opacity: 1;
+}
+.userbar-container.userbar-state--link-to-media.userbar-state--main .userbar-control {
+  line-height: 55px;
+}
+.userbar-container.userbar-state--link-to-media .userbar-skeleton-cell,
+.userbar-container.userbar-state--link-to-media .userbar-dash,
+.userbar-container.userbar-state--link-to-media .userbar-dropdown-control-arrow {
+  -webkit-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -moz-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -ms-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -o-transition: opacity .35s ease-out, visibility .35s ease-out;
+  transition: opacity .35s ease-out, visibility .35s ease-out;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-media-preview {
+  top: 0;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-media-preview .userbar-bg,
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-media-preview--img,
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-media-preview:before,
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-media-preview:after {
+  opacity: 1;
+  -webkit-transition: all .35s ease-in;
+  -moz-transition: all .35s ease-in;
+  -ms-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo {
+  -webkit-transition: all .35s ease-in;
+  -moz-transition: all .35s ease-in;
+  -ms-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+  opacity: 1;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--img {
+  -webkit-transition: all .35s ease-in;
+  -moz-transition: all .35s ease-in;
+  -ms-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--front,
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--back {
+  -webkit-transition: all .35s ease-in;
+  -moz-transition: all .35s ease-in;
+  -ms-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--front {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--text {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: all .35s ease-in;
+  -moz-transition: all .35s ease-in;
+  -ms-transition: all .35s ease-in;
+  -o-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--4game {
+  -webkit-transition: opacity .35s ease-in;
+  -moz-transition: opacity .35s ease-in;
+  -ms-transition: opacity .35s ease-in;
+  -o-transition: opacity .35s ease-in;
+  transition: opacity .35s ease-in;
+  opacity: 0;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--fogame {
+  -webkit-transition: opacity .35s ease-in ;
+  -moz-transition: opacity .35s ease-in ;
+  -ms-transition: opacity .35s ease-in ;
+  -o-transition: opacity .35s ease-in ;
+  transition: opacity .35s ease-in ;
+  opacity: 1;
+}
+.userbar-container.userbar-state--media-preview-on.userbar-state--simple .userbar-flip-logo--er {
+  -webkit-transition: all .35s ease-in, opacity .35s ease-in;
+  -moz-transition: all .35s ease-in, opacity .35s ease-in;
+  -ms-transition: all .35s ease-in, opacity .35s ease-in;
+  -o-transition: all .35s ease-in, opacity .35s ease-in;
+  transition: all .35s ease-in, opacity .35s ease-in;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-control .userbar-control-title:before,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-control .userbar-control-title:before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAZ0lEQVR4AWOAA1mGDQzfgPA4kIUGDBieMfyHwgh0qfdAQRiMwpDCLikBMRABgXanAY0OAcoAmf9xwF0MDN9wSr7HIwmUYTiOU/I4yPOhYLgL4SCICHJgRGF6hUjJCMzgQw744+gBDwBh4XC3DosdxgAAAABJRU5ErkJggg==");
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-control .userbar-control-title--arrow:before,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-control .userbar-control-title--arrow:before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%228px%22%20height%3D%228px%22%20viewBox%3D%220%200%208%208%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23000000%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C6%20L1%2C-5.68434189e-14%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M6%2C1%20L0%2C1%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1%2C1%20L7%2C7%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme.userbar-state--mmo .userbar-control--mmo,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme.userbar-state--mmo .userbar-control--mmo {
+  color: #c35e0d;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme.userbar-state--desktop .userbar-control--desktop,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme.userbar-state--desktop .userbar-control--desktop {
+  color: #c35e0d;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme.userbar-state--mobile .userbar-control--mobile,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme.userbar-state--mobile .userbar-control--mobile {
+  color: #c35e0d;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-control,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-control {
+  color: #000;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-loader:not(.userbar-loader--button_loader),
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-loader:not(.userbar-loader--button_loader) {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAACgCAYAAAAM0kxuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAC01JREFUeNrsmgtwVtURx29IAiREAtFIIIGKTZUiKkithZbaBmOl1EcdtZ1SWzq0SXG0Y2tpfYBYRluFivaBGRmoThFa0YHBEXUajKZSVApqDUUggRA0GolJhSYBYh7d1d+pm+u59/tSnDo4uTM75/vuuXfPnnN297+756Z0d3cHH+bVL/iQr7S4znHjxg2WZrLQmUJtQrVCT23btq016p0U35SFUaY03xP6rtBwoQwG1xm1CN0utEQYdyZkKMxypblFaIzQSKF/Cm0X0peLhCbpe0KrhWaEmaaFmA2S5sdCI4T2C5XIC7vNIzfLM8XSPiT0DZbghrhNmS6kEr6qUw4xe/eSe+XSXMzfn8gAeV6G0nGcNJ8T0vVbJC8e5v5FQn8WutO9LH2V0jwi1F/ooqgpFzLADnnhVZjNlOY+88wkdl2vSpidHsVQd7OVTXDXrbTXCZ0q9HWPpnRGrWG7ULNQE9L1Z3MOicSLpV2KKtn1DtAAr4RtSJjGOrUL09dUdaS9QP4/Yda7BBVSAR6MYqhq0iF0vLmnkt0ltE6YlKEmKlkx/dfIQAeiplzHemTJy59Ayrulucm9zADnCSmT70v/qlhLEUYTpTkLPVSbPcL9fHY4S6hB6DnpezuhLcuLKvEVmNbrQi/Kiwd74218tpyJJXSy6PVCjWxYhwzwTq/8obygu72GaesUC4R0TYcJDei1hB5XdgKMVU8PyoAtR8XwI4eA/zumDMApDBUayE5Xha0jGUwZhGs6G0bqKwfzW/vWC5X5lNunh6NR7jwk26seB5VRnJnCzN4Qujzs1cOWkodk6iBUgVfLC/tCA35SmnswRfVGU+SZpg8wlAdTkSxb6C156OGYtVVYVWyZwNR/6mN4hjSfEeoSekAe6uDFOUitTmGx3K/g+fHSbNXB1Weq/wyrzVjsdwvM0uX3o0K/EJqIH3xc7p+Oib4kTTUoWdhDD/EyOTjYvfRdiFdW53C+0FxQrtgI0Yhnygkr9gB+W1s9m/Z2sDgfey43az7KMO7B0CFXpzyYYjAmQCq91DuPEeZVBqSU4T65t7MHQxbUOdIM2ie5N1vjHXlmo1Ct0dV73AyiTK+atTge6Z4F5Gep5xYmS9lp3d0rcWkVwGvgU5sMAKj+PaHfhVE1tTuErvLYvTK6Vp47FGcpo5FSraPZhWpyvwhdzKDvEbOWCW1ZQ5J2a05HBVIff4997GPKKDIBVeJUdHTv/4Ip6q7OgEkaOJJDq/7yOcUVXwIUVmxV3EuQSJX6MOambk0jiNPAlTY8zF3CtDHK9NSFXYYEimbb5eE6j/Qnq8mxFBqh/dyGJ3ZTPgswqURP+5jhmfZI8zMwegzpW08J8dgawv1baLOLCeX+tWDKcLDjBulbTp8G9E8T8l3opu4kzCUpfM0wm0t8PQI3r88s00QISXW6L+PJvxieciYjNZoQeB4uf5q8nEKuEuAL3VWFBxrtg4Am1kWvc1CX5ZpOoEaFYfwwutwVVuxmptUZggEXNeSjAerFbzPMihFqVw+Gnqj0AAOcC+pponhiSH2mE47oZv01kS1vYvoXyItXe3RRB/ojgy6ymUKkgw1lopp5rjVZvUsiHyarb0/KYwvTbwGX2aGuQ2RV88MlgmSygBykKjbSVgijhj5MOZYxhXqD+rqTiB0HMvibQrtlh6t7k97mkex0w6S/wZUhptixyReuhDHlBMCoG+V929k5lbpP44lU4n8JPSb99XEMs7HP1qhEW55JI7wbCfYssRmVb8qpJoybakpRGzUx1z7i6wV4IMWflYlwWWF0OYmQvZ5SD0QwOgqI0Cnf6JYmSm3KYFYLwl2Hs/2yK7uQsu0nqTwlUm1kZA2Lvw2cnuPQTO6/RCCvjnU+j9dQXBsep4fTXAytzITRJICpwcBFYPKbLJN6eBnmmtEdKM3iJdXBRXZC4E99nOm5attE1qoG3SvV5JKsSpegEMxRKV+JUxtNDl9EsSfA0Geaa0jfVA8XxBWCqkjDdG2e1FKfZ8ANQp8nWFqSTHyo6/I4UwrYkHrMciRhnmatl8SWCMIWo3meVoJNqNEF4/uFfu0rtCWFKSbD0vLp9r7EJ/m0wngedQBa1GhJlFSmJTlwfxLzU6iAqpd5wdVoezvlIzDYRyWpFV28FH09ul0GWyYQe3dTzupKRrGHcHoxjOzgeQdI5DRF1Gd16ltjpywvzMK0HhP6Awcye+T+jdj7EXMKNI4qlJ8hMeEyYsIN5CnL6L5N+n8E0zpSkXSqyN4jJGXyO/6WyktLTd9aHIZW4n7L7SZM8kTnkMMSXsYDFY6ZBueaVnBaoT6ywOxuFxFFZpQeutOb9eaextlrhclO5+5NrWYoAkRiSqpnj3QqJeb/XPP7NCR8I2pTXHHnXHPvcgJ0jfgvFenuZylGEqF1G0Dz1mDrmMKXOB3zqZUGSwtZgnJ5brVXQiL7xfxdx6Fg4CnqLsP8GkPr7Q+WpFlJKNJNkLSBEG4s66YnGTuEboksEXhg8ofEMRmoRwdqoxuwgky1rVfOgbWajFSqa9uE/hZ1fNSX+HzcGOp5NGlIcrtMlDWduKaF4lmFSS2yqYcdsLmzz1JUke8OeZjAuLVvasQProyB8WZ3Yt7PY3aPwqyFWnUpQXoDEq/S0ha4cgAIGBvlD0vMCcUUV6pnME01nucU4yvAgULAp4S0YveCb1Oup73K1v01E8AJ/J7+82kdSGUxux5fERRy+tDgXBIbs8PUu9qtZ5dBupllOtRDQve9Qo0pnRTjbOsp319vCkUuisi2g9k1bDKlUXeV8+Ct5l4lGUCASumATS4csRLuJmMfzQGWywimsQRb2e1pJI9ppBUptpgWxpQ72Ol/6MLbEpRH8a8A4JsImDp9u7wQ964p10MgW5hRvtAcnlHpKm25ymcpCkJ/Iuc7SM1wF+4/lzimBclWJpWnEMqphUyFUTshXSsbt0VR0XcanghTsgkus2GkAPVK+NioD1OO1UyKz7WKCO1SsevyuMOZOD28Cc+SFerSioieNq5IiiFOUkO1mcbblPN7uglE1QGXJcPwB9Lci8ldHA44pX82ZWi1nHzpfytyU4i05hETzvBFr0i1lrWfmGhTJmNi+qXFerMxa0C1Ur4sqASoCgxGK6RqVe+gVRsXgFeEQOsLwXtfobnqkfvgzJ6Q57mKVL+QtIdJZwNz7KHXThn9WWLuErzORvoGwjAtzLCKMuh4c8+px6+EmUr/F95Z6D6Hw2vn4CN7MNyKexoGpAas5Qy8eEC/fk74S9ZvEJXk/yY/YbUpAZRUHa5x8UqEJQ2gXKWb87o8u8Fny6tM4jOPsqiP2Qgwu4Ad3hSHKYrLV5MYppNobwcC0snwsxlU/69IeOJDaeWr1A072dVGYCAA7TREecbWG5LBlCHoXYE56akVJrv6MOWjLaZpFV0/02q2IXJvIWAw9ZrvkGi7b3BqSdDLfN8RxwVL6wgmB2I5zXgeF+VWuDgxdg2JZR5EKq1lj5eXThbSgrjW+79Gla4IqEi4KaW4o81qq+FPYPA+U3FVV7ovrKIw5TgeVgc720VY+pJ6IfN5Vg1OJDV4/+Nar4Sn4rErXbkeD72F6W2h/BwQhAY2g/KpTT448bK5NwevMt9sSq0plL8Zx/AdXJStdLgPxDaaTDSX45AWwCuS4X68yXBz7wnw9z5h9BvWrQR/qLr4TNwaVuPv8pFCrwUUgXS6d5IAqQN+QOjmZEKRmSy0rtO96jwphyrOnIkG6CfBf3exUOwJOKfds9ntarL4zhiQGmpqZpGmd1IofdXTsjr3bQ0xUB4blgni7UnkHHRjzjOVyw4isq7g/UPYFOKgmt5gylmUUYfDKAVt2EOdoe3Yw5T/CDAAFUdTeZ5FCOsAAAAASUVORK5CYII=') no-repeat;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-game--active .userbar-game-name,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-game--active .userbar-game-name {
+  color: #c35e0d;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-game--active .userbar-game-icon-container:before,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-game--active .userbar-game-icon-container:before {
+  border-color: #c35e0d;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-game-name,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-game-name {
+  color: #000;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-list-item--dashed:before,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-skeleton-cell--dashed,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-skeleton-cell--dashed,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dash-line:before,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dash-line:before,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dash-line:after,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dash-line:after {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dash-arrow,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dash-arrow {
+  border-top-color: rgba(0, 0, 0, 0.3);
+  border-right-color: rgba(0, 0, 0, 0.3);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button:after,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button:after,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button:after,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button:after {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button-text,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button-text {
+  color: rgba(0, 0, 0, 0.8);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button-icon-path,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button-icon-path,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button-icon-path,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar .userbar-button--theme-flat .userbar-button-icon-path {
+  fill: #756e64;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button-group,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button-group {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button-group-item,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button-group-item {
+  border-left-color: rgba(0, 0, 0, 0.3);
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--highlight,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--highlight,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--highlight:hover,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--highlight:hover {
+  color: #000;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--highlight .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--highlight .userbar-button-text,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--highlight:hover .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--highlight:hover .userbar-button-text {
+  color: #000 !important;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button.userbar-button--theme-link:hover .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button.userbar-button--theme-link:hover .userbar-button-text {
+  color: #46423c;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button.userbar-button--theme-link:hover .userbar-button-icon--achievements-poligon,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button.userbar-button--theme-link:hover .userbar-button-icon--achievements-poligon {
+  fill: #46423c !important;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--theme-link .userbar-button-icon--achievements-poligon,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--theme-link .userbar-button-icon--achievements-poligon,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--theme-link:active .userbar-button-icon--achievements-poligon,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--theme-link:active .userbar-button-icon--achievements-poligon,
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--theme-link:active:hover .userbar-button-icon--achievements-poligon,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--theme-link:active:hover .userbar-button-icon--achievements-poligon {
+  fill: #46423c !important;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-button--theme .userbar-button-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-button--theme .userbar-button-text {
+  color: #46423c;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dropdown-control-icon path,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dropdown-control-icon path {
+  fill: #46423c;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dropdown-control-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dropdown-control-text {
+  color: #46423c;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-dropdown-control-arrow,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-dropdown-control-arrow {
+  border-top-color: #46423c;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-icon path,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-icon path {
+  fill: #d93d26;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-text,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-text {
+  color: #d93d26;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-arrow,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-billing-control--negative-balance .userbar-dropdown-control-arrow {
+  border-top-color: #d93d26;
+}
+.userbar-container:not(.userbar-state--install).userbar-state--bright-bg-theme .userbar-staging,
+.userbar-container.userbar-state--collapsed.userbar-state--bright-bg-theme .userbar-staging {
+  color: #000;
+}
+.userbar-container.userbar-state--collapsed.userbar-state--install .userbar-list-item--dashed:before,
+.userbar-container.userbar-state--collapsed.userbar-state--install .userbar-skeleton-cell--dashed {
+  border-bottom-color: transparent;
+}
+.userbar-container.userbar-state--collapsed.userbar-state--install .userbar-dash-line:before,
+.userbar-container.userbar-state--collapsed.userbar-state--install .userbar-dash-line:after {
+  border-top-color: transparent;
+}
+.userbar-container .userbar-skeleton-cell > .userbar-list > .userbar-list-item--dashed:first-child .userbar-control {
+  padding-left: 45px;
+}
+.userbar-container .userbar-list--controls .userbar-list-item:last-child .userbar-control {
+  padding-right: 45px;
+}
+.userbar-container .userbar {
+  position: relative;
+  /**
+		 * Для десктопа немного сужаем ячейки с играми, чтобы не поместились
+		 */
+}
+.userbar-container .userbar--floating {
+  width: 100%;
+  position: absolute;
+  z-index: 11;
+}
+.userbar-container .userbar-loader-container {
+  font-size: 0;
+  height: 35px;
+  text-align: center;
+}
+.userbar-container .userbar-loader-container:before {
+  height: 100%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+.userbar-container .userbar-loader--button_loader {
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,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') no-repeat;
+  margin: -10px 0 0 -10px;
+  position: absolute;
+  display: none !important;
+  z-index: 1;
+}
+.userbar-container .userbar-indent {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: auto;
+}
+.userbar-container .userbar-indent--relative {
+  position: relative;
+}
+.userbar-container .userbar-tray {
+  margin-top: -200px;
+  margin-bottom: -40px;
+  padding-top: 36px;
+  padding-bottom: 40px;
+  -webkit-transition: margin-top 0.2s;
+  -moz-transition: margin-top 0.2s;
+  -ms-transition: margin-top 0.2s;
+  -o-transition: margin-top 0.2s;
+  transition: margin-top 0.2s;
+  overflow: hidden;
+}
+.userbar-container .userbar-tray-container {
+  width: 100%;
+  display: table;
+  position: relative;
+  z-index: 10;
+}
+.userbar-container .userbar-games {
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+  position: absolute;
+}
+.userbar-container .userbar-games-list {
+  height: 113px;
+  position: relative;
+  display: block;
+  -webkit-transition: opacity 0.1s ease-in-out 0.1s;
+  -moz-transition: opacity 0.1s ease-in-out 0.1s;
+  -ms-transition: opacity 0.1s ease-in-out 0.1s;
+  -o-transition: opacity 0.1s ease-in-out 0.1s;
+  transition: opacity 0.1s ease-in-out 0.1s;
+  opacity: 1;
+}
+.userbar-container .userbar-games-list--active .userbar-games {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.userbar-container .userbar-games-list--active .userbar-games--shift_left {
+  -webkit-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.userbar-container .userbar-games-list--active .userbar-games--shift_right {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+}
+.userbar-container .userbar-game {
+  left: 50%;
+  width: 88px;
+  font: 12px/14px Arial, sans-serif;
+  text-align: center;
+  margin: 18px 0 0 -44px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform-origin: 50% 27px;
+  -moz-transform-origin: 50% 27px;
+  -ms-transform-origin: 50% 27px;
+  transform-origin: 50% 27px;
+  position: absolute;
+}
+.userbar-container .userbar-game--active .userbar-game-icon-container:before {
+  opacity: 1;
+}
+.userbar-container .userbar-game--active .userbar-game-name {
+  color: #ffce0a;
+}
+.userbar-container .userbar-game--info-status-hidden .userbar-game-background-icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAMAAAArDjJDAAAAMFBMVEXCyNKFjpfGzNd9hpKBipSgp7KDjJbFy9WTm6WlrbeNlaC9w86IkJqqsbuKkp61vMZjH/fpAAABb0lEQVR42u3W0YrCMBCF4TOZ2KRNW9//bS1J3YNWkMwUdNn9L734MMPAFG8ap6h7cRphr6z60FpgbdU4yE9D1BXGRm0QMTW88YKt6S7RmvolxRYlWv1SfKZCTYZ+SbAlR0r6pQOlNZFuyU9RElKMD+yQ3BSl1xQf2CH5KEojKdsyUApeilIS5zJQgo/ixKOqcxko2SlKzLEMlPwUUngKW+FFHZKZ+v5KBrQzgHebXWc1Uce7fdlwQDoDDne7TKoiZop3G0vcT0PoDHi82yWrDuKkZKjzvv9gGTupOu8UfFQLk+o+PPvYW9AoZ1GDnEbl86g0nkeF63QStVkg5VjRGVsJmP1URqtk94ouaIU0OqmMvTp9z9hzSaCFi5Wa85KqRMwy9tBqEi0zlRJ+Zfqiz1KGT7UPUarfRoXat1FaO5X636s/ulfzcRlm2MpHKsPWIocW+P4WyzCWCi3eYKOVltxmzxtstsJDlCwWsXc3+AahEhP9MeKH7gAAAABJRU5ErkJggg==");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 37px;
+}
+.userbar-container .userbar-game--ext-status-beta .userbar-game-icon-container:after,
+.userbar-container .userbar-game--ext-status-preorder .userbar-game-icon-container:after {
+  background-position: 0 -100px;
+  opacity: 1;
+}
+.userbar-container .userbar-game--ext-status-new .userbar-game-icon-container:after {
+  background-position: 0 -80px;
+  opacity: 1;
+}
+.userbar-container .userbar-game--progress .userbar-game-progress {
+  -webkit-animation: animatedBackground 1s linear infinite;
+  -moz-animation: animatedBackground 1s linear infinite;
+  -ms-animation: animatedBackground 1s linear infinite;
+  -o-animation: animatedBackground 1s linear infinite;
+  animation: animatedBackground 1s linear infinite;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 1;
+}
+.userbar-container .userbar-game--update_required .userbar-game-icon-container:after,
+.userbar-container .userbar-game--full_update_required .userbar-game-icon-container:after {
+  background-position: 0 0;
+  opacity: 1;
+}
+.userbar-container .userbar-game--paused .userbar-game-icon-container:after {
+  background-position: 0 -40px;
+  opacity: 1;
+}
+.userbar-container .userbar-game--maintenance .userbar-game-icon-container:after {
+  background-position: 0 -20px;
+  opacity: 1;
+}
+.userbar-container .userbar-game--error .userbar-game-icon-container:after {
+  background-position: 0 -60px;
+  opacity: 1;
+}
+.userbar-container .userbar-game-wrapper {
+  width: 88px;
+  position: relative;
+  -webkit-transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  -ms-transition: width 0.4s;
+  -o-transition: width 0.4s;
+  transition: width 0.4s;
+}
+.userbar-container .userbar-game-wrapper--scaled {
+  width: 0;
+}
+.userbar-container .userbar-game-wrapper--scaled .userbar-game {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.userbar-container .userbar-game-icon,
+.userbar-container .userbar-game-background-icon {
+  width: 48px;
+  height: 48px;
+  background-size: 48px;
+  display: block;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  position: relative;
+}
+.userbar-container .userbar-game-background-icon {
+  background-color: #c2c8d2;
+}
+.userbar-container .userbar-game-icon {
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.userbar-container .userbar-game-icon:before,
+.userbar-container .userbar-game-icon:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  position: absolute;
+  opacity: 0;
+}
+.userbar-container .userbar-game-icon:before {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 177, 255, 0.5);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 177, 255, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 177, 255, 0.5);
+}
+.userbar-container .userbar-game-icon:after {
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 177, 255, 0.5);
+  -moz-box-shadow: inset 0 0 5px 0 rgba(0, 177, 255, 0.5);
+  box-shadow: inset 0 0 5px 0 rgba(0, 177, 255, 0.5);
+}
+.userbar-container .userbar-game-icon:hover:before,
+.userbar-container .userbar-game-icon:hover:after {
+  opacity: 1;
+}
+.userbar-container .userbar-game-icon-container {
+  padding: 3px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.userbar-container .userbar-game-icon-container:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border: 1px #ffce0a solid;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  position: absolute;
+  opacity: 0;
+}
+.userbar-container .userbar-game-icon-container:after {
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  content: '';
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  background: url("data:image/png;base64,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");
+  background-size: 20px;
+  position: absolute;
+  opacity: 0;
+}
+.userbar-container .userbar-game-progress {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background: rgba(18, 72, 110, 0.5) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAT0lEQVR4AZXMMQ3DQADFUEvF0aMQBllvOgAJnRRIyZVH5fU2D57+02dczzy/v7U37s98vY+1R8GeU7A7BRsFGwUbBRsFe07B7hRsFGwUbH+k2r6Bkn+GUQAAAABJRU5ErkJggg==");
+  -webkit-transition: opacity 0.2s, bottom 0.2s;
+  -moz-transition: opacity 0.2s, bottom 0.2s;
+  -ms-transition: opacity 0.2s, bottom 0.2s;
+  -o-transition: opacity 0.2s, bottom 0.2s;
+  transition: opacity 0.2s, bottom 0.2s;
+  position: absolute;
+  opacity: 0;
+}
+.userbar-container .userbar-game-name {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 5px;
+  white-space: normal;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  cursor: default;
+}
+.userbar-container .userbar-games--desktop {
+  /**
+			 * Убираем отступы у блоков с установленными/неустановленными
+			 * играми — их все-равно нельзя установить
+			 */
+}
+.userbar-container .userbar-games--desktop .userbar-list-item--installed-games,
+.userbar-container .userbar-games--desktop .userbar-list-item--uninstalled-games {
+  margin: 0px;
+}
+.userbar-container .userbar-games--desktop .userbar-game {
+  width: 86px;
+  margin-left: -43px;
+}
+.userbar-container .userbar-games--desktop .userbar-game-wrapper {
+  width: 86px;
+}
+.userbar-container .userbar-games--desktop .userbar-game-wrapper--scaled {
+  width: 0;
+}
+.userbar-container .userbar-list {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+.userbar-container .userbar-list--inline {
+  white-space: nowrap;
+}
+.userbar-container .userbar-list--inline:before {
+  height: 100%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+.userbar-container .userbar-list--inline-indent > .userbar-list-item {
+  margin: 0 2px;
+}
+.userbar-container .userbar-list--center {
+  text-align: center;
+}
+.userbar-container .userbar-list--vertical-top:before {
+  vertical-align: top;
+}
+.userbar-container .userbar-list--vertical-top > .userbar-list-item {
+  vertical-align: top;
+}
+.userbar-container .userbar-list--vertical-bottom:before {
+  vertical-align: bottom;
+}
+.userbar-container .userbar-list--vertical-bottom > .userbar-list-item {
+  vertical-align: bottom;
+}
+.userbar-container .userbar-list--height {
+  height: 100%;
+}
+.userbar-container .userbar-list--vertical-list > .userbar-list-item {
+  text-align: left;
+  display: block;
+}
+.userbar-container .userbar-list--indent {
+  padding: 0 15px;
+}
+@media (max-width: 900px) {
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--vk-btn,
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--fb-btn,
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--ok-btn,
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--ya-btn,
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn {
+    display: none;
+  }
+}
+@media (max-width: 1170px) {
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn .userbar-button--type-vk {
+    width: 39px;
+    padding: 0;
+  }
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn .userbar-button--type-vk .userbar-button-text {
+    display: none;
+  }
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn .userbar-button--type-vk .userbar-button-icon {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn .userbar-button-group-item {
+    display: none;
+  }
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item--social-btn .userbar-button-group-item:first-child {
+    display: inline-block;
+  }
+}
+@media (max-width: 1020px) {
+  .userbar-container .userbar-list--auth-panel > .userbar-list-item .userbar-button--type-achievements .userbar-button-text {
+    display: none;
+  }
+}
+.userbar-container .userbar-list--controls {
+  margin-right: -1px;
+}
+.userbar-container .userbar-list-item {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+.userbar-container .userbar-list-item--dashed {
+  position: relative;
+}
+.userbar-container .userbar-list-item--dashed:before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border-bottom: 1px rgba(255, 255, 255, 0.23) solid;
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -ms-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  position: absolute;
+}
+.userbar-container .userbar-list-item--separated .userbar-button--type-achievements {
+  margin-right: 0;
+}
+.userbar-container .userbar-list-item--separated .userbar-button--type-achievements .userbar-button-text {
+  padding: 2px 0px 2px 2px;
+}
+.userbar-container .userbar-list-item--installed-games,
+.userbar-container .userbar-list-item--uninstalled-games {
+  height: 113px;
+  margin: 0 20px;
+}
+.userbar-container .userbar-skeleton {
+  width: 100%;
+  display: table;
+}
+.userbar-container .userbar-skeleton-row {
+  display: table-row;
+}
+.userbar-container .userbar-skeleton-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.userbar-container .userbar-skeleton-cell--collapsed {
+  width: 1px;
+}
+.userbar-container .userbar-skeleton-cell--dashed {
+  border-bottom: 1px rgba(255, 255, 255, 0.23) solid;
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -ms-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+}
+.userbar-container .userbar-skeleton-cell--userpanel {
+  width: 28%;
+}
+.userbar-container .userbar-skeleton-cell--userpanel {
+  text-align: right;
+}
+.userbar-container .userbar-control {
+  font: bold 14px/35px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.userbar-container .userbar-control:hover .userbar-control-title {
+  opacity: 1;
+}
+.userbar-container .userbar-control--empty,
+.userbar-container .userbar-control--empty:hover {
+  cursor: default;
+}
+.userbar-container .userbar-control--empty .userbar-control-title,
+.userbar-container .userbar-control--empty:hover .userbar-control-title,
+.userbar-container .userbar-control--empty .userbar-control-title:before,
+.userbar-container .userbar-control--empty:hover .userbar-control-title:before {
+  opacity: .3;
+}
+.userbar-container .userbar-control-title {
+  position: relative;
+  opacity: .7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.userbar-container .userbar-control-title--simple,
+.userbar-container .userbar-control-title--extended {
+  padding-left: 22px;
+}
+.userbar-container .userbar-control-title--simple:before,
+.userbar-container .userbar-control-title--extended:before {
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  content: '';
+  margin-top: -10px;
+  position: absolute;
+}
+.userbar-container .userbar-control-title--simple {
+  font-size: 16px;
+  color: #ffc01f;
+  padding-left: 34px;
+  opacity: 1;
+  display: none;
+}
+.userbar-container .userbar-control-title--simple:before {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAMFBMVEUAAAD/wB7/wB7/wB7/wB7/wB7/wB7/wB7/vyH/5AD/wB7/vx//vRz/wB//vx7/wB99oRNwAAAAD3RSTlMA9ujcNMBHXxABqngflGyzYf94AAAAhklEQVR42pWSyw5CMQhEebXQeuv8/99qNDWW4MKznBOGhECbWMqs0yhhgheS8s4AWgNQ5BqhSfi7RVVO0fFF6qmEHTn8ihj0JBQFetFCySIFuKW0AUoMsVsSdgfXwpl/V02UTDJBgezzj88aH3QwthiU2IL+EK33Vk+4VxMCMANCGZvn+zwA+iYRSWYIr24AAAAASUVORK5CYII=");
+  margin-top: -12px;
+}
+.userbar-container .userbar-control-title--extended:before {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAbElEQVR4AY3QsQ3DIBCF4TeGm9shwyQS8gCZj9oL3CZu3dH+kYJegRFRvtfxV5yMoNJoJIH6RN+DEyuOThcGu+OchrhxMqq8KTzZRGXlEI2V61dsIllJEby+O7BKfwnh7fNX/owFK3MM8n74D1sWMAaS+Sn3AAAAAElFTkSuQmCC") left center no-repeat;
+}
+.userbar-container .userbar-control-title--arrow {
+  padding-left: 14px;
+  white-space: nowrap;
+}
+.userbar-container .userbar-control-title--arrow:before {
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  content: '';
+  margin-top: -4px;
+  position: absolute;
+  background: none left center no-repeat;
+}
+.userbar-container .userbar-dash {
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 7px;
+  font-size: 0;
+  text-align: center;
+  margin-top: -7px;
+  position: absolute;
+  overflow: hidden;
+}
+.userbar-container .userbar-dash-line {
+  top: 6px;
+  width: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -ms-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+}
+.userbar-container .userbar-dash-line:before,
+.userbar-container .userbar-dash-line:after {
+  top: 0;
+  right: 100%;
+  width: 2000px;
+  content: '';
+  border-top: 1px rgba(255, 255, 255, 0.23) solid;
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -ms-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  position: absolute;
+}
+.userbar-container .userbar-dash-line:after {
+  left: 100%;
+  right: auto;
+}
+.userbar-container .userbar-dash-arrow {
+  top: 3px;
+  left: 50%;
+  width: 7.07106781px;
+  height: 7.07106781px;
+  border-top: 1px rgba(255, 255, 255, 0.23) solid;
+  border-right: 1px rgba(255, 255, 255, 0.23) solid;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0 0 0 -4px;
+  position: absolute;
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  -ms-transition: top 0.2s;
+  -o-transition: top 0.2s;
+  transition: top 0.2s;
+}
+.userbar-container .userbar-user {
+  white-space: nowrap;
+}
+.userbar-container .userbar-button {
+  height: 24px;
+  font-size: 0;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  background-color: #e6b349;
+  background-image: -moz-linear-gradient(top, #fde567 0%, #cf812b 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fde567), color-stop(100%, #cf812b));
+  background-image: -webkit-linear-gradient(top, #fde567 0%, #cf812b 100%);
+  background-image: -o-linear-gradient(top, #fde567 0%, #cf812b 100%);
+  background-image: -ms-linear-gradient(top, #fde567 0%, #cf812b 100%);
+  background-image: linear-gradient(top, #fde567 0%, #cf812b 100%);
+  -webkit-box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+  -moz-box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+  box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+  padding: 0 17px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+.userbar-container .userbar-button:before {
+  height: 100%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+.userbar-container .userbar-button:after {
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  content: '';
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffec6c;
+  background: -moz-linear-gradient(top, #ffec6c 0%, #f5af01 50%, #e68800 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffec6c), color-stop(50%, #f5af01), color-stop(100%, #e68800));
+  background: -webkit-linear-gradient(top, #ffec6c 0%, #f5af01 50%, #e68800 100%);
+  background: -o-linear-gradient(top, #ffec6c 0%, #f5af01 50%, #e68800 100%);
+  background: -ms-linear-gradient(top, #ffec6c 0%, #f5af01 50%, #e68800 100%);
+  background: linear-gradient(top, #ffec6c 0%, #f5af01 50%, #e68800 100%);
+  -webkit-box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+.userbar-container .userbar-button:hover,
+.userbar-container .userbar-button.userbar-button--theme-flat:hover {
+  background-color: #e9b94f;
+  background-image: -moz-linear-gradient(top, #f3dc56 0%, #de9548 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3dc56), color-stop(100%, #de9548));
+  background-image: -webkit-linear-gradient(top, #f3dc56 0%, #de9548 100%);
+  background-image: -o-linear-gradient(top, #f3dc56 0%, #de9548 100%);
+  background-image: -ms-linear-gradient(top, #f3dc56 0%, #de9548 100%);
+  background-image: linear-gradient(top, #f3dc56 0%, #de9548 100%);
+  -webkit-box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+  -moz-box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+  box-shadow: 0 3px 5px -2px rgba(26, 13, 4, 0.8);
+}
+.userbar-container .userbar-button:hover:after,
+.userbar-container .userbar-button.userbar-button--theme-flat:hover:after {
+  background-color: #ffeb76;
+  background: -moz-linear-gradient(top, #ffeb76 0%, #f9c430 50%, #f0ac2f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffeb76), color-stop(50%, #f9c430), color-stop(100%, #f0ac2f));
+  background: -webkit-linear-gradient(top, #ffeb76 0%, #f9c430 50%, #f0ac2f 100%);
+  background: -o-linear-gradient(top, #ffeb76 0%, #f9c430 50%, #f0ac2f 100%);
+  background: -ms-linear-gradient(top, #ffeb76 0%, #f9c430 50%, #f0ac2f 100%);
+  background: linear-gradient(top, #ffeb76 0%, #f9c430 50%, #f0ac2f 100%);
+}
+.userbar-container .userbar-button:hover .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--theme-flat:hover .userbar-button-icon-path {
+  fill: #fff !important;
+}
+.userbar-container .userbar-button:hover .userbar-button-icon--ya .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--theme-flat:hover .userbar-button-icon--ya .userbar-button-icon-path {
+  fill: #ff0000 !important;
+}
+.userbar-container .userbar-button--highlight,
+.userbar-container .userbar-button--highlight:hover {
+  color: #f8bb00;
+}
+.userbar-container .userbar-button--highlight .userbar-button-text,
+.userbar-container .userbar-button--highlight:hover .userbar-button-text {
+  opacity: 1;
+  color: #f8bb00 !important;
+}
+.userbar-container .userbar-button--highlight .userbar-button-icon--achievements,
+.userbar-container .userbar-button--highlight:hover .userbar-button-icon--achievements {
+  opacity: 1;
+  color: #f8bb00 !important;
+}
+.userbar-container .userbar-button--highlight .userbar-button-icon-path,
+.userbar-container .userbar-button--highlight:hover .userbar-button-icon-path {
+  fill: #f8bb00 !important;
+}
+.userbar-container .userbar-button.userbar-button--theme-link:hover {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.userbar-container .userbar-button.userbar-button--theme-link:hover:after {
+  display: none;
+}
+.userbar-container .userbar-button.userbar-button--theme-link:hover .userbar-button-text {
+  color: #fff;
+  opacity: 1;
+  font: bold 14px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+}
+.userbar-container .userbar-button.userbar-button--theme-link:hover .userbar-button-icon--achievements {
+  opacity: 1;
+  color: #f8bb00 !important;
+}
+.userbar-container .userbar-button:active,
+.userbar-container .userbar-button:active:hover,
+.userbar-container .userbar-button.userbar-button--progress,
+.userbar-container .userbar-button.userbar-button--theme-flat:active,
+.userbar-container .userbar-button.userbar-button--theme-flat:active:hover {
+  background-color: #313136;
+  background-image: -moz-linear-gradient(top, #19191c 0%, #494950 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #19191c), color-stop(100%, #494950));
+  background-image: -webkit-linear-gradient(top, #19191c 0%, #494950 100%);
+  background-image: -o-linear-gradient(top, #19191c 0%, #494950 100%);
+  background-image: -ms-linear-gradient(top, #19191c 0%, #494950 100%);
+  background-image: linear-gradient(top, #19191c 0%, #494950 100%);
+}
+.userbar-container .userbar-button:active:after,
+.userbar-container .userbar-button:active:hover:after,
+.userbar-container .userbar-button.userbar-button--progress:after,
+.userbar-container .userbar-button.userbar-button--theme-flat:active:after,
+.userbar-container .userbar-button.userbar-button--theme-flat:active:hover:after {
+  background-color: #2c2c32;
+  background-image: -moz-linear-gradient(top, #202023 0%, #383840 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #202023), color-stop(100%, #383840));
+  background-image: -webkit-linear-gradient(top, #202023 0%, #383840 100%);
+  background-image: -o-linear-gradient(top, #202023 0%, #383840 100%);
+  background-image: -ms-linear-gradient(top, #202023 0%, #383840 100%);
+  background-image: linear-gradient(top, #202023 0%, #383840 100%);
+}
+.userbar-container .userbar-button:active .userbar-button-text,
+.userbar-container .userbar-button:active:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--progress .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--theme-flat:active .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--theme-flat:active:hover .userbar-button-text {
+  color: #acacac;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.35);
+}
+.userbar-container .userbar-button:active .userbar-button-icon-path,
+.userbar-container .userbar-button:active:hover .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--progress .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--theme-flat:active .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--theme-flat:active:hover .userbar-button-icon-path {
+  fill: #acacac !important;
+}
+.userbar-container .userbar-button--wide {
+  display: block;
+}
+.userbar-container .userbar-button--progress {
+  cursor: default;
+}
+.userbar-container .userbar-button--progress .userbar-button-icon,
+.userbar-container .userbar-button--progress .userbar-button-text {
+  visibility: hidden;
+}
+.userbar-container .userbar-button--progress .userbar-loader {
+  display: block !important;
+}
+.userbar-container .userbar-button--type-vk {
+  background-color: #608cbc;
+  background-image: -moz-linear-gradient(top, #8dafd5 0%, #3368a2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dafd5), color-stop(100%, #3368a2));
+  background-image: -webkit-linear-gradient(top, #8dafd5 0%, #3368a2 100%);
+  background-image: -o-linear-gradient(top, #8dafd5 0%, #3368a2 100%);
+  background-image: -ms-linear-gradient(top, #8dafd5 0%, #3368a2 100%);
+  background-image: linear-gradient(top, #8dafd5 0%, #3368a2 100%);
+}
+.userbar-container .userbar-button--type-vk:after {
+  background-color: #7ca4cf;
+  background: -moz-linear-gradient(top, #7ca4cf 0%, #6c95c2 50%, #5d87b5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7ca4cf), color-stop(50%, #6c95c2), color-stop(100%, #5d87b5));
+  background: -webkit-linear-gradient(top, #7ca4cf 0%, #6c95c2 50%, #5d87b5 100%);
+  background: -o-linear-gradient(top, #7ca4cf 0%, #6c95c2 50%, #5d87b5 100%);
+  background: -ms-linear-gradient(top, #7ca4cf 0%, #6c95c2 50%, #5d87b5 100%);
+  background: linear-gradient(top, #7ca4cf 0%, #6c95c2 50%, #5d87b5 100%);
+}
+.userbar-container .userbar-button--type-vk:hover,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:hover {
+  background-color: #7298c3;
+  background-image: -moz-linear-gradient(top, #99b7d9 0%, #4a78ac 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #99b7d9), color-stop(100%, #4a78ac));
+  background-image: -webkit-linear-gradient(top, #99b7d9 0%, #4a78ac 100%);
+  background-image: -o-linear-gradient(top, #99b7d9 0%, #4a78ac 100%);
+  background-image: -ms-linear-gradient(top, #99b7d9 0%, #4a78ac 100%);
+  background-image: linear-gradient(top, #99b7d9 0%, #4a78ac 100%);
+}
+.userbar-container .userbar-button--type-vk:hover:after,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:hover:after {
+  background-color: #89acd4;
+  background: -moz-linear-gradient(top, #89acd4 0%, #7ca0c7 50%, #6d93bd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #89acd4), color-stop(50%, #7ca0c7), color-stop(100%, #6d93bd));
+  background: -webkit-linear-gradient(top, #89acd4 0%, #7ca0c7 50%, #6d93bd 100%);
+  background: -o-linear-gradient(top, #89acd4 0%, #7ca0c7 50%, #6d93bd 100%);
+  background: -ms-linear-gradient(top, #89acd4 0%, #7ca0c7 50%, #6d93bd 100%);
+  background: linear-gradient(top, #89acd4 0%, #7ca0c7 50%, #6d93bd 100%);
+}
+.userbar-container .userbar-button--type-vk:active,
+.userbar-container .userbar-button--type-vk:active:hover,
+.userbar-container .userbar-button--type-vk.userbar-button--progress,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:active,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:active:hover,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat.userbar-button--progress,
+.userbar-container .userbar-button--type-vk:active:after,
+.userbar-container .userbar-button--type-vk:active:hover:after,
+.userbar-container .userbar-button--type-vk.userbar-button--progress:after,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:active:after,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat:active:hover:after,
+.userbar-container .userbar-button--type-vk.userbar-button--theme-flat.userbar-button--progress:after {
+  background: #7599c0;
+}
+.userbar-container .userbar-button--type-fb {
+  background-color: #5e88c7;
+  background-image: -moz-linear-gradient(top, #9eb6e4 0%, #1d59a9 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9eb6e4), color-stop(100%, #1d59a9));
+  background-image: -webkit-linear-gradient(top, #9eb6e4 0%, #1d59a9 100%);
+  background-image: -o-linear-gradient(top, #9eb6e4 0%, #1d59a9 100%);
+  background-image: -ms-linear-gradient(top, #9eb6e4 0%, #1d59a9 100%);
+  background-image: linear-gradient(top, #9eb6e4 0%, #1d59a9 100%);
+}
+.userbar-container .userbar-button--type-fb:after {
+  background-color: #8faadf;
+  background: -moz-linear-gradient(top, #8faadf 0%, #7096ce 50%, #4b7abb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8faadf), color-stop(50%, #7096ce), color-stop(100%, #4b7abb));
+  background: -webkit-linear-gradient(top, #8faadf 0%, #7096ce 50%, #4b7abb 100%);
+  background: -o-linear-gradient(top, #8faadf 0%, #7096ce 50%, #4b7abb 100%);
+  background: -ms-linear-gradient(top, #8faadf 0%, #7096ce 50%, #4b7abb 100%);
+  background: linear-gradient(top, #8faadf 0%, #7096ce 50%, #4b7abb 100%);
+}
+.userbar-container .userbar-button--type-fb:hover,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:hover {
+  background-color: #6e94cc;
+  background-image: -moz-linear-gradient(top, #a8bde7 0%, #336ab1 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a8bde7), color-stop(100%, #336ab1));
+  background-image: -webkit-linear-gradient(top, #a8bde7 0%, #336ab1 100%);
+  background-image: -o-linear-gradient(top, #a8bde7 0%, #336ab1 100%);
+  background-image: -ms-linear-gradient(top, #a8bde7 0%, #336ab1 100%);
+  background-image: linear-gradient(top, #a8bde7 0%, #336ab1 100%);
+}
+.userbar-container .userbar-button--type-fb:hover:after,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:hover:after {
+  background-color: #9ab4e2;
+  background: -moz-linear-gradient(top, #9ab4e2 0%, #7fa0d3 50%, #5d89c2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9ab4e2), color-stop(50%, #7fa0d3), color-stop(100%, #5d89c2));
+  background: -webkit-linear-gradient(top, #9ab4e2 0%, #7fa0d3 50%, #5d89c2 100%);
+  background: -o-linear-gradient(top, #9ab4e2 0%, #7fa0d3 50%, #5d89c2 100%);
+  background: -ms-linear-gradient(top, #9ab4e2 0%, #7fa0d3 50%, #5d89c2 100%);
+  background: linear-gradient(top, #9ab4e2 0%, #7fa0d3 50%, #5d89c2 100%);
+}
+.userbar-container .userbar-button--type-fb:active,
+.userbar-container .userbar-button--type-fb:active:hover,
+.userbar-container .userbar-button--type-fb.userbar-button--progress,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:active,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:active:hover,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat.userbar-button--progress,
+.userbar-container .userbar-button--type-fb:active:after,
+.userbar-container .userbar-button--type-fb:active:hover:after,
+.userbar-container .userbar-button--type-fb.userbar-button--progress:after,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:active:after,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat:active:hover:after,
+.userbar-container .userbar-button--type-fb.userbar-button--theme-flat.userbar-button--progress:after {
+  background: #668fc6;
+}
+.userbar-container .userbar-button--type-ok {
+  background-color: #f1822c;
+  background-image: -moz-linear-gradient(top, #ffb057 0%, #e35400 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb057), color-stop(100%, #e35400));
+  background-image: -webkit-linear-gradient(top, #ffb057 0%, #e35400 100%);
+  background-image: -o-linear-gradient(top, #ffb057 0%, #e35400 100%);
+  background-image: -ms-linear-gradient(top, #ffb057 0%, #e35400 100%);
+  background-image: linear-gradient(top, #ffb057 0%, #e35400 100%);
+}
+.userbar-container .userbar-button--type-ok:after {
+  background-color: #fea43d;
+  background: -moz-linear-gradient(top, #fea43d 0%, #f58f23 50%, #ea7702 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fea43d), color-stop(50%, #f58f23), color-stop(100%, #ea7702));
+  background: -webkit-linear-gradient(top, #fea43d 0%, #f58f23 50%, #ea7702 100%);
+  background: -o-linear-gradient(top, #fea43d 0%, #f58f23 50%, #ea7702 100%);
+  background: -ms-linear-gradient(top, #fea43d 0%, #f58f23 50%, #ea7702 100%);
+  background: linear-gradient(top, #fea43d 0%, #f58f23 50%, #ea7702 100%);
+}
+.userbar-container .userbar-button--type-ok:hover,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:hover {
+  background-color: #f38f35;
+  background-image: -moz-linear-gradient(top, #ffb869 0%, #e66500 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffb869), color-stop(100%, #e66500));
+  background-image: -webkit-linear-gradient(top, #ffb869 0%, #e66500 100%);
+  background-image: -o-linear-gradient(top, #ffb869 0%, #e66500 100%);
+  background-image: -ms-linear-gradient(top, #ffb869 0%, #e66500 100%);
+  background-image: linear-gradient(top, #ffb869 0%, #e66500 100%);
+}
+.userbar-container .userbar-button--type-ok:hover:after,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:hover:after {
+  background-color: #ffad50;
+  background: -moz-linear-gradient(top, #ffad50 0%, #f69b39 50%, #ec861d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffad50), color-stop(50%, #f69b39), color-stop(100%, #ec861d));
+  background: -webkit-linear-gradient(top, #ffad50 0%, #f69b39 50%, #ec861d 100%);
+  background: -o-linear-gradient(top, #ffad50 0%, #f69b39 50%, #ec861d 100%);
+  background: -ms-linear-gradient(top, #ffad50 0%, #f69b39 50%, #ec861d 100%);
+  background: linear-gradient(top, #ffad50 0%, #f69b39 50%, #ec861d 100%);
+}
+.userbar-container .userbar-button--type-ok:active,
+.userbar-container .userbar-button--type-ok:active:hover,
+.userbar-container .userbar-button--type-ok.userbar-button--progress,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:active,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:active:hover,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat.userbar-button--progress,
+.userbar-container .userbar-button--type-ok:active:after,
+.userbar-container .userbar-button--type-ok:active:hover:after,
+.userbar-container .userbar-button--type-ok.userbar-button--progress:after,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:active:after,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat:active:hover:after,
+.userbar-container .userbar-button--type-ok.userbar-button--theme-flat.userbar-button--progress:after {
+  background: #e97500;
+}
+.userbar-container .userbar-button--type-ya {
+  background: rgba(0, 0, 0, 0.15);
+}
+.userbar-container .userbar-button--type-ya:after {
+  background-color: #eeeeef;
+  background-image: -moz-linear-gradient(top, #fff 0%, #dcddde 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcddde));
+  background-image: -webkit-linear-gradient(top, #fff 0%, #dcddde 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #dcddde 100%);
+  background-image: -ms-linear-gradient(top, #fff 0%, #dcddde 100%);
+  background-image: linear-gradient(top, #fff 0%, #dcddde 100%);
+}
+.userbar-container .userbar-button--type-ya:hover,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+.userbar-container .userbar-button--type-ya:hover:after,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:hover:after {
+  background-color: #f7f7f8;
+  background-image: -moz-linear-gradient(top, #fff 0%, #eeeff0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #eeeff0));
+  background-image: -webkit-linear-gradient(top, #fff 0%, #eeeff0 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #eeeff0 100%);
+  background-image: -ms-linear-gradient(top, #fff 0%, #eeeff0 100%);
+  background-image: linear-gradient(top, #fff 0%, #eeeff0 100%);
+}
+.userbar-container .userbar-button--type-ya:active,
+.userbar-container .userbar-button--type-ya:active:hover,
+.userbar-container .userbar-button--type-ya.userbar-button--progress,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:active,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:active:hover,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat.userbar-button--progress,
+.userbar-container .userbar-button--type-ya:active:after,
+.userbar-container .userbar-button--type-ya:active:hover:after,
+.userbar-container .userbar-button--type-ya.userbar-button--progress:after,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:active:after,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat:active:hover:after,
+.userbar-container .userbar-button--type-ya.userbar-button--theme-flat.userbar-button--progress:after {
+  background: #c4c4c4;
+}
+.userbar-container .userbar-button--type-ya .userbar-button-text,
+.userbar-container .userbar-button--type-ya.userbar-button:hover .userbar-button-text,
+.userbar-container .userbar-button--type-ya.userbar-button:active .userbar-button-text,
+.userbar-container .userbar-button--type-ya.userbar-button:active:hover .userbar-button-text {
+  text-shadow: none;
+}
+.userbar-container .userbar-button--type-ya.userbar-button--promoted,
+.userbar-container .userbar-button--type-ya.userbar-button--promoted:hover,
+.userbar-container .userbar-button--type-ya.userbar-button--promoted:after {
+  background: #fff;
+}
+.userbar-container .userbar-button--type-ya.userbar-button--promoted .userbar-button-text {
+  color: #000;
+}
+.userbar-container .userbar-button--type-achievements {
+  margin: 0 15px;
+  font-size: 14px;
+  display: block;
+  height: 100%;
+}
+.userbar-container .userbar-button--type-achievements .userbar-button-text {
+  vertical-align: middle;
+}
+.userbar-container .userbar-button--theme-flat {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.userbar-container .userbar-button--theme-flat:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: none;
+}
+.userbar-container .userbar-button--theme-flat .userbar-button-text {
+  color: #fff;
+  text-shadow: none;
+}
+.userbar-container .userbar-button--theme-link,
+.userbar-container .userbar-button--theme-link:active,
+.userbar-container .userbar-button--theme-link:active:hover {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  vertical-align: baseline;
+}
+.userbar-container .userbar-button--theme-link:after,
+.userbar-container .userbar-button--theme-link:active:after,
+.userbar-container .userbar-button--theme-link:active:hover:after {
+  display: none;
+}
+.userbar-container .userbar-button--theme-link .userbar-button-text,
+.userbar-container .userbar-button--theme-link:active .userbar-button-text,
+.userbar-container .userbar-button--theme-link:active:hover .userbar-button-text {
+  color: #fff;
+  text-decoration: none;
+  opacity: .7;
+  font: bold 14px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+  padding-left: 2px;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.userbar-container .userbar-button--theme-link .userbar-button-text:hover,
+.userbar-container .userbar-button--theme-link:active .userbar-button-text:hover,
+.userbar-container .userbar-button--theme-link:active:hover .userbar-button-text:hover {
+  opacity: 1;
+}
+.userbar-container .userbar-button--collapsed {
+  width: 39px;
+  padding: 0;
+}
+.userbar-container .userbar-button--collapsed .userbar-button-icon {
+  margin-right: 0;
+}
+.userbar-container .userbar-button-icon,
+.userbar-container .userbar-button-text {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+.userbar-container .userbar-button-text {
+  vertical-align: top;
+}
+.userbar-container .userbar-button-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+.userbar-container .userbar-button-icon-svg {
+  display: block;
+}
+.userbar-container .userbar-button-icon-path {
+  fill: #fff;
+}
+.userbar-container .userbar-button-icon--vk,
+.userbar-container .userbar-button-icon--fb,
+.userbar-container .userbar-button-icon--ok {
+  padding: 1px;
+  -webkit-filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+  -moz-filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+  -ms-filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+  -o-filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+}
+.userbar-container .userbar-button-icon--vk {
+  width: 15px;
+  height: 9px;
+  background: none;
+}
+.userbar-container .userbar-button-icon--fb {
+  width: 8px;
+  height: 14px;
+  background: none;
+}
+.userbar-container .userbar-button-icon--achievements {
+  width: 13px;
+  height: 19px;
+  opacity: .7;
+}
+.userbar-container .userbar-button-icon--ok {
+  width: 9px;
+  height: 15px;
+  background: none;
+}
+.userbar-container .userbar-button-icon--ya {
+  width: 7px;
+  height: 14px;
+  background: none;
+}
+.userbar-container .userbar-button.userbar-button--promoted .userbar-button-icon--ya .userbar-button-icon-path {
+  fill: #ff0000;
+}
+.userbar-container .userbar-button-group {
+  font-size: 0;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.userbar-container .userbar-button-group-item {
+  height: 22px;
+  border-left: 1px rgba(255, 255, 255, 0.3) solid;
+  display: inline-block;
+  vertical-align: top;
+}
+.userbar-container .userbar-button-group-item:first-child {
+  border: none;
+}
+.userbar-container .userbar-button-group-item:not(:first-child):not(:last-child) > .userbar-button,
+.userbar-container .userbar-button-group-item:not(:first-child):not(:last-child) > .userbar-button:after {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.userbar-container .userbar-button-group-item:first-child > .userbar-button {
+  margin-left: -1px;
+}
+.userbar-container .userbar-button-group-item:first-child > .userbar-button,
+.userbar-container .userbar-button-group-item:first-child > .userbar-button:after {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.userbar-container .userbar-button-group-item:last-child > .userbar-button {
+  margin-right: -1px;
+}
+.userbar-container .userbar-button-group-item:last-child > .userbar-button,
+.userbar-container .userbar-button-group-item:last-child > .userbar-button:after {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.userbar-container .userbar-button-group-item .userbar-button {
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+.userbar-container .userbar-button-group-item .userbar-button:after {
+  border: none;
+}
+.userbar-container .userbar-button-text,
+.userbar-container .userbar-button:hover .userbar-button-text {
+  font: bold 12px/24px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+  text-shadow: 1px 1px 0 rgba(255, 217, 129, 0.75);
+}
+.userbar-container .userbar-button:hover:after,
+.userbar-container .userbar-button.userbar-button--type-vk:hover:after,
+.userbar-container .userbar-button.userbar-button--type-fb:hover:after,
+.userbar-container .userbar-button.userbar-button--type-ok:hover:after,
+.userbar-container .userbar-button.userbar-button--type-ya:hover:after {
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: none;
+  -webkit-box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 5px 10px -4px rgba(255, 255, 255, 0.5);
+}
+.userbar-container .userbar-button.userbar-button--type-ya:hover:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.userbar-container .userbar-button.userbar-button--type-vk:not(.userbar-button--theme-flat) .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-fb:not(.userbar-button--theme-flat) .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-ok:not(.userbar-button--theme-flat) .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-vk:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-fb:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-ok:hover .userbar-button-text {
+  color: #fff !important;
+  text-shadow: 0 -1px 0 #577ba9;
+}
+.userbar-container .userbar-button:active,
+.userbar-container .userbar-button:active:hover,
+.userbar-container .userbar-button.userbar-button--progress,
+.userbar-container .userbar-button.userbar-button--type-vk:active,
+.userbar-container .userbar-button.userbar-button--type-vk:active:hover,
+.userbar-container .userbar-button.userbar-button--type-vk.userbar-button--progress,
+.userbar-container .userbar-button.userbar-button--type-fb:active,
+.userbar-container .userbar-button.userbar-button--type-fb:active:hover,
+.userbar-container .userbar-button.userbar-button--type-fb.userbar-button--progress,
+.userbar-container .userbar-button.userbar-button--type-ok:active,
+.userbar-container .userbar-button.userbar-button--type-ok:active:hover,
+.userbar-container .userbar-button.userbar-button--type-ok.userbar-button--progress,
+.userbar-container .userbar-button.userbar-button--type-ya:active,
+.userbar-container .userbar-button.userbar-button--type-ya:active:hover,
+.userbar-container .userbar-button.userbar-button--type-ya.userbar-button--progress {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.userbar-container .userbar-button:active:after,
+.userbar-container .userbar-button:active:hover:after,
+.userbar-container .userbar-button.userbar-button--progress:after,
+.userbar-container .userbar-button.userbar-button--type-vk:active:after,
+.userbar-container .userbar-button.userbar-button--type-vk:active:hover:after,
+.userbar-container .userbar-button.userbar-button--type-vk.userbar-button--progress:after,
+.userbar-container .userbar-button.userbar-button--type-fb:active:after,
+.userbar-container .userbar-button.userbar-button--type-fb:active:hover:after,
+.userbar-container .userbar-button.userbar-button--type-fb.userbar-button--progress:after,
+.userbar-container .userbar-button.userbar-button--type-ok:active:after,
+.userbar-container .userbar-button.userbar-button--type-ok:active:hover:after,
+.userbar-container .userbar-button.userbar-button--type-ok.userbar-button--progress:after,
+.userbar-container .userbar-button.userbar-button--type-ya:active:after,
+.userbar-container .userbar-button.userbar-button--type-ya:active:hover:after,
+.userbar-container .userbar-button.userbar-button--type-ya.userbar-button--progress:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  -webkit-box-shadow: inset 0 3px 10px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 3px 10px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 10px -2px rgba(0, 0, 0, 0.5);
+}
+.userbar-container .userbar-button.userbar-button--progress .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-vk:active .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-vk:active:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-vk.userbar-button--progress .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-fb:active .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-fb:active:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-fb.userbar-button--progress .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-ok:active .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-ok:active:hover .userbar-button-text,
+.userbar-container .userbar-button.userbar-button--type-ok.userbar-button--progress .userbar-button-text {
+  color: #a2bbca !important;
+  text-shadow: 0 -1px 0 #416d87;
+}
+.userbar-container .userbar-button.userbar-button--progress .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-vk:active .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-vk:active:hover .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-vk.userbar-button--progress .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-fb:active .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-fb:active:hover .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-fb.userbar-button--progress .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-ok:active .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-ok:active:hover .userbar-button-icon-path,
+.userbar-container .userbar-button.userbar-button--type-ok.userbar-button--progress .userbar-button-icon-path {
+  fill: #a2bbca !important;
+}
+.userbar-container .userbar-billing-control:hover .userbar-dropdown-control--list,
+.userbar-container .userbar-auth-control:hover .userbar-dropdown-control--list {
+  opacity: 1;
+}
+.userbar-container .userbar-billing-control .userbar-dropdown-control,
+.userbar-container .userbar-auth-control .userbar-dropdown-control {
+  opacity: .7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.userbar-container .userbar-billing-control .userbar-dropdown-control--opened,
+.userbar-container .userbar-auth-control .userbar-dropdown-control--opened {
+  opacity: 1;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control--opened .userbar-dropdown-control {
+  opacity: 1;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control--opened .userbar-dropdown-control-icon path {
+  fill: #d93d26;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control--opened .userbar-dropdown-control-text {
+  color: #d93d26;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control--opened .userbar-dropdown-control-arrow {
+  border-bottom-color: #d93d26;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control-icon path {
+  fill: #fd5f41;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control-text {
+  color: #fd5f41;
+}
+.userbar-container .userbar-billing-control--negative-balance .userbar-dropdown-control-arrow {
+  border-top-color: #fd5f41;
+}
+.userbar-container .userbar-auth-control,
+.userbar-container .userbar-billing-control {
+  margin-left: 28px;
+}
+.userbar-container .userbar-dropdown {
+  top: 100%;
+  left: 0;
+  -webkit-border-radius: 0 3px 3px 3px;
+  -moz-border-radius: 0 3px 3px 3px;
+  border-radius: 0 3px 3px 3px;
+  -webkit-box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  margin-top: -4px;
+  padding: 10px 28px 6px;
+  position: absolute;
+  z-index: 15;
+  overflow: hidden;
+}
+.userbar-container .userbar-dropdown--stick_to_right_edge {
+  left: auto;
+  right: 0;
+  -webkit-border-radius: 3px 0 3px 3px;
+  -moz-border-radius: 3px 0 3px 3px;
+  border-radius: 3px 0 3px 3px;
+}
+.userbar-container .userbar-dropdown--hidden {
+  top: -10000px;
+  left: auto;
+  right: 0;
+  opacity: 0;
+}
+.userbar-container .userbar-dropdown-item {
+  font: normal 14px/28px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+  white-space: nowrap;
+}
+.userbar-container .userbar-dropdown-item-link {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.userbar-container .userbar-dropdown-item-link:hover {
+  color: #ed3d29;
+}
+.userbar-container .userbar-dropdown-item-delimiter {
+  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+  margin: 6px -28px 5px;
+  display: block;
+}
+.userbar-container .userbar-dropdown-item-component {
+  margin-bottom: 7px;
+}
+.userbar-container .userbar-dropdown-item-component .userbar-component_loader .userbar-loader--deferred_component {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,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') no-repeat;
+}
+.userbar-container .userbar-dropdown-item-label {
+  color: #4bb441;
+  text-decoration: none;
+  margin-left: .24em;
+  display: inline-block;
+}
+.userbar-container .userbar-dropdown-item-label--dark {
+  color: #e33711;
+}
+.userbar-container .userbar-dropdown-control {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  cursor: default;
+  position: relative;
+}
+.userbar-container .userbar-dropdown-control:before {
+  height: 100%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+.userbar-container .userbar-dropdown-control--list .userbar-dropdown-control-arrow {
+  visibility: visible;
+}
+.userbar-container .userbar-dropdown-control--opened {
+  background: #fff;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  padding: 4px 16px 6px;
+  margin: -4px -16px -6px;
+}
+.userbar-container .userbar-dropdown-control--opened .userbar-dropdown-control-icon path {
+  fill: #46423c;
+  opacity: .7;
+}
+.userbar-container .userbar-dropdown-control--opened .userbar-dropdown-control-text {
+  color: #46423c;
+  opacity: 1;
+}
+.userbar-container .userbar-dropdown-control--opened .userbar-dropdown-control-arrow {
+  border-top: none;
+  border-bottom: 4px solid #46423c;
+  opacity: .7;
+}
+.userbar-container .userbar-dropdown-control--opened .userbar-loader {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: rotate step-start 0.8s infinite normal;
+  -moz-animation: rotate step-start 0.8s infinite normal;
+  -ms-animation: rotate step-start 0.8s infinite normal;
+  -o-animation: rotate step-start 0.8s infinite normal;
+  animation: rotate step-start 0.8s infinite normal;
+  background: url('data:image/png;base64,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') no-repeat;
+}
+.userbar-container .userbar-dropdown-control--numbered .userbar-dropdown-control-text-value {
+  text-align: right;
+}
+.userbar-container .userbar-dropdown-control-icon,
+.userbar-container .userbar-dropdown-control-text,
+.userbar-container .userbar-dropdown-control-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 0px;
+}
+.userbar-container .userbar-dropdown-control-icon {
+  width: 13px;
+  height: 16px;
+  margin-right: 7px;
+  overflow: hidden;
+}
+.userbar-container .userbar-dropdown-control-icon path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  -moz-transition: fill 0.2s;
+  -ms-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+.userbar-container .userbar-dropdown-control-text {
+  height: 20px;
+  font: bold 14px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  overflow: hidden;
+}
+.userbar-container .userbar-dropdown-control-text-value,
+.userbar-container .userbar-dropdown-control-text-after {
+  display: inline-block;
+  vertical-align: top;
+}
+.userbar-container .userbar-dropdown-control-text-value {
+  top: 0;
+  -webkit-transition: top 0.4s;
+  -moz-transition: top 0.4s;
+  -ms-transition: top 0.4s;
+  -o-transition: top 0.4s;
+  transition: top 0.4s;
+  position: relative;
+}
+.userbar-container .userbar-dropdown-control-text-node {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  padding: 0px 0px 4px;
+}
+@media (max-width: 800px) {
+  .userbar-container .userbar-dropdown-control-text-node {
+    max-width: 100px;
+  }
+}
+@media (max-width: 775px) {
+  .userbar-container .userbar-dropdown-control-text-node {
+    max-width: 80px;
+  }
+}
+@media (max-width: 750px) {
+  .userbar-container .userbar-dropdown-control-text-node {
+    max-width: 35px;
+  }
+}
+.userbar-container .userbar-dropdown-control .userbar-loader {
+  display: none !important;
+}
+.userbar-container .userbar-dropdown-control-arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -ms-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  margin-top: -1px;
+  margin-left: 6px;
+  padding: 0px;
+  visibility: hidden;
+}
+.userbar-container .userbar-dropdown-control-switcher {
+  cursor: pointer;
+  display: inline-block;
+}
+.userbar-container .userbar-dropdown-control-badge {
+  display: inline-block;
+  position: relative;
+  top: -6px;
+  margin-left: -5px;
+  padding: 0 3px 0 4px;
+  font: bold 10px/13px Arial, sans-serif;
+  color: #fff;
+  letter-spacing: 0.2px;
+  background: #ccc;
+  border-radius: 8px;
+}
+.userbar-container .userbar-dropdown-control-badge-plus-prefix:before {
+  content: '+';
+}
+.userbar-container .userbar-dropdown-control-badge-bonus {
+  background: #3bb449;
+}
+.userbar-container .userbar-dropdown-control-badge-buff {
+  background: #3b83dc;
+}
+.userbar-container .userbar-info-message {
+  font: bold 16px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+  padding-left: 18px;
+  position: relative;
+}
+.userbar-container .userbar-info-message:before {
+  top: 3px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABXUlEQVR42m3L3UoCURQF4A1BoNRIgiIN2I+KZPUMXXUbBEHgC1ihGPQHBkYxJkZh0lVPEvQGXnlnmqUYEiahwkAwIOzWGc5MNnXg22uds2do/AxKKz7QBqXlGpIl0fN4CwBZ7NIvLm31b2M6kvvFGMiUXe7iQII5Pq+jm8BjNCDpxrGLA1GvEPb2ChEd+KMQZqSQBJKOgG1XER3fqdTNhTRghzsg02XovptbZICQlXl6v5ivAP9YEPkAJD0CO9Sokw0anbM5Ro5rAgmys4NB7czsELh9qvIboAsjmGhn1EnZGcDeG9Q6DlRaJwFG2uQ9K/E/atQ89GuvB37+zSdyhBT4D/xDjfSMF4bAjbSXkcIXBCEMBvAY/WXfqxIG1ZPKBnA96ZGUUT3liSJXRX9OmW+WbSDCMD3tTq9BE9i0p5jQLdgp60CCGLZqwjUF59WEu1zdcTMSXGXkudyR5Ru7IKErpjLDMAAAAABJRU5ErkJggg==") no-repeat;
+  content: '';
+  position: absolute;
+}
+.userbar-container .userbar-info-message--shift-left {
+  margin-left: -20px;
+}
+.userbar-container .userbar-info-message--warning {
+  color: #ff4b23;
+}
+.userbar-container .userbar-account-security {
+  white-space: normal;
+  padding: 12px 0 15px;
+}
+.userbar-container .userbar-account-security--highlight {
+  background: #eef1f2;
+  margin: 10px -28px -7px;
+  padding: 12px 28px 15px;
+}
+.userbar-container .userbar-account-security-title {
+  font: bold 14px/16px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+  cursor: default;
+}
+.userbar-container .userbar-account-security-control {
+  margin-top: 8px;
+}
+.userbar-container .userbar-bonuses {
+  white-space: normal;
+  padding: 12px 28px 15px;
+  margin: -10px -28px -4px;
+  min-width: 160px;
+  background-color: #eef1f2;
+}
+.userbar-container .userbar-bonuses-replenish-text {
+  margin: 0;
+  font: 11px/14px Arial, sans-serif;
+  color: #666;
+  overflow: hidden;
+}
+.userbar-container .userbar-bonuses-replenish-text-warn {
+  color: red;
+}
+.userbar-container .userbar-bonuses-use-bonus-text {
+  margin: 0 0 3px;
+  font: bold 14px/16px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.userbar-container .userbar-bonuses-use-bonus-text > span {
+  color: #3bb449;
+}
+.userbar-container .userbar-bonuses-use-bonus-text-buff {
+  color: #3b83dc;
+}
+.userbar-container .userbar-bonuses-control {
+  margin-bottom: 16px;
+}
+.userbar-container .userbar-bonuses-text {
+  margin: 0 0 15px;
+}
+.userbar-container .userbar-bonuses-text:last-child {
+  margin-bottom: 0;
+}
+.userbar-container .userbar-bonuses-text__icon {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 10px;
+  background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAbCAYAAABxwd+fAAAC8klEQVQ4jaWUTWhcVRTHf+e++95MYpOJTW06NlprJYgLoYIoShftTkTQhQhWEEpxIS676coPxF1XuhK6UeqiRVEEsYh0oWbRvYpYxdp8dNoXzZfJy7xz73Exk3SczEyD/W/u45zzfveec8+5YmYM0tmTwqF6BT90d03X/167ubhRdvrHd7VW//b0jYGgScBi4K9Vvhiy8GhtiNw5zjnhw4VV5jfj5K0fGgNBwBhw8IELh7/WlbndFY/cVSFWM5abyvmRKq8D+F5/irRWMwT4UcJGfX3ymDRX82jXvpFCTWw11pwwM1Jtp9YLZAbeCSJMldHq5lLyx9+xaMhKkbP306eduKqbPf5zfSapVo98OVEMTM0JkiXuc9XyuVAWeAE1cAJRPJZUBDgFnHGDihMNKzROOSIjaYJPHE7AAHNbyfzSN7UOTQEPl8FMYyBNhOE0IUkSYpJhxkvARdkB6HkASzIxcZSmlKURg5Akcb5+du95gPy1mz1Bw8AbwKvAI1tW54kd4cHsu83vQuM20JPAx8BDtzkpwE8zJ25dVGexjwLfdkMWFgO//1mysBi6QaeBY92ge4EL7bT+o8XlSDRjaTl2uyrAZ8B9naD3gPFe5x8bdTgRaqM9O6UGnIHWrU0AL/eKAhgfSxgfS/q5AV4A7nfAM0AKEAKsF0az7P20zF5XZq9rt9kDz/qNph2+OltyIw/8s36rDlkq7NmdcGB/yuiugQMA8Ji/crW5b2Z+2y40S2Ouocw1lIk9nkMHUvbv69u/9/gQ2E7pUiNXGrlSG3HURhOqWeudiRHWioj30vSqdu12oE0trUSWVra1AZN1/6sLgemdgvqpksklp9EuAvkdcP7IUrnkQmADePcOQG9mqQQXggF8AHz1PyDngI+yVHDamsUAvNh27FSfACcAKpngYtjq4jXgFeAJ4H3gSh/Ab7RG6jjQBEhTwR99ahhVUDU0GKpcLoNdbtsOlmpHQuDBUq1Qte81MK1qsR1LtNYU/AvxYjqEc996rQAAAABJRU5ErkJggg==") no-repeat center;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.userbar-container .userbar-staging {
+  height: 5px;
+  background: repeating-linear-gradient(135deg, #000, #000 9px, #F9C948 9px, #F9C948 16px);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.userbar-container .userbar-tooltip {
+  max-width: 160px;
+  font: normal 14px/20px Arial, sans-serif;
+  color: #000;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 13px 20px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.userbar-container .userbar-tooltip--game_install {
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+.userbar-container .userbar-tooltip--payment_fail,
+.userbar-container .userbar-tooltip--mobile_promo {
+  left: 50%;
+  width: 250px;
+  max-width: none;
+  margin-left: -200px;
+}
+.userbar-container .userbar-tooltip--mobile_promo {
+  margin-top: -7px;
+}
+.userbar-container .userbar-tooltip-container {
+  top: -5000px;
+  left: 50%;
+  width: 124px;
+  text-align: center;
+  -webkit-transition: top 0ms ease-in-out 1200ms, opacity 1000ms ease-in-out 200ms;
+  -moz-transition: top 0ms ease-in-out 1200ms, opacity 1000ms ease-in-out 200ms;
+  -ms-transition: top 0ms ease-in-out 1200ms, opacity 1000ms ease-in-out 200ms;
+  -o-transition: top 0ms ease-in-out 1200ms, opacity 1000ms ease-in-out 200ms;
+  transition: top 0ms ease-in-out 1200ms, opacity 1000ms ease-in-out 200ms;
+  margin-left: -62px;
+  padding-top: 7px;
+  position: absolute;
+  opacity: 0;
+}
+.userbar-container .userbar-tooltip-container--popover {
+  top: 100%;
+  opacity: 1;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.userbar-container .userbar-tooltip-hover_area {
+  position: relative;
+}
+.userbar-container .userbar-tooltip-hover_area:hover .userbar-tooltip-container {
+  top: 100%;
+  opacity: 1;
+  -webkit-transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms;
+  -moz-transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms;
+  -ms-transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms;
+  -o-transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms;
+}
+.userbar-container .userbar-tooltip-arrow {
+  bottom: 100%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-top: -1px;
+  margin-left: -5px;
+  position: absolute;
+}
+.userbar-container .userbar-tooltip-close {
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.userbar-container .userbar-tooltip-close:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 22px;
+  color: #707070;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  line-height: 10px;
+  content: '×';
+  position: absolute;
+}
+.userbar-container .userbar-tooltip-close:hover:before {
+  color: #000;
+}
+.userbar-container .userbar-tooltip-content {
+  white-space: normal;
+  cursor: default;
+}
+.userbar-container .userbar-popover-title {
+  font: bold 16px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.userbar-container .userbar-popover-desc {
+  margin-top: 4px;
+}
+.userbar-container .userbar-popover-desc strong {
+  font-weight: bold;
+}
+.userbar-container .userbar-support-link {
+  color: #2963d6;
+  text-decoration: none;
+}
+.userbar-container .userbar-support-link:hover {
+  color: #ed3d29;
+}
+.userbar-container .userbar-bg {
+  width: 100%;
+  height: 35px;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+.userbar-container .userbar-bg-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.userbar-container .userbar-component_loader--loading {
+  text-align: center;
+}
+.userbar-container .userbar-earn-bonus {
+  padding: 12px 28px;
+  margin: -10px -28px 0;
+  background-color: #f3f3f3;
+  border-radius: 0 3px 0 0;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0px -1px 0px 0px #fff inset;
+}
+.userbar-container .userbar-earn-bonus--title {
+  margin: 2px 0;
+  font: bold 15px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.userbar-container .userbar-earn-bonus--text {
+  margin: 0;
+  font: 14px/20px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  color: #000;
+}
+.userbar-container .userbar-earn-bonus a {
+  color: #3b70dc;
+  text-decoration: none;
+}
+.userbar-container .userbar-earn-bonus a:hover {
+  color: #e33711;
+}
+.userbar-container .userbar-flip-logo {
+  -webkit-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -moz-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -ms-transition: opacity .35s ease-out, visibility .35s ease-out;
+  -o-transition: opacity .35s ease-out, visibility .35s ease-out;
+  transition: opacity .35s ease-out, visibility .35s ease-out;
+  -webkit-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -105px;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  width: 210px;
+}
+.userbar-container .userbar-flip-logo--img {
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 43px;
+  font-size: 0;
+  margin: -1px 14px 0 0;
+  -webkit-transform: translate(20px, 0);
+  -moz-transform: translate(20px, 0);
+  -ms-transform: translate(20px, 0);
+  -o-transform: translate(20px, 0);
+  transform: translate(20px, 0);
+  -webkit-transition: all .35s ease-out;
+  -moz-transition: all .35s ease-out;
+  -ms-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+}
+.userbar-container .userbar-flip-logo--flipper {
+  position: relative;
+  display: block;
+}
+.userbar-container .userbar-flip-logo--front,
+.userbar-container .userbar-flip-logo--back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all .35s ease-out;
+  -moz-transition: all .35s ease-out;
+  -ms-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+  width: 43px;
+  height: 43px;
+}
+.userbar-container .userbar-flip-logo--front svg,
+.userbar-container .userbar-flip-logo--back svg {
+  width: 43px;
+  height: 43px;
+}
+.userbar-container .userbar-flip-logo--front img,
+.userbar-container .userbar-flip-logo--back img {
+  width: 43px;
+}
+.userbar-container .userbar-flip-logo--front {
+  z-index: 2;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+}
+.userbar-container .userbar-flip-logo--front rect {
+  fill: #ffce0a;
+}
+.userbar-container .userbar-flip-logo--back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.userbar-container .userbar-flip-logo--back rect {
+  fill: #fff;
+}
+.userbar-container .userbar-flip-logo--text {
+  -webkit-transform: translate(20px, 0);
+  -moz-transform: translate(20px, 0);
+  -ms-transform: translate(20px, 0);
+  -o-transform: translate(20px, 0);
+  transform: translate(20px, 0);
+  -webkit-transition: all .35s ease-out;
+  -moz-transition: all .35s ease-out;
+  -ms-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+  font: bold 36px/36px 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 32px;
+  color: #ffce0a;
+  font-size: 0;
+  top: 7px;
+}
+.userbar-container .userbar-flip-logo--4game {
+  width: 118px;
+  overflow: hidden;
+  display: inline-block;
+  height: 32px;
+}
+.userbar-container .userbar-flip-logo--4game img {
+  width: 116.5px;
+  display: block;
+}
+.userbar-container .userbar-flip-logo--game,
+.userbar-container .userbar-flip-logo--fogame {
+  -webkit-transition: opacity .35s ease-out;
+  -moz-transition: opacity .35s ease-out;
+  -ms-transition: opacity .35s ease-out;
+  -o-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+  display: inline-block;
+  height: 32px;
+}
+.userbar-container .userbar-flip-logo--fogame img,
+.userbar-container .userbar-flip-logo--er img {
+  width: 153px;
+  display: block;
+}
+.userbar-container .userbar-flip-logo--fogame {
+  opacity: 0;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: 0 center;
+  width: 118px;
+  overflow: hidden;
+}
+.userbar-container .userbar-flip-logo--er {
+  -webkit-transition: all .35s ease-out;
+  -moz-transition: all .35s ease-out;
+  -ms-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+  -webkit-transform: translate(-30px, 0);
+  -moz-transform: translate(-30px, 0);
+  -ms-transform: translate(-30px, 0);
+  -o-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
+  color: #fff;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  background-position: -124px center;
+  overflow: hidden;
+  padding-right: 2px;
+}
+.userbar-container .userbar-flip-logo--er img {
+  margin-left: -118px;
+}
+.userbar-container .userbar-media-preview {
+  position: absolute;
+  top: -10000px;
+  left: 0;
+  right: 0;
+  height: 518px;
+  pointer-events: none;
+  z-index: 11;
+}
+.userbar-container .userbar-media-preview .userbar-bg {
+  position: relative;
+}
+.userbar-container .userbar-media-preview .userbar-bg,
+.userbar-container .userbar-media-preview--img,
+.userbar-container .userbar-media-preview:before,
+.userbar-container .userbar-media-preview:after {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .35s ease-out;
+  -moz-transition: all .35s ease-out;
+  -ms-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out;
+}
+.userbar-container .userbar-media-preview--img {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-color: #111;
+  position: absolute;
+}
+.userbar-container .userbar-media-preview--img:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+.userbar-container .userbar-media-preview--frame {
+  position: absolute;
+}
+.userbar-container .userbar-media-preview--title {
+  height: 450px;
+  max-width: 640px;
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.userbar-container .userbar-media-preview--title-cell {
+  font: bold 40px/1.2em 'PT Sans', 'Trebuchet MS', Arial, sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.userbar-container .userbar-media-preview:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  content: '';
+  z-index: 0;
+}
+.userbar-container .userbar-media-preview:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -150px;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 50%, rgba(0, 0, 0, 0) 100%);
+}
+.userbar-container [data-service-id="31-deus-ex-mankind-divided"] .userbar-game-name {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@-webkit-keyframes linkShake {
+  0% {
+    -webkit-transform: translateX(-80px);
+  }
+  25% {
+    -webkit-transform: translateX(20px);
+  }
+  50% {
+    -webkit-transform: translateX(-7px);
+  }
+  75% {
+    -webkit-transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes linkShake {
+  0% {
+    transform: translateX(-80px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-7px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes listShake {
+  0% {
+    -webkit-transform: translateX(-50px);
+  }
+  30% {
+    -webkit-transform: translateX(28px);
+  }
+  55% {
+    -webkit-transform: translateX(-10px);
+  }
+  80% {
+    -webkit-transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes listShake {
+  0% {
+    transform: translateX(-50px);
+  }
+  30% {
+    transform: translateX(28px);
+  }
+  55% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes arrowShake {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-4px, -4px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
+@keyframes arrowShake {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-4px, -4px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

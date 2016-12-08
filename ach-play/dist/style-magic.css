@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body {
+  background-color: #5780ac;
+}
+.play {
+  background-image: url(img/bg-magic.jpg);
+  height: 1770px;
+  background-repeat: no-repeat;
+}
+.black-bg {
+  background-color: black;
+  background-image: url(img/fortune-bg.png);
+  position: absolute;
+  top: -35px;
+  left: 0;
+  bottom: 237px;
+  right: 0;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.achievements {
+  position: absolute;
+  top: 370px;
+  left: 797px;
+}
+.achievements-header {
+  margin-bottom: 30px;
+  z-index: 1;
+  position: relative;
+}
+.achievements-header a {
+  font-family: PT Sans, sans-serif;
+  font-size: 24px;
+  color: white;
+  margin-left: 30px;
+}
+.achievements-header a:hover {
+  color: red;
+}
+.achievements-link {
+  position: absolute;
+  color: #245fd9;
+  left: 29px;
+  top: 41px;
+  font-family: PT Sans;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.achievements-link:hover {
+  color: red;
+}
+.achievements-counter {
+  font-family: Arial, sans-serif;
+  color: #999;
+  font-size: 14px;
+  position: absolute;
+  top: 5px;
+  left: 175px;
+}
+.achievements-counter span {
+  font-size: 18px;
+  color: #fc0;
+  font-weight: bold;
+}
+.achievements_gallery {
+  width: 469px;
+  position: relative;
+  z-index: 2;
+  top: -20px;
+}
+.slick-dots {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  margin-left: -50px;
+}
+.slick-dots li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #999;
+  margin: 0 5px 0;
+}
+.slick-dots li.slick-active {
+  background: #fc0;
+}
+.slick-dots li button {
+  display: none;
+}
+.slick-slide {
+  outline: none;
+}
+.slick-track {
+  padding: 20px 0;
+  height: 500px;
+}
+.achievement--color-white.achievement--hover_available:hover .achievement-badge .achievement-icon,
+.achievement--color-white .achievement--hovered .achievement-badge .achievement-icon {
+  background-color: #999;
+  box-shadow: 0 0 0 12px #fff;
+}
+.achievement--color-white .achievement-icon-placeholder {
+  box-shadow: 0 0 0 12px white !important;
+  background-color: #999 !important;
+}
+.achievement--color-white.achievement--unlocked .achievement-prize_desc {
+  color: black;
+}
+.achievement--color-white.achievement--locked .achievement-icon:after {
+  opacity: .5;
+}
+.achievement--color-white .achievement-icon {
+  background-color: #999;
+}
+.achievement--color-white .achievement-hover_block {
+  background-color: white;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4) !important;
+}
+.achievement--color-white .achievement-ring {
+  stroke: #999 !important;
+}
+.achievement--color-white .achievement-ring--filled {
+  stroke: #fac704 !important;
+}
+.achievement--color-white .achievement-condition_progress_bar {
+  background-color: #999;
+}
+.achievement--color-white .achievement-condition_progress_bar_completed {
+  background-color: #000;
+}
+.achievement--color-white .achievement-condition_progress_achieved,
+.achievement--color-white .achievement-conditions_title,
+.achievement--color-white .achievement-prize_title {
+  color: #000;
+}
+.achievement--color-white .achievement-condition--achieved .achievement-condition_check path {
+  fill: #000;
+}
+.achievement--color-white .achievement-condition--achieved .achievement-condition_desc {
+  color: #000;
+}
+.achievement-nav {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  z-index: 2;
+}
+.achievement-nav-right {
+  left: 29px;
+  margin-left: 10px;
+}
+.achievement-nav-left svg {
+  -webkit-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.achievement-nav--light .slick-arrow {
+  background-color: white;
+  border-color: white;
+}
+.achievement-nav--light .slick-arrow svg {
+  fill: black;
+}
+.achievement-nav--light .slick-disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+}
+.achievement-nav--light .slick-disabled svg {
+  fill: rgba(255, 255, 255, 0.2);
+}
+.slick-disabled svg {
+  fill: #cfd0d3!important;
+}
+.slick-list {
+  z-index: 11;
+}
+.slick-arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cfd0d3;
+  border-radius: 4px;
+}
+.slick-arrow:hover svg {
+  fill: red;
+}
+.slick-arrow svg {
+  width: 8px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  -o-transition: fill .2s;
+  transition: fill .2s;
+}
+.achievement-scale {
+  transition: opacity .3s, -webkit-transform .3s;
+  -o-transition: transform .3s, opacity .3s, -o-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s, -o-transform .3s;
+  opacity: .3;
+}
+.slick-center .achievement-scale {
+  opacity: 1;
+}
+.achievement--in_group .achievement-name,
+.achievement--in_group .achievement-prize {
+  width: 176px;
+  display: inline-block;
+}
+.achievement--multiple .achievement-icon {
+  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.5);
+}
+.achievements--white .black-bg {
+  background: white;
+  background-image: none;
+}
+.achievements--white .achievements-header a {
+  color: black;
+}
+.achievements--white .achievements-header a:hover {
+  color: red;
+}
+.achievements--white .achievement--multiple .achievement-icon {
+  box-shadow: none;
+}
+.achievements--white .achievement-icon {
+  background-color: #999;
+}

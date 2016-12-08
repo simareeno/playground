@@ -1,0 +1,20 @@
+<div class="deskpro-portal-tabs">
+  <ul>
+    <li class="all {% if not category %}dpt-active-tab{% endif %}">
+      <a href="{{ path('portal_news') }}">
+        <i class="fa fa-asterisk"></i>
+        {{ phrase('portal.general.nav-all') }}
+      </a>
+    </li>
+    <li class="blank"></li>
+    {% if category_children|length > 0 %}
+      {% for child in category_children %}
+        <li class="{% if child is same as(category) %}dpt-active-tab{% endif %}">
+          <a href="{{ portal_path(child) }}">
+            {{ object_phrase(child) }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+</div>

@@ -1,0 +1,26 @@
+{% if pager|length > 0 %}
+  <ul class="categories-article-list">
+    {% for article in pager %}
+      <li>
+        <div class="news-header">
+          <div class="news-header-info">
+            <a href="{{ portal_path(article) }}"><h1>{{ article.translated_title }}</h1></a>
+            <div class="article-meta">
+              Posted by <span style="background: url({{ avatar_url(article.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span>{{ article.person.display_name_user }}
+              in {{ article.date_published | date('Y-m-d') }}
+              <hr>
+              <span class="comments"><i class="fa fa-comments-o"></i> <a href="{{ portal_path(article) }}#comments">{{ phrase('portal.general.comments-count', {count: article.calc_num_comments}) }}</a></span>
+              <hr>
+              in <a href="{{ portal_path(article.primary_category) }}">{{ article.primary_category }}</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+    {% if show_pager %}
+        {% show download_pager %}
+    {% endif %}
+{% else %}
+  <strong>{{ phrase('portal.articles.none') }}</strong>
+{% endif %}

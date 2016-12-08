@@ -1,0 +1,22 @@
+{% if comments|length %}
+    {% for comment in comments %}
+        <div class="single-comment">
+            <div class="comment-info">
+                <span class="avatar">
+                  <span style="background: url({{ avatar_url(comment.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-tiny"></span>
+                </span>
+                <span class="author">{{ comment.userName(true) }}</span>
+                <span class="date">{{ comment.date_created|date }}</span>
+            </div>
+
+            <div class="comment-content">
+                <div class="blurb">
+                    <p>{{ comment.content_html_plain|raw }}</p>
+                    {% if not comment.is_visible %}
+                        <span class="pending-review">{{ phrase('portal.general.comments-pending-validation') }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

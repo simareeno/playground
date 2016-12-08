@@ -1,0 +1,19 @@
+{% if pager|length > 0 %}
+<ul class="download-list">
+    {% for dl in pager %}
+        <li>
+            {{ content_icon(dl) }}
+            <a href="{{ portal_path(dl) }}">{{ dl.title }}</a>
+        </li>
+    {% endfor %}
+    {% if show_category_link %}
+        <div class="list-meta">
+            <a href="{{ category ? portal_path(category) : path('portal_downloads') }}">
+                {{ phrase('portal.downloads.view-x-files', {count: pager|length}) }}<i class="fa fa-caret-right"></i>
+            </a>
+        </div>
+    {% endif %}
+</ul>
+{% else %}
+    <strong>{{ phrase('portal.downloads.none') }}</strong>
+{% endif %}

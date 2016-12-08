@@ -1,0 +1,82 @@
+<div class="content">
+  <div class="search-and-ticket">
+    <div class="search-form">
+      <form action="{{ path('portal_search') }}" id="omnisearch" autocomplete="off">
+        <div class="input-wrap">
+          <i class="fa fa-search"></i>
+          <a href="#" class="search-clear" style="display: none;"><i class="fa fa-times"></i></a>
+          <input type="text" class="omnisearch" name="q" autocomplete="off" placeholder="{{ phrase('portal.general.search_btn') }}...">
+          <!-- .active on this if we need it active -->
+        </div>
+        <button type="submit" class="search-btn">{{ phrase('portal.general.search_btn') }}</button>
+      </form>
+    </div>
+
+    {% if include_contact_us %}
+
+      <div class="search-or-ticket">
+        <span>{{ phrase('portal.general.or') }}</span>
+      </div>
+
+      <div class="search-and-ticket-dropdown">
+        <a href="{{ first_link }}"
+           {% if should_display_dropdown %}class="clickaway-dropdown" data-clickaway-target="top-contactus-dropdown"{% endif %}
+        >
+          <span class="button select-action {% if not should_display_dropdown %}unpadded{% endif %}" >
+            <i class="fa fa-support"></i>
+            {{ phrase('portal.general.nav-newticket') }}
+            {% if should_display_dropdown %}
+              <span class="select-action-dropdown">
+                <i class="fa fa-caret-down"></i>
+              </span>
+            {% endif %}
+          </span>
+        </a>
+
+        {% if should_display_dropdown %}
+          <div class="dropdown-content" id="top-contactus-dropdown" style="display: none;">
+            <ul>
+              {% if can_view_tickets_link %}
+              <li>
+                <a href="{{ path('portal_new_ticket') }}">
+                  <i class="fa fa-envelope"></i>
+
+                  <h1>{{ phrase('portal.general.get-in-touch') }}</h1>
+
+                  <p>{{ phrase('portal.general.get-in-touch-desc') }}</p>
+                </a>
+              </li>
+              {% endif %}
+              {% if can_use_feedback %}
+              <li>
+                <a href={{ path('portal_feedback') }}>
+                  <i class="fa fa-thumbs-o-up"></i>
+
+                  <h1>{{ phrase('portal.general.submit-feedback') }}</h1>
+
+                  <p>{{ phrase('portal.general.submit-feedback-desc') }}</p>
+                </a>
+              </li>
+              {% endif %}
+              {% if can_use_chat %}
+              <li>
+                <a href="#" class="widget-button disabled">
+                  <i class="fa fa-comments-o"></i>
+                  <h1>{{ phrase('portal.general.start-chat') }}</h1>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  {#
+  <div class="search-form-suggestions">
+    For example: "<a href="#" class="dpx-omnisearch-link">lorel ipsum</a>", "<a href="#" class="dpx-omnisearch-link">lorel ipsum</a>", "<a href="#" class="dpx-omnisearch-link">lorel ipsum</a>"
+  </div>
+  #}
+
+</div>

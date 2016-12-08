@@ -1,0 +1,95 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% block page_content %}
+
+    {% block content_header %}
+    <section class="welcome-news">
+
+        {% show section nav_buttons_big %}
+
+        {% include 'Theme:Portal:welcome-box.html.twig' %}
+
+    </section>
+    {% endblock content_header %}
+
+    {% if can_use_news() %}
+        <section>
+            <article class="news front-page-news">
+                <div class="large-title">
+                    <h1>
+                        <a href="{{ path('portal_news') }}">
+                            {{ phrase('portal.news.section-title') }}
+                        </a>
+                    </h1>
+                    <p>{{ phrase('portal.news.homepage-desc') }}</p>
+                </div>
+                {% show section news_list_excerpts with { count: 2, show_category_link: true } %}
+            </article>
+        </section>
+    {% endif %}
+
+    {% if can_use_articles() %}
+    <section>
+        <article class="news front-page-kb">
+            <div class="large-title clearfix">
+                <h1>
+                    <a href="{{ path('portal_kb') }}">
+                        {{ phrase('portal.articles.section-title') }}
+                    </a>
+                </h1>
+            </div>
+            {% show section kb with { articles_count: 3, with_tree: true } %}
+        </article>
+    </section>
+    {% endif %}
+
+    {% group min 2 %}
+    <section class="with-{{ group.count }}-columns">
+        {% item if has_any_news() %}
+        <div class="column">
+            <article class="panel-tiny front-page-news-tiny">
+                <div class="large-title">
+                    <h1>
+                        <a href="{{ path('portal_news') }}">
+                            {{ phrase('portal.news.recent-title') }}
+                        </a>
+                    </h1>
+                </div>
+                {% show section news_list_simple with { count: 5, show_category_link: true } %}
+            </article>
+        </div>
+        {% enditem %}
+
+        {% item if has_any_feedback() %}
+        <div class="column">
+            <article class="panel-tiny front-page-feedback">
+                <div class="large-title">
+                    <h1>
+                        <a href="{{ path('portal_feedback') }}">
+                            {{ phrase('portal.feedback.recent-feedback') }}
+                        </a>
+                    </h1>
+                </div>
+                {% show  feedback_list_simple with { count: 5, show_category_link: true, types: feedbackTypes  } %}
+            </article>
+        </div>
+        {% enditem %}
+
+        {% item if has_any_downloads() %}
+        <div class="column">
+            <article class="panel-tiny front-page-downloads">
+                <div class="large-title">
+                    <h1>
+                        <a href="{{ path('portal_downloads') }}">
+                            {{ phrase('portal.downloads.recent-downloads') }}
+                        </a>
+                    </h1>
+                </div>
+                {% show section download_list_simple with { count: 5, show_category_link: true } %}
+            </article>
+        </div>
+        {% enditem %}
+    </section>
+    {% endgroup %}
+
+{% endblock page_content %}

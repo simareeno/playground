@@ -1,0 +1,33 @@
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Portal:User/macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <div>
+        {{  macros.lockout_notice(phrase('portal.account.tickets-lockout'), lockout, lockout_time) }}
+        <header class="large-title">
+            <h1>{{ phrase('portal.tickets.new-section-title') }}</h1>
+            <p>{{ phrase('portal.tickets.new-intro') }}</p>
+        </header>
+
+        <section class="padded">
+            {% if rerendering %}
+                <strong>{{ phrase('portal.tickets.form-changed-notice') }}</strong>
+            {% endif %}
+
+            {% if rerendering_saved %}
+                <strong>{{ phrase('portal.general.rerender-form') }}</strong>
+            {% endif %}
+
+            {% show new_ticket_form %}
+        </section>
+    </div>
+{% endblock inner_content %}
+{% block doc_end %}
+    <!-- DESKPRO_TICKET_DISPLAY -->
+    <script type="text/javascript">
+        {{ ticket_display_js|raw }}
+    </script>
+{% endblock doc_end %}

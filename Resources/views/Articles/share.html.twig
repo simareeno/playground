@@ -1,0 +1,33 @@
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Portal:User/macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <header>
+        <h1>{{ article.translated_title }}</h1>
+        {{ phrase('portal.articles.link', {'link': article.permalink})|raw }}
+    </header>
+    {{  macros.lockout_notice(phrase('portal.account.share-lockout'), lockout, lockout_time) }}
+    <div class="article-share" id="article-share-form">
+        {{  phrase('portal.articles.share-by-email') }}
+        {{ form_errors(form) }}
+        {{ form_start(form, { attr: { class: 'form-article' } }) }}
+        {% if form_errors|length > 0 %}
+            <div class="column-full">
+                <div class="bucket">
+                    <div class="form-error-list" style="max-width: 620px;">
+                        <ul>
+                            {% for error in form_errors %}
+                                {% set error_view = error.origin.createView() %}
+                                <li>
+                                    <span>{{ phrase_form_error(error) }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

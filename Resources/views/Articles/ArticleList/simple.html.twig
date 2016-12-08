@@ -1,0 +1,24 @@
+<div class="content-list-wrap simple as-articles {% if pager|length %}with-items{% else %}with-no-items{% endif %}">
+  {% if pager|length %}
+    <ul class="content-list">
+      {% for article in pager %}
+        <li>
+          {{ article_icon(article) }}
+          <a href="{{ portal_path(article) }}">
+            {{ article.translated_title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <strong>{{ phrase('portal.articles.none') }}</strong>
+  {% endif %}
+
+  {% if show_category_link and pager|length > 0 %}
+    <div class="list-meta">
+      <a href="{{ category ? portal_path(category) : path('portal_kb') }}">
+        {{ phrase('portal.articles.view-x-articles', {count: pager|length}) }}<i class="fa fa-caret-right"></i>
+      </a>
+    </div>
+  {% endif %}
+</div>

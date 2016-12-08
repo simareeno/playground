@@ -1,0 +1,17 @@
+{% if breadcrumbs is defined %}
+  {% for item in breadcrumbs %}
+      <a href="{{ item.url }}"{% if loop.last %} class="active-page"{% endif %}>
+        {%- if loop.first -%}<i class="fa fa-home"></i>{%- endif -%}
+        {%- if item.phrase -%}
+          {{ phrase(item.phrase) }}
+        {%- elseif item.var.title is defined -%}
+          {{ item.var.title }}
+        {%- elseif item.var.name is defined -%}
+          {{ item.var.name }}
+        {%- else -%}
+          {{ item.url }}
+        {%- endif -%}
+      </a>
+      {% if not loop.last %}&gt;{% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,98 @@
+{% extends 'Theme::layout.html.twig' %}
+
+{% form_theme profile_form _self %}
+{% block cf_definition_contextual_choice_widget %}
+    {% spaceless %}
+
+        {% for child in form._children %}
+            {{ form_row(child, {attr: {style: 'margin-bottom:5px;'} }) }}
+        {% endfor %}
+
+        {% set idx = form._children|length %}
+        {% if form.vars.allow_edit %}
+        <input type="hidden" name="{{ form._children.vars.full_name }}[{{ idx }}][id]" value="cb_1" />
+        <input type="hidden" name="{{ form._children.vars.full_name }}[{{ idx }}][display_order]" value="10" />
+        <input type="text" name="{{ form._children.vars.full_name }}[{{ idx }}][title]" style="width: 60%;" />&nbsp;
+        <button type="submit" class="dp-btn dp-btn-default" style="width: 37%;">
+            Add
+        </button>
+        {% endif %}
+    {% endspaceless %}
+{% endblock cf_definition_contextual_choice_widget %}
+
+{% block inner_content %}
+    <div class="breadcrumbs" xmlns="http://www.w3.org/1999/html">
+        {% show breadcrumbs %}
+    </div>
+
+    <header class="large-title">
+        <h1>{{ phrase('portal.account.section-title-your-account') }}</h1>
+    </header>
+
+    <section class="padded">
+        <nav class="tabs secondary-tabs">
+            <ul>
+                <li class="tab-active active">
+                    <a href="{{ path('portal_user_profile') }}">
+                        <div>
+                            <span class="title">
+                                {{ phrase('portal.account.section-title-profile') }}
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tab-inactive">
+                    <a href="{{ path('portal_user_profile_emails') }}">
+                        <div>
+                            <span class="title">
+                                {{ phrase('portal.account.section-title-emails') }}
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="column-half">
+            {{ form_start(profile_form, { attr: { class: 'form-ticket dpx-form' } }) }}
+            {{ form_errors(profile_form) }}
+            {{ form_row(profile_form.name) }}
+            {% if profile_form.language_id is defined %}
+                {{ form_row(profile_form.language_id) }}
+            {% endif %}
+            {% if profile_form.delete_picture is defined %}
+                <img src="{{ person.picture_url }}" alt="{{ person }}"/>
+                {{ form_row(profile_form.delete_picture, { checkbox_label: phrase('portal.account.profile-delete-picture'), label: false }) }}
+            {% else %}
+                {{ form_row(profile_form.upload_picture) }}
+            {% endif %}
+            {{ form_row(profile_form.timezone) }}
+            {% if profile_form.manager_auto_add is defined %}
+                {{ form_row(profile_form.manager_auto_add) }}
+            {% endif %}
+            {{ form_rest(profile_form) }}
+            <div class="column-full">
+                <div class="bucket">
+                    <button type="submit">{{ phrase('portal.account.profile-btn-save') }}</button>
+                </div>
+            </div>
+            {{ form_end(profile_form) }}
+        </div>
+
+        <div class="column-half divide-left omega">
+            {{ form_start(password_form, { attr: { class: 'form-ticket' } }) }}
+            {{ form_errors(password_form) }}
+            {% if password_form.current_password is defined %}
+                {{ form_row(password_form.current_password) }}
+            {% endif %}
+            {{ form_row(password_form.new_password) }}
+            <div class="column-full">
+                <div class="bucket">
+                    <button type="submit">{{ phrase('portal.account.change-password-btn') }}</button>
+                </div>
+            </div>
+        {{ form_rest(password_form) }}
+        {{ form_end(password_form) }}
+        </div>
+    </section>
+{% endblock inner_content %}

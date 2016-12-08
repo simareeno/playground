@@ -1,0 +1,66 @@
+{% if related_count %}
+    <div class="related">
+    {% for type,related in related_content %}
+            {% if 'news' == type and related|length %}
+                <div class="titled-header">
+                    <h1>{{ phrase('portal.general.related-news') }}</h1>
+                </div>
+                <ul>
+                    {% for content in related %}
+                        <li>
+                            {{ content_icon(content) }}
+                            <a href="{{ path('portal_news_view', { slug: content.slug }) }}">
+                                 {{ content.realTitle }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if 'articles' == type and related|length %}
+                <div class="titled-header">
+                    <h1>{{ phrase('portal.general.related-pages') }}</h1>
+                </div>
+                <ul>
+                    {% for content in related %}
+                        <li>
+                            {{ content_icon(content) }}
+                            <a href="{{ path('portal_kb_view', { slug: content.slug }) }}">
+                                 {{ content.translated_title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if 'downloads' == type and related|length %}
+                <div class="titled-header">
+                    <h1>{{ phrase('portal.general.related-downloads') }}</h1>
+                </div>
+                <ul>
+                    {% for content in related %}
+                        <li>
+                            {{ content_icon(content) }}
+                            <a href="{{ path('portal_downloads_view', { slug: content.slug }) }}">
+                                 {{ content.realTitle }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if 'feedback' == type and related|length %}
+                <div class="titled-header">
+                    <h1>{{ phrase('portal.general.related-feedback') }}</h1>
+                </div>
+                <ul>
+                    {% for content in related %}
+                        <li>
+                            {{ content_icon(content) }}
+                            <a href="{{ path('portal_feedback_view', { slug: content.slug }) }}">
+                                {{ content.realTitle }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}

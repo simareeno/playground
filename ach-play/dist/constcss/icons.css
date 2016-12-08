@@ -1,0 +1,9 @@
+.achievement[name=achievement-type--witness].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/witness.svg)}
+.achievement[name=achievement-type--witness].achievement--unlocked .achievement-icon:after{background-image:url(img/a-icons/witness-unlocked.svg)}
+.achievement[name=achievement-type--pc-master].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/pc-master.svg)}
+.achievement[name=achievement-type--pc-master].achievement--unlocked .achievement-icon:after{background-image:url(img/a-icons/pc-master-unlocked.svg)}
+.achievement[name=achievement-type--aion-arena-5-wins].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/aion-arena-5-wins.svg)}
+.achievement[name=achievement-type--aion-cap-levels].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/aion-cap-levels.svg)}
+.achievement[name=achievement-type--aion-first-million].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/aion-first-million.svg)}
+.achievement[name=achievement-type--aion-fortune-wheel].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/aion-fortune-wheel.svg)}
+.achievement[name=achievement-type--aion-billionaire].achievement--locked .achievement-icon:after{background-image:url(img/a-icons/aion-billionaire.svg)}

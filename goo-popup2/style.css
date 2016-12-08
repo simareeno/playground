@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color:black;
+  background-image: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+
+
+.bubbles {
+  position: absolute;
+  bottom: 42px;
+  width: 100px;
+  overflow: hidden;
+  height: 100px;
+  left: 15px;
+}
+
+.potion {
+  position: absolute;
+  z-index: -1;
+  animation: potionin .5s forwards ease-out, rotate 7.5s infinite ease;
+  bottom:0;
+  width: 490px;
+  margin-left: -6px;
+}
+
+.buffname {
+  font-size: 24px;
+  color: #3987de;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  margin-top: 24px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.number {
+  font-size:52px;
+  position: relative;
+  top: 12px;
+}
+
+.desc {
+  color: white;
+  font: 14px/22px Arial;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0 70px;
+}
+
+.daysleft {
+  color: #3987de;
+  font: 14px/18px Arial;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.potion-wrap {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color:black;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: .8;
+}
+
+.popup {
+  width:420px;
+  height:440px;
+  position: absolute;
+  border-radius:10px;
+  z-index: 3;
+  left:50%;
+  margin-left:-240px;
+  top:250px;
+  background: #001328;
+  box-shadow: 0px 30px 150px 0px rgba(0,115,255,.1);
+}
+
+.shadow {
+  position: absolute;
+  z-index: 2;
+  width: 1362px;
+  height: 1116px;
+  left: 50%;
+  margin: 0 auto;
+  margin-left: -680px;
+  top: -5%;
+}
+
+.close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+.bottle {
+  position: absolute;
+  width: 130px;
+  top: -106px;
+  left: 142px;
+  /*animation: rotate 10s infinite cubic-bezier(.23,.54,.64,.92);*/
+}
+
+.bottle_pic {
+  position: absolute;
+  top: -207px;
+  left: 30px;
+}
+
+.bottle::before {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: -130px;
+  top: 42px;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0px 30px 200px 0 rgba(0, 115, 255, 0.7);
+  border-radius: 100%;
+  animation: blinky 3s infinite;
+}
+
+.bubble {
+  background-color:#3987de;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  z-index: 11;
+}
+
+.wave {
+  position: absolute;
+  width: 130px;
+  left: 0px;
+  bottom: 0px;
+  height: 200px;
+}
+
+.wave svg {
+  width: 130px;
+  bottom: 0;
+  position: absolute;
+}
+
+.wave2 {
+  -webkit-filter: url("#goo");
+}
+
+.wave2 svg {
+  z-index: 10;
+}
+
+.header {
+  color:white;
+  font-size: 32px;
+  font-family: PT Sans;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.button {
+  margin-top:40px;
+  text-align:center;
+  position: relative;
+  z-index: 10;
+}
+
+#move1, #move2 {
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+
+@keyframes potionin {
+  0% {bottom: -120px}
+  100% {bottom: -85px;}
+}
+
+.bubble1 {
+  animation: bubble1 4s 2s infinite ease-out;
+  transform: translate(40px,-20px)  scale(1);
+}
+
+@keyframes bubble1 {
+  0% {transform: translate(40px,-10px)  scale(.5);}
+  98% {transform: translate(40px,-90px) scale(2);}
+  99% {transform: translate(40px,-90px) scale(2.5);}
+  100% {transform: translate(40px,-90px) scale(2);}
+}
+
+
+.bubble2 {
+  animation: bubble2 6s 2s infinite ease-out;
+  transform: translate(20px,-20px)  scale(1);
+}
+
+@keyframes bubble2 {
+  0% {transform: translate(20px,-20px)  scale(.5);}
+  98% {transform: translate(20px,-65px) scale(2);}
+  99% {transform: translate(20px,-65px) scale(2.5);}
+  100% {transform: translate(20px,-40px) scale(2);}
+}
+
+
+.bubble3 {
+  animation: bubble3 6s 4s infinite ease-out;
+  transform: translate(80px,-20px)  scale(1);
+}
+
+@keyframes bubble3 {
+  0% {transform: translate(80px,-20px)  scale(.5);}
+  98% {transform: translate(80px,-60px) scale(3);}
+  99% {transform: translate(80px,-60px) scale(3.5);}
+  100% {transform: translate(80px,-40px) scale(3);}
+}
+
+.bubble4 {
+  animation: bubble4 10s 5s infinite ease-out;
+  transform: translate(60px,-20px)  scale(1);
+}
+
+@keyframes bubble4 {
+  0% {transform: translate(60px,-20px)  scale(.5);}
+  98% {transform: translate(60px,-55px) scale(3);}
+  99% {transform: translate(60px,-55px) scale(3.5);}
+  100% {transform: translate(60px,-40px) scale(3);}
+}
+
+.bubble5 {
+  animation: bubble5 6s 2s infinite ease-out;
+  transform: translate(60px,-20px)  scale(1);
+}
+
+@keyframes bubble5 {
+  0% {transform: translate(60px,-20px)  scale(.5);}
+  98% {transform: translate(60px,-95px) scale(1.7);}
+  99% {transform: translate(60px,-95px) scale(2.5);}
+  100% {transform: translate(60px,-95px) scale(1.7);}
+}
+
+
+
+@keyframes rotate-group1 {
+  0% {transform: rotate(5deg)}
+  50% {transform: rotate(-5deg)}
+  100% {transform: rotate(5deg)}
+}
+
+@keyframes rotate-group2 {
+  0% {transform: rotate(-5deg)}
+  50% {transform: rotate(5deg)}
+  100% {transform: rotate(-5deg)}
+}
+
+@keyframes testanimation {
+  0% {
+    transform:rotate(-5deg);
+  }
+  50% {
+    transform:rotate (5deg);
+  }
+  100% {
+    transform:rotate(-5deg);
+  }
+}
+
+@keyframes rotate {
+  0%, 100% {transform:rotate(-20deg)}
+  50% {transform:rotate(-10deg)}
+}
+
+@keyframes blinky {
+  0%, 50%, 100% {opacity:1; }
+  10%, 40%, 70%, 90% {opacity:.7}
+  20%, 80% {opacity:.85}
+}

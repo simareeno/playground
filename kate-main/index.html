@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>4game hover</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="normalize.min.css">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="container" class="container">
+	<div id="link"><img src="img/link.png" alt=""></div>
+
+	<div class="flip-container">
+		<div class="flipper">
+			<div class="front"><img src="img/forgame-logo.png" alt=""></div>
+			<div class="back"><img src="img/forgamer-logo.png" alt=""></div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="header-fogame"></div>
+		<div class="header-fogamer"></div>
+		<div class="header-ep"><img src="img/ep.png" alt=""></div>
+	</div>
+
+	<div id="forgame"><img src="img/forgame.png" alt=""></div>
+	<div id="forgame-hover"><img src="img/forgame-hover.png" alt=""></div>
+	<div id="forgamer"><img src="img/forgamer.png" alt=""></div>
+</div>
+
+<script>
+
+$( '#link' ).click(function () {
+	$( '#forgamer' ).addClass('active');
+});
+
+$('#link').hover( function () {
+	$('.flip-container').addClass('hover');
+	$('.header').addClass('hover');
+});
+
+$('#link').on('mouseleave', function () {
+	$('.flip-container').removeClass('hover');
+	$('.header').removeClass('hover');
+});
+
+
+</script>
+
+
+</body>
+</html>

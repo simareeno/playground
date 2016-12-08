@@ -1,0 +1,217 @@
+{% extends 'Theme::layout.html.twig' %}
+{% import 'Theme:Tickets:macros.html.twig' as macros %}
+
+{% block inner_content %}
+    <div class="breadcrumbs">
+        {% show breadcrumbs %}
+    </div>
+    <article class="ticket-page" id="ticket_view_page">
+        <div class="container relative-height">
+            <div class="column-full">
+
+                {% block page_header %}
+                {% if ticket.isAwaitingUser() %}
+                    {# AWAITING USER #}
+                    <div class="ticket-view-note-for-user agent-has-replied">
+                        {{ phrase('portal.tickets.view_awaiting_user') }}
+                         <a href="#ticket-reply-form">
+                             {{ phrase('portal.tickets.view_scroll_reply') }}
+                         </a>
+                    </div>
+                {% elseif ticket.isAwaitingAgent() %}
+                    {# AWAITING AGENT #}
+                    <div class="ticket-view-note-for-user">
+                        {# only shows this if its been more than 10 minutes since the last message was posted #}
+                        {# to avoid "your last message was 1 second ago" after every reply #}
+                        {% if ticket.date_last_user_reply and ticket.messages|length > 1 and last_user_reply_in_seconds > 600 %}
+                            <span class="note-for-user-blue">
+                            {{ phrase('portal.tickets.view_last_message', { ago: date_ago(ticket.date_last_user_reply, null, false) }) }}
+                            </span>
+                            {# similarly, only show the "created ago" message if it has been more than 10 mins #}
+                        {% elseif created_in_seconds > 600 %}
+                            <span class="note-for-user-blue">
+                                {{ phrase('portal.tickets.view_you_created', { ago: date_ago(ticket.date_created, null, false) }) }}
+                            </span>
+                        {% endif %}
+                        {% if not ticket.date_last_agent_reply %}
+                            {{ phrase('portal.tickets.view_will_notify_you') }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {% endblock page_header %}
+
+                <div class="ticket-view">
+                    <div class="full-column">
+                        <div class="ticket-view-content-container">
+                            <!-- Ticket title -->
+                            <div class="header">
+                                <h1>{{ ticket.subject }}</h1>
+                            </div>
+
+                            {% block page_specific_content %}
+                            {% endblock page_specific_content %}
+                        </div>
+
+                {% block page_sidebar %}
+                    <div class="ticket-view-sidebar-wrapper">
+
+                        {% if can_edit and ticket.isOpen() %}
+                            <div class="ticket-view-sidebar">
+                                <a href="{{ portal_path(ticket, 'resolve') }}" class="ticket-sidebar-button">
+                                    {{ phrase('portal.tickets.view_close') }}
+                                </a>
+                            </div>
+                        {% endif %}
+
+                        <div class="ticket-view-sidebar">
+                            <div class="ticket-sidebar-container ticket-sidebar-info">
+                                <h1>{{ phrase('portal.tickets.view_ticket_info') }}</h1>
+                                <ul class="major">
+                                    <li class="item-assigned">
+                                        <span class="sidebar-small-title">
+                                            {{ phrase('portal.tickets.view_assigned_agent') }}
+                                        </span>
+                                        <ul>
+                                            <li>
+                                                {{ macros.person_sidebar(ticket.agent) }}
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="item-opened-by">
+                                        <span class="sidebar-small-title">
+                                            {{ phrase('portal.tickets.view_opened_by') }}
+                                        </span>
+                                        <ul>
+                                            <li>
+                                                {{ macros.person_sidebar(ticket.person) }}
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="item-participants">
+                                        <span class="sidebar-small-title">
+                                            {{ phrase('portal.tickets.view_participants' ) }}
+                                        </span>
+                                        <ul>
+                                            {% for participant in ticket.participants %}
+                                                {% if participant.id %}
+                                                <li>
+                                                    {{ macros.person_sidebar(participant.person, path('portal_tickets_cc_remove', { ticket_ref: ticket_public_id(ticket), cc_id: participant.id })) }}
+                                                </li>
+                                                {% endif %}
+                                            {% else %}
+                                                <li>
+                                                    {{ phrase('portal.tickets.no_participants') }}
+                                                </li>
+                                            {% endfor %}
+                                            {% block page_sidebar_add_participant_form %}
+                                            <li>
+                                                <a href="#" class="sidebar-person add-person clickaway-dropdown" data-clickaway-target="add-cc-user-popover">
+                                                    <span class="agent-avatar agent-avatar-mid"><i class="fa fa-plus"></i></span>
+                                                    <span class="avatar-meta">
+                                                      <span class="primary single">
+                                                          {{ phrase('portal.tickets.view_btn_add_cc') }}
+                                                      </span>
+                                                    </span>
+                                                </a>
+
+                                                <div class="add-cc-user-popover" id="add-cc-user-popover" style="display: none;">
+                                                    <form action="{{ portal_path(ticket, 'add-cc') }}" method="POST">
+
+                                                        <div class="column-full">
+                                                            <div>
+                                                                <div class="bucket">
+                                                                    <label class="title">{{ phrase('portal.forms.label_name') }}: *</label>
+                                                                    <input placeholder="{{ phrase('portal.tickets.view_label_your_name_placeholder') }}" name="name" type="text" required>
+                                                                </div>
+
+                                                                <div class="bucket">
+                                                                    <label class="title">{{ phrase('portal.forms.label_email') }}: *</label>
+                                                                    <input name="email" placeholder="{{ phrase('portal.tickets.view_label_your_email_placeholder') }}" type="text" required>
+                                                                </div>
+
+                                                                <div class="bucket">
+                                                                    <input type="submit" value="{{ phrase('portal.tickets.view_btn_add_to_ticket') }}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                            {% endblock page_sidebar_add_participant_form %}
+                                        </ul>
+                                    </li>
+
+                                    <li class="item-ticket-ref">
+                                        <span class="sidebar-small-title">{{ phrase('portal.tickets.ticket-ref') }}</span>
+                                        <ul>
+                                            <li>{{ ticket_public_id(ticket) }}</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {% if ticket.attachments|length > 0 %}
+                                <div class="ticket-sidebar-container ticket-sidebar-media">
+                                    <h1>{{ phrase('portal.tickets.view_media') }}</h1>
+                                    <ul>
+                                        {% for attachment in ticket.attachments %}
+                                            <li>
+                                                {{ macros.attachment_inline(attachment) }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+
+                            {% if ticket_view.hasAnyVisibleProperties() %}
+                            <div class="ticket-sidebar-container ticket-sidebar-meta">
+                                {% if can_edit and ticket.isOpen() and not edit_page %}
+                                    <a href="{{ portal_path(ticket, 'edit') }}" class="sidebar-edit">{{ phrase('portal.tickets.view_btn_edit') }} <i class="fa fa-edit"></i></a>
+                                {% endif %}
+                                <h1>{{ phrase('portal.tickets.view_more_info') }}</h1>
+                                <ul>
+                                    {# see the TicketViewDataService in AppBundle's data services #}
+                                    {% for property in ticket_view.properties %}
+                                        {% if property.isVisible %}
+                                            <li>
+                                                <h3>{{ property.label }}</h3>
+                                                <p>{{ property.value|smart_wrap(35) }}</p>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                        </div>
+                    {% if not ticket_view.hasAnyVisibleProperties() %}
+                        {% if can_edit and ticket.isOpen() and not edit_page %}
+                            <div class="ticket-view-sidebar">
+                                <a href="{{ portal_path(ticket, 'edit') }}" class="ticket-sidebar-button ">{{ phrase('portal.tickets.view_btn_edit_full') }}</a>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                    </div>
+                    </div>
+                {% endblock page_sidebar %}
+                </div>
+
+                </div>
+
+            </div><!-- end .column-half-plus -->
+
+        </div>
+    </article>
+{% endblock inner_content %}
+
+{% block doc_end %}
+    <script type="text/javascript">
+        window.DP_DISMISS_ALERTS = window.DP_DISMISS_ALERTS || [];
+        window.DP_DISMISS_ALERTS.push({
+            alertId: '{{ portal_path(ticket) }}',
+            alertVersion: {{ "now"|date('U') }}
+        });
+    </script>
+{% endblock %}

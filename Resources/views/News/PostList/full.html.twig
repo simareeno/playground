@@ -1,0 +1,33 @@
+{% if pager|length %}
+  {% for item in pager %}
+    <article class="news kb-article kb-article-news">
+
+      <div class="news-header">
+        <div class="deskpro-calendar-decoration-flat">
+          <div class="dcdf-month">{{ item.date_published | date('M') }}</div>
+          <div class="dcdf-day">{{ item.date_published | date('j') }}</div>
+        </div>
+
+        <div class="news-header-info">
+          <h1><a href="{{ portal_path(item) }}">{{ item.title }}</a></h1>
+
+          <div class="article-meta">
+            {% if item.person %}{{ phrase('portal.general.by') }} <span style="background: url({{ avatar_url(item.person) }}) no-repeat; background-size: cover" class="agent-avatar agent-avatar-mini"></span> {{ item.person.display_name_user }} {% endif %}
+            <hr>
+            <span class="comments"><i class="fa fa-comments"></i> <a href="{{ portal_path(item) }}#comments">{{ phrase('portal.general.comments-count', {count: item.calc_num_comments}) }}</a></span>
+            <hr>
+            {{ phrase('portal.general.in') }} <a href="{{ portal_path(item.category) }}">{{ object_phrase(item.category) }}</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="article-content padded">
+        {{ render_news(item) }}
+      </div>
+    </article>
+  {% endfor %}
+  {% if show_pager %}
+    {% show news_pager %}
+  {% endif %}
+{% endif %}
